@@ -42,9 +42,12 @@ include("includes/header.php");
                         </div>
                         <div class="form-group">
 
-                            <label> Apellido</label>                    <input type="text" class="form-control" name="ClienteApellido" required>
+                            <label> Primer Apellido</label>                    <input type="text" class="form-control" name="ClientePaterno" required>
                         </div>
+                        <div class="form-group">
 
+                            <label> Segundo Apellido</label>                    <input type="text" class="form-control" name="ClienteMaterno" required>
+                        </div>
 
 
 
@@ -109,7 +112,8 @@ include("includes/Footer.php");
 
 if (isset($_POST['registrar'])){
             $c_name= $_POST['ClienteNombre'];
-            $c_lastname= $_POST['ClienteApellido'];
+            $c_firstlastname= $_POST['ClientePaterno'];
+            $c_secondlastname= $_POST['ClienteMaterno'];
             $c_email= $_POST['ClienteCorreo'];
             $c_pass= $_POST['ClienteContraseña'];
             $ci_pass = password_hash($c_pass,PASSWORD_BCRYPT);
@@ -119,10 +123,10 @@ if (isset($_POST['registrar'])){
 
             $c_ip = getRealIpUser();
 
-            $insert_cliente ="insert into Cliente (ClienteNombre,ClienteApellido,ClienteCorreo,ClienteContraseña,ClienteContraseñaEncriptada,ClientePais,ClienteCiudad,ClienteTelefono,ClienteIp) 
-                values ('$c_name','$c_lastname','$c_email','$c_pass','$ci_pass','$c_pais','$c_ciudad','$c_contacto','$c_ip')";
+    $insert_cliente ="insert into Cliente (ClienteNombre,ClientePrimerApellido,ClienteSegundoApellido,ClienteCorreo,ClienteContraseña,ClienteContraseñaEncriptada,ClientePais,ClienteCiudad,ClienteTelefono,ClienteIp) 
+                values ('$c_name','$c_firstlastname','$c_secondlastname','$c_email','$c_pass','$ci_pass','$c_pais','$c_ciudad','$c_contacto','$c_ip')";
 
-            $run_customer = mysqli_query($con,$insert_cliente);
+    $run_customer = mysqli_query($con,$insert_cliente);
 
             $sel_car = "select * from Carrito where AddIp = '$c_ip'";
             $run_cart = mysqli_query($con,$sel_car);

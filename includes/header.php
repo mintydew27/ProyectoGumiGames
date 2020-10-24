@@ -1,9 +1,6 @@
 <?php
 session_start();
-
-include("Conexion.php");
-$con=AbrirConexion();
-
+include("includes/BD.php");
 include_once("functions/functions.php");
 
 ?>

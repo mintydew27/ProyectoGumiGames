@@ -168,7 +168,7 @@ function getpgenpro(){
             
             <div class = 'box'>   
             
-            <hi> No se encontraron productos en esta categoría :(</hi>
+            <hi> No se encontraron productos en este genero :(</hi>
             
             </div>
            

@@ -1,5 +1,5 @@
 <?php
-$active='Confirmar.php';
+
 include("includes/header.php");
 include ("includes/BD.php");
 

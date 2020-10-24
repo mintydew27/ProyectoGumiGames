@@ -41,7 +41,7 @@ include("includes/header.php");
             <div class='box'><!--Inicio box-->
                 <h1>Tienda</h1>
                     <p>
-                       Aqui podras encontrar una gran variedad de videojuegos y consolas.
+                       Aqui podras encontrar una gran variedad de juegos.
                     </p>
             </div><!--Final box-->
             ";

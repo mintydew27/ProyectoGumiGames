@@ -3,7 +3,7 @@ include_once("functions/functions.php");
 ?>
 <div class="panel panel-default sidebar-menu"><!--Inicio de panel-default sidebar-menu-->
     <div class="panel-heading"><!--Inicio de panel-heading-->
-        <h3 class="panel-title">Productos</h3>
+        <h3 class="panel-title">Genero</h3>
     </div><!--Final de panel-heading-->
 
     <div class="panel-body"><!--Final de panel-body-->

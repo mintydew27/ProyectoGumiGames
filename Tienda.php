@@ -51,7 +51,7 @@ include("includes/header.php");
 
             <div class="row"><!--Inicio row-->
     <?php
-                if(!isset($_GET['p_gen'])) {
+                if(!isset($_GET['p_cat'])) {
                     if(!isset($_GET['cat'])) {
                 $per_page=6;
 

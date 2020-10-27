@@ -173,7 +173,7 @@
                 <h3 class="panel-title"><!--Inicio  panel-title -->
 
 
-                    <i class="fa fa-money fa-fw"></i>Nuevas Ordenes
+                    <i class="fa fa-money fa-fw"></i>Nuevas Compras
 
 
                 </h3><!--Final panel-title -->
@@ -259,8 +259,8 @@
             <div class="mb-md thumb-info"><!--Inicio mb-md thumb-info-->
                 <img src="admin_images/admin_image.jpg" alt="admin-thumb-info" class="img-rounded img-responsive">
                 <div class="thumb-info-title"><!--Inicio thumb-info-title-->
-                    <span class="thumb-info-inner"> Vivirinda </span>
-                    <span class="thumb-info-type"> Desarrollador Web</span>
+                    <i class="fa fa-user"></i><span > Nombre: </span> Viviana</br>
+                    <i class="fa fa-paw"></i><span > Rol: </span>Programador </br>
 
                 </div><!--Final thumb-info-title-->
 

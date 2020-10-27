@@ -9,12 +9,11 @@
         </button>
         <a href="Index.php?dashboard" class="navbar-brand"Admin Area></a>
     </div>
+
+
+
     <ul class="nav navbar-right top-nav">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                <i class="fa fa-user"></i> Mrghie <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
+        <li >
                 <li>
                     <a href="Index.php?user_profile">
                         <i class="fa fa-fw fa-user"></i> Profile
@@ -40,7 +39,7 @@
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a href="logout.php">
+                    <a href="Logout.php">
                         <i class="fa fa-fw fa-power-off"></i> Log Out
                     </a>
                 </li>

@@ -114,7 +114,21 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                     </li>
 
             </li>
+
+
             ///////////////////////////////////////////////////////////////////
+            <li>
+                <a href="Index.php?view_estadistics" data-toggle="collapse" data-target="#slides">
+                    <i class="fa fa-fw fa-gear"></i> Estadisticas
+                </a>
+
+            </li>
+            ///////////////////////////////////////////////////////////////////
+
+
+
+
+
             <li>
                 <a href="Index.php?view_orders">
                     <i class="fa fa-fw fa-book"></i> View Orders

@@ -73,6 +73,19 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                     }
 
+                    if(isset($_GET['view_products'])){
+
+                        include("Ver_Productos.php");
+
+            }      if(isset($_GET['delete_product'])){
+
+                include("Borrar_Productos.php");
+
+            }         if(isset($_GET['edit_product'])){
+
+                include("Editar_Productos.php");
+
+            }
 
             ?>
 

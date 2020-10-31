@@ -8,6 +8,34 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
 }else{
 
+    $admin_session= $_SESSION['AdministradorCorreo'];
+    $get_admin = "select * from Administrador where AdministradorCorreo='$admin_session'";
+    $run_admin = mysqli_query($con,$get_admin);
+    $row_admin = mysqli_fetch_array($run_admin);
+    $admin_id= $row_admin['AdministradorId'];
+    $admin_name = $row_admin['AdministradorNombre'];
+    $admin_email= $row_admin['AdministradorCorreo'];
+    $admin_image = $row_admin['AdministradorImagen'];
+    $admin_country= $row_admin['AdministradorPais'];
+    $admin_desc= $row_admin['AdministradorDescripcion'];
+    $admin_contact = $row_admin['AdministradorTelefono'];
+    $admin_rol= $row_admin['AdministradorRol'];
+
+
+    $get_products= "select * from Producto";
+    $run_products= mysqli_query($con,$get_products);
+    $count_products=  mysqli_num_rows($run_products);
+    $get_customers = "select * from Cliente";
+    $run_customers= mysqli_query($con,$get_customers);
+    $count_customers= mysqli_num_rows($run_customers);
+    $get_genero= "select * from Genero";
+    $run_genero= mysqli_query($con,$get_genero);
+    $count_genero = mysqli_num_rows($run_genero);
+    $get_category = "select * from Categoria";
+    $run_category= mysqli_query($con,$get_category);
+    $count_category= mysqli_num_rows($run_category);
+
+
 ?>
 
 
@@ -37,6 +65,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     if(isset($_GET['dashboard'])){
 
                         include ("dashboard.php");
+
+                    }
+                    if(isset($_GET['insert_product'])){
+
+                        include("Insertar_Productos.php");
 
                     }
 

@@ -1,6 +1,9 @@
 
 <?php
-include ("includes/BD.php");
+if (!isset($_SESSION['AdministradorCorreo'])){
+
+    echo "<script>window.open('Login.php','_self')</script>";
+}else{
 
 ?>
 <!--Esto es para insertar los productos de manera dinamica desde una pagina-->
@@ -232,10 +235,6 @@ include ("includes/BD.php");
 
 </div><!--Final de row-->
 
-
-
-    <script src="js/jquery-331.min.js"></script>
-    <script src="js/bootstrap-337.min.js"></script>
 <script src="js/tinymce/tinymce.min.js"></script>
 <script>tinymce.init({selector:'textarea'});</script>
 </body>
@@ -284,7 +283,7 @@ $run_product = mysqli_query($con,$insert_producto) or die($insert_producto);
 if($run_product) {
 
     echo "<script>alert('El producto fue agregado satisafctoriamente')</script>";
-    echo "<script>window.open('Insertar_Productos.php','_self')</script>";
+    echo "<script>window.open('Index.php?view_products','_self')</script>";
 }
 else {
     echo "<script>alert('No se pudo')</script>";
@@ -295,6 +294,10 @@ else {
 }
 
 
+?>
+
+<?php
+}
 ?>
 
 

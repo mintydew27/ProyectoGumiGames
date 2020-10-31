@@ -1,3 +1,16 @@
+<?php
+if (!isset($_SESSION['AdministradorCorreo'])){
+
+    echo "<script>window.open('Login.php','_self')</script>";
+}else{
+
+
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-exl-collapse">
@@ -15,29 +28,10 @@
     <ul class="nav navbar-right top-nav">
         <li >
                 <li>
-                    <a href="Index.php?user_profile">
-                        <i class="fa fa-fw fa-user"></i> Profile
+                    <a href="Index.php?user_profile=<?php echo $admin_id; ?>">
+                        <i class="fa fa-fw fa-user"></i> <?php echo $admin_name; ?>
                     </a>
                 </li>
-                <li>
-                    <a href="Index.php?view_products">
-                        <i class="fa fa-fw fa-envelope"></i> Products
-                        <span class="badge">7</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Index.php?view_customers">
-                        <i class="fa fa-fw fa-users"></i> Customers
-                        <span class="badge">11</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="Index.php?view_cats">
-                        <i class="fa fa-fw fa-gear"></i> Product Categories
-                        <span class="badge">4</span>
-                    </a>
-                </li>
-                <li class="divider"></li>
                 <li>
                     <a href="Logout.php">
                         <i class="fa fa-fw fa-power-off"></i> Log Out
@@ -54,67 +48,71 @@
                 </a>
             </li>
             <li>
-                <a href="#" data-toggle="collapse" data-target="products">
-                    <i class="fa fa-fw fa-tag"></i> Products
-                    <i class="fa fa-fw fa-caret-down"></i>
+
+                <a href="Index.php?view_products" id="products" data-target="products" >
+                    <i class="fa fa-fw fa-tag"></i>Productos <span class="badge"><?php echo $count_products; ?></span>
                 </a>
-                <ul id="products" class="collapse">
-                    <li>
-                        <a href="Index.php?insert_product">Insert Product </a>
-                        <a href="Index.php?view_products">View Products </a>
-                    </li>
-                </ul>
+
+            <li>
+                <a href="Index.php?insert_product">Insertar Producto </a>
+                <a href="Index.php?view_products">Mirar Productos </a>
+            </li>
+
             </li>
             ///////////////////////////////////////////////////////////////////
+
             <li>
                 <a href="#" data-toggle="collapse" data-target="#p_cat">
-                    <i class="fa fa-fw fa-edit"></i> Products Categories
-                    <i class="fa fa-fw fa-caret-down"></i>
+                    <i class="fa fa-fw fa-edit"></i> Genero de Productos <span class="badge"><?php echo $count_genero; ?></span>
+
                 </a>
-                <ul id="p_cat" class="collapse">
                     <li>
-                        <a href="Index.php?insert_p_cat">Insert Product Category </a>
+                        <a href="Index.php?insert_p_cat">Insertar Genero de Productos</a>
                     </li>
                     <li>
-                        <a href="Index.php?view_p_cats">View Products Categories</a>
+                        <a href="Index.php?view_p_cats">Mirar Generos</a>
                     </li>
-                </ul>
+
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="#" data-toggle="collapse" data-target="#cat">
-                    <i class="fa fa-fw fa-book"></i> Categories
-                    <i class="fa fa-fw fa-caret-down"></i>
+                    <i class="fa fa-fw fa-book"></i> Categoria <span class="badge"><?php echo $count_category; ?></span>
+
                 </a>
-                <ul id="cat" class="collapse">
                     <li>
-                        <a href="Index.php?insert_cat">Insert Category </a>
+                        <a href="Index.php?insert_cat">Insertar Categoria </a>
                     </li>
                     <li>
-                        <a href="Index.php?view_cats">View Categories</a>
+                        <a href="Index.php?view_cats">Mirar Categorias</a>
                     </li>
-                </ul>
+
+            </li>
+            ///////////////////////////////////////////////////////////////////
+            <li>
+                <a href="#" data-toggle="collapse" data-target="#customers">
+                    <i class="fa fa-fw fa-users"></i> Clientes <span class="badge"><?php echo $count_customers; ?></span>
+
+                </a>
+                <li>
+                <a href="index.php?view_customers"> Mirar Clientes
+                </a>
+            </li>
+
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="#" data-toggle="collapse" data-target="#slides">
                     <i class="fa fa-fw fa-gear"></i> Slides
-                    <i class="fa fa-fw fa-caret-down"></i>
                 </a>
-                <ul id="slides" class="collapse">
+
                     <li>
                         <a href="Index.php?insert_slide">Insert Slide </a>
                     </li>
                     <li>
                         <a href="Index.php?view_slides">View Slides</a>
                     </li>
-                </ul>
-            </li>
-            ///////////////////////////////////////////////////////////////////
-            <li>
-                <a href="index.php?view_customers">
-                    <i class="fa fa-fw fa-users"></i> View Customers
-                </a>
+
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
@@ -134,7 +132,7 @@
                     <i class="fa fa-fw fa-users"></i> Users
                     <i class="fa fa-fw fa-caret-down"></i>
                 </a>
-                <ul id="users" class="collapse">
+
                     <li>
                         <a href="Index.php?insert_user">Insert User </a>
                     </li>
@@ -142,9 +140,9 @@
                         <a href="Index.php?view_users">View Users</a>
                     </li>
                     <li>
-                        <a href="Index.php?user_profile">Edit User Profile</a>
+                        <a href="Index.php?user_profile=<?php echo $admin_id;?>">Edit User Profile</a>
                     </li>
-                </ul>
+
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>

@@ -1,8 +1,8 @@
 <?php
 
-if(!isset($_SESSION['admin_email'])){
+if(!isset($_SESSION['AdministradorCorreo'])){
 
-    echo "<script>window.open('login.php','_self')</script>";
+    echo "<script>window.open('Login.php','_self')</script>";
 
 }else{
 
@@ -14,7 +14,7 @@ if(!isset($_SESSION['admin_email'])){
 
         $delete_id = $_GET['delete_customer'];
 
-        $delete_c = "delete from cliente where ClienteId='$delete_id'";
+        $delete_c = "delete from Cliente where ClienteId='$delete_id'";
 
         $run_delete = mysqli_query($con,$delete_c);
 
@@ -22,7 +22,7 @@ if(!isset($_SESSION['admin_email'])){
 
             echo "<script>alert('Se ha eliminado un cliente')</script>";
 
-            echo "<script>window.open('index.php?view_customers','_self')</script>";
+            echo "<script>window.open('Index.php?view_customers','_self')</script>";
 
         }
 

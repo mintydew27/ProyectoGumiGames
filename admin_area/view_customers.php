@@ -1,8 +1,8 @@
 <?php
 
-if(!isset($_SESSION['admin_email'])){
+if(!isset($_SESSION['AdministradorCorreo'])){
 
-    echo "<script>window.open('login.php','_self')</script>";
+    echo "<script>window.open('Login.php','_self')</script>";
 
 }else{
 
@@ -40,6 +40,7 @@ if(!isset($_SESSION['admin_email'])){
                                 <th> Número: </th>
                                 <th> Nombre: </th>
                                 <th> Primer Apellido: </th>
+                                <th> Segundo Apellido: </th>
                                 <th> E-Mail: </th>
                                 <th> País: </th>
                                 <th> Ciudad: </th>
@@ -54,7 +55,7 @@ if(!isset($_SESSION['admin_email'])){
 
                             $i=0;
 
-                            $get_c = "select * from cliente";
+                            $get_c = "select * from Cliente";
 
                             $run_c = mysqli_query($con,$get_c);
 
@@ -65,6 +66,8 @@ if(!isset($_SESSION['admin_email'])){
                                 $c_name = $row_c['ClienteNombre'];
 
                                 $c_ape = $row_c['ClientePrimerApellido'];
+
+                                $c_apeseg = $row_c['ClienteSegundoApellido'];
 
                                 $c_email = $row_c['ClienteCorreo'];
 
@@ -81,14 +84,16 @@ if(!isset($_SESSION['admin_email'])){
                                 <tr><!-- tr begin -->
                                     <td> <?php echo $i; ?> </td>
                                     <td> <?php echo $c_name; ?> </td>
-                                    <td> <?php echo $c_email; ?> </td>
                                     <td> <?php echo $c_ape; ?> </td>
+                                    <td> <?php echo $c_apeseg; ?> </td>
+                                    <td> <?php echo $c_email; ?> </td>
+
                                     <td> <?php echo $c_country; ?></td>
                                     <td> <?php echo $c_city; ?> </td>
                                     <td> <?php echo $c_contact ?> </td>
                                     <td>
 
-                                        <a href="index.php?delete_customer=<?php echo $c_id; ?>">
+                                        <a href="Index.php?delete_customer=<?php echo $c_id; ?>">
 
                                             <i class="fa fa-trash-o"></i> Delete
 

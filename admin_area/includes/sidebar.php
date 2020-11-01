@@ -88,7 +88,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
-                <a href="#" data-toggle="collapse" data-target="#customers">
+                <a href="Index.php?view_customers" data-toggle="collapse" data-target="#customers">
                     <i class="fa fa-fw fa-users"></i> Clientes <span class="badge"><?php echo $count_customers; ?></span>
 
                 </a>

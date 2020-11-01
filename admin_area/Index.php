@@ -139,6 +139,14 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("Borrar_Slide.php");
 
+            }   if(isset($_GET['view_customers'])){
+
+                include("view_customers.php");
+
+            }   if(isset($_GET['delete_customer'])){
+
+                include("delete_customer.php");
+
             }
 
 

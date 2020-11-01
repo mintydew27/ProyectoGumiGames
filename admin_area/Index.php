@@ -147,6 +147,22 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("delete_customer.php");
 
+            }   if(isset($_GET['view_users'])){
+
+                include("view_users.php");
+
+            }   if(isset($_GET['delete_user'])){
+
+                include("delete_user.php");
+
+            }   if(isset($_GET['insert_user'])){
+
+                include("insert_user.php");
+
+            }   if(isset($_GET['user_profile'])){
+
+                include("user_profile.php");
+
             }
 
 

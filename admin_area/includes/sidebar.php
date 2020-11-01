@@ -5,8 +5,6 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 }else{
 
 
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -55,28 +53,28 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
             <li>
                 <a href="Index.php?insert_product">Insertar Producto </a>
-                <a href="Index.php?view_products">Mirar Productos </a>
+                <a href="Index.php?view_products">Ver Productos </a>
             </li>
 
             </li>
             ///////////////////////////////////////////////////////////////////
 
             <li>
-                <a href="#" data-toggle="collapse" data-target="#p_cat">
+                <a href="Index.php?view_genero" data-toggle="collapse" data-target="#p_cat">
                     <i class="fa fa-fw fa-edit"></i> Genero de Productos <span class="badge"><?php echo $count_genero; ?></span>
 
                 </a>
                     <li>
-                        <a href="Index.php?insert_p_cat">Insertar Genero de Productos</a>
+                        <a href="Index.php?insert_genero">Insertar Genero</a>
                     </li>
                     <li>
-                        <a href="Index.php?view_p_cats">Mirar Generos</a>
+                        <a href="Index.php?view_genero">Ver Generos</a>
                     </li>
 
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
-                <a href="#" data-toggle="collapse" data-target="#cat">
+                <a href="Index.php?view_cats" data-toggle="collapse" data-target="#cat">
                     <i class="fa fa-fw fa-book"></i> Categoria <span class="badge"><?php echo $count_category; ?></span>
 
                 </a>
@@ -84,7 +82,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                         <a href="Index.php?insert_cat">Insertar Categoria </a>
                     </li>
                     <li>
-                        <a href="Index.php?view_cats">Mirar Categorias</a>
+                        <a href="Index.php?view_cats">Ver Categorias</a>
                     </li>
 
             </li>
@@ -95,14 +93,14 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
                 </a>
                 <li>
-                <a href="index.php?view_customers"> Mirar Clientes
+                <a href="index.php?view_customers"> Ver Clientes
                 </a>
             </li>
 
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
-                <a href="#" data-toggle="collapse" data-target="#slides">
+                <a href="Index.php?view_slides" data-toggle="collapse" data-target="#slides">
                     <i class="fa fa-fw fa-gear"></i> Slides
                 </a>
 
@@ -168,3 +166,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
         </ul>
     </div>
 </nav>
+<?php }
+
+
+?>

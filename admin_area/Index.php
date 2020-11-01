@@ -86,6 +86,62 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                 include("Editar_Productos.php");
 
             }
+                    if(isset($_GET['view_genero'])){
+
+                        include("Ver_Genero.php");
+
+                    }
+
+                    if(isset($_GET['insert_genero'])){
+
+                include("Insertar_Genero.php");
+
+            }
+            if(isset($_GET['editar_genero'])){
+
+                include("Editar_Genero.php");
+
+            } if(isset($_GET['borrar_genero'])){
+
+                include("Borrar_Genero.php");
+
+            }
+            if(isset($_GET['view_cats'])){
+
+                include("Ver_Categoria.php");
+
+            }if(isset($_GET['insert_cat'])){
+
+                include("Insertar_Categoria.php");
+
+            }if(isset($_GET['edit_cat'])){
+
+                include("Editar_Categoria.php");
+
+            }if(isset($_GET['delete_cat'])){
+
+                include("Borrar_Categoria.php");
+
+            }if(isset($_GET['view_slides'])){
+
+                include("Ver_Slide.php");
+
+            }if(isset($_GET['insert_slide'])){
+
+                include("Insertar_Slide.php");
+
+            }
+            if(isset($_GET['edit_slide'])){
+
+                include("Editar_Slide.php");
+
+            } if(isset($_GET['delete_slide'])){
+
+                include("Borrar_Slide.php");
+
+            }
+
+
 
             ?>
 

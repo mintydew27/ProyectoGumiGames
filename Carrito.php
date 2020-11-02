@@ -1,6 +1,17 @@
 <?php
 $active='Carrito.php';
-include("includes/header.php")?>
+include("includes/header.php");
+$session_email = $_SESSION['ClienteCorreo'];
+
+ $select_customer = "select * from Cliente where ClienteCorreo='$session_email'";
+
+    $run_customer = mysqli_query($con,$select_customer);
+
+    $row_customer = mysqli_fetch_array($run_customer);
+
+    $customer_id = $row_customer['ClienteId'];
+
+?>
 
 
 <div id="content"><!--Inicio content-->
@@ -149,7 +160,7 @@ include("includes/header.php")?>
 
                         </button><!--Final btn btn-default-->
 
-                        <a href="Confirmar.php" class="btn btn-primary">
+                        <a href="Orden.php?c_id=<?php echo $customer_id ?>" class="btn btn-primary">
 
                         Pagar <i class="fa fa chevron-right"></i>
 

@@ -115,7 +115,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_ape2; ?> name="admin_ape2" type="text" class="form-control" required>
+                                <input value="<?php echo $user_ape2; ?>" name="admin_ape2" type="text" class="form-control" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -239,8 +239,8 @@ if(!isset($_SESSION['AdministradorCorreo'])){
     if(isset($_POST['update'])){
 
         $user_name = $_POST['admin_name'];
-        $user_ape1 = $_POST['admin_name'];
-        $user_ape2 = $_POST['admin_name'];
+        $user_ape1 = $_POST['admin_ape1'];
+        $user_ape2 = $_POST['admin_ape2'];
         $user_email = $_POST['admin_email'];
         $user_pass = $_POST['admin_pass'];
         $user_country = $_POST['admin_country'];
@@ -253,14 +253,14 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
         move_uploaded_file($temp_admin_image,"admin_images/$user_image");
 
-        $update_user = "update administrador set AdministradorNombre='$user_name',AdministradorPrimerApellido='$user_ape1',AdministradorSegundoApellido='$user_ape2',AdministradorCorreo='$user_email',AdministradorContraseña='$user_pass',AdministradorCorreo='$user_country',AdministradorTelefono='$user_contact',AdministradorRol='$user_job',AdministradorDescripcion='$user_about',AdministradorImagen='$user_image' where AdministradorId='$user_id'";
+        $update_user = "update Administrador set AdministradorNombre='$user_name',AdministradorPrimerApellido='$user_ape1',AdministradorSegundoApellido='$user_ape2',AdministradorCorreo='$user_email',AdministradorContraseña='$user_pass',AdministradorPais='$user_country',AdministradorTelefono='$user_contact',AdministradorRol='$user_job',AdministradorDescripcion='$user_about',AdministradorImagen='$user_image' where AdministradorId='$user_id'";
 
         $run_user = mysqli_query($con,$update_user);
 
         if($run_user){
 
             echo "<script>alert('El usuario ha sido actualizado')</script>";
-            echo "<script>window.open('login.php','_self')</script>";
+            echo "<script>window.open('Login.php','_self')</script>";
 
             session_destroy();
 

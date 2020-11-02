@@ -35,6 +35,9 @@ include("includes/header.php")
 
                 }
 
+                if (isset($_GET['pay_offline'])) {
+                    include("Carrito.php");
+                }
 
 
                 ?>

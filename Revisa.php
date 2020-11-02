@@ -28,7 +28,7 @@ include("includes/header.php");
 
             <div class="col-md-9">
             <?php
-            if(!isset($_SESSION['cliente_correo'])){
+            if(!isset($_SESSION['ClienteCorreo'])){
 
                 include("Inicio_sesion_cliente.php");
             }else{

@@ -1,93 +1,110 @@
-<center><!--Inicio center-->
-    <h1>Mis Ordenes</h1>
-    <p class="lead">Tus ordenes en un solo lugar. </p>
+<center><!--  center Begin  -->
+
+    <h1> My Orders </h1>
+
+    <p class="lead"> Your orders on one place</p>
+
     <p class="text-muted">
-        Cualquier duda o sugerencia <a href="Contactanos.php">Contactanos</a>. Nuestro servicio al cliente trabaja <strong>24/7</strong>
+
+        If you have any questions, feel free to <a href="Contactanos.php">Contact Us</a>. Our Customer Service work <strong>24/7</strong>
+
     </p>
-</center><!--Final center-->
+
+</center><!--  center Finish  -->
+
 
 <hr>
 
-<div class="table-responsive"><!--Inicio table-responsive-->
 
-    <table class="table table-bordered table-hover"><!--Inicio table table-bordered table-hover-->
+<div class="table-responsive"><!--  table-responsive Begin  -->
 
-        <thead><!--Inicio thead-->
-            <tr><!--Inicio tr-->
+    <table class="table table-bordered table-hover"><!--  table table-bordered table-hover Begin  -->
 
-                <th> ON: </th>
-                <th> Cantidad a deber: </th>
-                <th> Numero Factura: </th>
-                <th> Cantidad: </th>
-                <th> Estado: </th>
-                <th> Fecha de Orden:</th>
-                <th> Pagado/ Sin Pagar: </th>
-                <th> Status: </th>
+        <thead><!--  thead Begin  -->
 
-            </tr><!--Final tr-->
-        </thead><!--Final thead-->
+        <tr><!--  tr Begin  -->
 
-        <tbody>
+            <th> ON: </th>
+            <th> Due Amount: </th>
+            <th> Invoice No: </th>
+            <th> Qty: </th>
+            <th> Order Date:</th>
+            <th> Paid / Unpaid: </th>
+            <th> Status: </th>
 
-        <!--?php
-        $cliente_sesion = $_SESSION['ClienteCorreo'];
-        $get_cliente = "select * from Cliente where ClienteCorreo='$cliente_sesion'";
-        $run_cliente = mysqli_query($con,$get_cliente);
-        $row_ciente = mysqli_fetch_array($run_cliente);
-        $cliente_id = $row_ciente['ClienteId'];
-        $get_ordenes= "select * from clientes_pedidos where ClienteId='$cliente_id'";
-        $run_ordenes = mysqli_query($con,$get_ordenes);
+        </tr><!--  tr Finish  -->
+
+        </thead><!--  thead Finish  -->
+
+        <tbody><!--  tbody Begin  -->
+
+        <?php
+
+        $customer_session = $_SESSION['ClienteCorreo'];
+
+        $get_customer = "select * from Cliente where ClienteCorreo='$customer_session'";
+
+        $run_customer = mysqli_query($con,$get_customer);
+
+        $row_customer = mysqli_fetch_array($run_customer);
+
+        $customer_id = $row_customer['ClienteId'];
+
+        $get_orders = "select * from ClienteOrden where ClienteId='$customer_id'";
+
+        $run_orders = mysqli_query($con,$get_orders);
 
         $i = 0;
-        while($row_ordenes = mysqli_fetch_array($run_ordenes)){
-            $orden_id = $row_ordenes['orden_id'];
-            $cantidad_a_deber = $row_ordenes['cantidad_a_deber'];
-            $factura_no = $row_ordenes['factura_no'];
-            $qty = $row_ordenes['qty'];
-            $estado = $row_ordenes['estado'];
 
-            $fecha_orden = substr($row_ordenes['fecha_orden'],0,11);
-            $estado_del_pedido= $row_ordenes['estado_del_pedido'];
+        while($row_orders = mysqli_fetch_array($run_orders)){
+
+            $order_id = $row_orders['ClienteOrdenId'];
+
+            $due_amount = $row_orders['ClienteOrdenCantidadDeber'];
+
+            $invoice_no = $row_orders['FacturaNumero'];
+
+            $qty = $row_orders['ClienteOrdenCantidad'];
+
+            $order_date = substr($row_orders['ClienteOrdenFecha'],0,11);
+
+            $order_status = $row_orders['ClienteOrdenEstado'];
+
             $i++;
-            if($estado_del_pedido=='pending'){
-                $estado_del_pedido='No pagado';
 
+            if($order_status=='pending'){
 
-            }else {
-                $estado_del_pedido='Pagado';
+                $order_status = 'Unpaid';
+
+            }else{
+
+                $order_status = 'Paid';
 
             }
 
-            ?-->
+            ?>
 
+            <tr><!--  tr Begin  -->
 
-        <!--
-            <tr>
-
-                <th> <-?php echo $i;?></th>
-
-                <td> <-?php echo $cantidad_a_deber;?> </td>
-                <td> <-?php echo $factura_no;?></td>
-                <td> <-?php echo $qty;?></td>
-                <td> <-?php echo $estado;?> </td>
-                <td> <-?php echo $fecha_orden;?></td>
-                <td> <-?php echo $estado_del_pedido;?></td>
+                <th> <?php echo $i; ?> </th>
+                <td> <?php echo $due_amount; ?> </td>
+                <td> <?php echo $invoice_no; ?> </td>
+                <td> <?php echo $qty; ?> </td>
+                <td> <?php echo $order_date; ?> </td>
+                <td> <?php echo $order_status; ?> </td>
 
                 <td>
 
-                    <a href="Confirmar.php" target="_blank" class="btn btn-primary btn-sm"> Confirmar pago</a>
+                    <a href="Confirmar.php?order_id='<?php echo $order_id; ?>'" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
 
-                </td>
+                </td> <td> <?php echo $order_status; ?> </td>
 
-            </tr>
--->
-        <!--?php}
-        ?-->
+            </tr><!--  tr Finish  -->
 
+        <?php } ?>
 
+        </tbody><!--  tbody Finish  -->
 
-        </tbody>
+    </table><!--  table table-bordered table-hover Finish  -->
 
-    </table><!--Final table table-bordered table-hover-->
-
-</div><!--Final table-responsive-->
+</div><!--  table-responsive Finish  -->

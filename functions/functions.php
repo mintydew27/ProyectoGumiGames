@@ -28,7 +28,7 @@ function add_cart(){
 
         $product_qty = $_POST['product_qty'];
 
-        $check_product = "select * from Carrito where AddIp='$ip_add' AND CarritoId='$p_id' ";
+        $check_product = "select * from Carrito where AddIp='$ip_add' AND CarritoId='$p_id'";
 
         $run_check = mysqli_query($db,$check_product);
 
@@ -39,13 +39,11 @@ function add_cart(){
             echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
 
 
-        }else{
+        }else {
 
 
             $query = "insert into Carrito (CarritoId,AddIp,CarritoCantidad)values('$p_id','$ip_add','$product_qty')";
-            $run_query = mysqli_query($db,$query);
-
-
+            $run_query= mysqli_query($db,$query);
             echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
 
         }

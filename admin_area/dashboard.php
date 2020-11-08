@@ -143,16 +143,14 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         <i class="fa fa-shopping-cart fa-5x"></i>
                     </div>
                     <div class="col-xs-9 text-right">
-                        <div class="huge">
-
+                        <div class="huge"> $ <?php echo  $TotalPago; ?>
                         </div>
-
-                        <div>Detalle de compras</div>
+                        <div>Detalle de Ventas</div>
 
                     </div>
                 </div>
             </div>
-            <a href="Index.php?view_orders">
+            <a href="Index.php?view_estadistics">
                 <div class="panel-footer">
                     <span class="pull-left">
                         Ver Detalles

@@ -34,6 +34,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
     $get_category = "select * from Categoria";
     $run_category= mysqli_query($con,$get_category);
     $count_category= mysqli_num_rows($run_category);
+    $get_pay = "select SUM(PagoCantidad) FROM Pago;";
+    $consulta="SELECT SUM(PagoCantidad) as TotalPago FROM Pago";
+    $resultado=$con -> query($consulta);
+    $fila=$resultado->fetch_assoc(); //que te devuelve un array asociativo con el nombre del campo
+    $TotalPago=$fila['TotalPago'];
+    $get_pago = "select * from Pago";
+    $run_pago= mysqli_query($con,$get_pago);
+    $count_pago= mysqli_num_rows($run_pago);
+
 
 
 ?>
@@ -52,6 +61,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
         <link rel="stylesheet" href="css/bootstrap-337.min.css">
         <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
+
 
 
 
@@ -173,6 +183,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("Borrar_Orden.php");
 
+            }if(isset($_GET['view_estadistics'])){
+
+                include("Estadisticas.php");
+
             }
 
 
@@ -185,6 +199,8 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 </div><!--Wrapper finish -->
 <script src="js/jquery-331.min.js"></script>
 <script src="js/boostrap-337.min.js"></script>
+<script src="Highcharts-4.1.5/js/highcharts.js"></script>
+<script src="Highcharts-4.1.5/js/modules/exporting.js"></script>
 
 </body>
 </html>

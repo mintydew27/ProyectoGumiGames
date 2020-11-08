@@ -100,6 +100,7 @@ function getPro(){
                                     <i class='fa fa-shopping-cart'></i> Agregar al carrito
                                                                         
                                  </a>
+                                 </a>
                                  
                             </p>
                             

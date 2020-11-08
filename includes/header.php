@@ -49,7 +49,22 @@ if(isset($_GET['pro_id'])){
 
 }
 
+if(!isset($_COOKIE["Visitado"])){
+    $date = date('d/M/Y', time());
+    $select = "Select * from Visita Where VisitaFecha = '$date'";
+    $result = mysqli_query($con,$select);
+    echo mysqli_num_rows($result);
+    if(mysqli_num_rows($result)>0){
+        $update = "Update Visita set VisitaCantidad=VisitaCantidad+1 where VisitaFecha = '$date' ";
+        $updateresult = mysqli_query($con,$update);
+    }
+    else{
+        $insertdate = "INSERT INTO Visita (VisitaFecha,VisitaCantidad) VALUES('$date',1)";
+        $insertresult = mysqli_query($con,$insertdate);
+    }
+    setcookie("Visitado",true,mktime().time()+60*60*24);
 
+}
 ?>
 
 

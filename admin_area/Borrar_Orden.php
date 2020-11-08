@@ -14,7 +14,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
         $delete_id = $_GET['delete_order'];
 
-        $delete_order = "delete from OrdenPendiente where OrdenPendienteId='$delete_id'";
+        $delete_order = "delete from Orden where OrdenId='$delete_id'";
 
         $run_delete = mysqli_query($con,$delete_order);
 

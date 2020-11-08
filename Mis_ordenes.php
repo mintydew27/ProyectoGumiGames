@@ -51,7 +51,7 @@
 
         $customer_id = $row_customer['ClienteId'];
 
-        $get_orders = "select * from OrdenPendiente where ClienteId='$customer_id'";
+        $get_orders = "select * from Orden where ClienteId='$customer_id'";
 
         $run_orders = mysqli_query($con,$get_orders);
 
@@ -63,13 +63,13 @@
 
         while($row_orders = mysqli_fetch_array($run_orders)){
 
-            $order_id = $row_orders['OrdenPendienteId'];
+            $order_id = $row_orders['OrdenId'];
 
             $invoice_no = $row_orders['FacturaNumero'];
             $pro_id = $row_orders['ProductoId'];
-            $qty= $row_orders['OrdenPendienteCantidad'];
-            $due_amount = $row_orders['OrdenPendienteCantidadDeber'];
-            $order_date = substr($row_orders['OrdenPendienteFecha'],0,11);
+            $qty= $row_orders['OrdenCantidad'];
+            $due_amount = $row_orders['OrdenCantidadDeber'];
+            $order_date = substr($row_orders['OrdenFecha'],0,11);
 
 
             $i++;

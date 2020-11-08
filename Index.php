@@ -1,13 +1,18 @@
 
 <?php
 
-include("functions/functions.php");
 
+
+include("functions/functions.php");
 
 ?>
 <?php
 $active='Index.php';
-include("includes/header.php")?>
+
+include("includes/header.php");
+
+
+?>
 
 
 <!--Creacion del carril de imagenes-->

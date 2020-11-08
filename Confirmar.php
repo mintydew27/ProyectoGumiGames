@@ -11,9 +11,9 @@ if(!isset($_SESSION['ClienteCorreo'])){
     include("includes/BD.php");
     include("functions/functions.php");
 
-    if(isset($_GET['ClienteOrdenId'])){
+    if(isset($_GET['OrdenId'])){
 
-        $order_id= $_GET['ClienteOrdenId'];
+        $order_id= $_GET['OrdenId'];
     }
     ?>
     <!DOCTYPE html>
@@ -288,7 +288,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                             <label> Payment Date: </label>
 
-                            <input type="text" class="form-control" name="date" required>
+                            <input placeholder="dd/mm/yyyy" class="form-control" name="date" required>
 
                         </div><!-- form-group Finish -->
 

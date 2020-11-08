@@ -26,7 +26,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
     <ul class="nav navbar-right top-nav">
         <li >
                 <li>
-                    <a href="Index.php?user_profile=<?php echo $admin_id; ?>">
+                    <a href="Index.php?view_profile=<?php echo $admin_id; ?>">
                         <i class="fa fa-fw fa-user"></i> <?php echo $admin_name; ?>
                     </a>
                 </li>
@@ -135,7 +135,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="Index.php?view_payments">
-                    <i class="fa fa-fw fa-money"></i> View Payments
+                    <i class="fa fa-fw fa-money"></i> View Payments <span class="badge"><?php echo $count_pago; ?></span>
                 </a>
             </li>
             ///////////////////////////////////////////////////////////////////

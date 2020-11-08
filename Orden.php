@@ -34,7 +34,7 @@ while($row_cart = mysqli_fetch_array($run_cart)){
     while($row_products = mysqli_fetch_array($run_products)){
 
         $sub_total = $row_products['ProductoPrecio'];
-        $insert_pending_order = "insert into OrdenPendiente (ClienteId,FacturaNumero,ProductoId,OrdenPendienteCantidad,OrdenPendienteCantidadDeber,OrdenPendienteFecha) values ('$customer_id','$invoice_no','$pro_id','$pro_qty','$sub_total',NOW())";
+        $insert_pending_order = "insert into Orden (ClienteId,FacturaNumero,ProductoId,OrdenCantidad,OrdenCantidadDeber,OrdenFecha) values ('$customer_id','$invoice_no','$pro_id','$pro_qty','$sub_total',NOW())";
         $run_pending_order = mysqli_query($con,$insert_pending_order);
 
         $delete_cart = "delete from Carrito where AddIp='$ip_add'";

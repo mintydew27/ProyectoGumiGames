@@ -13,7 +13,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
             <ol class="breadcrumb"><!-- breadcrumb begin -->
                 <li class="active"><!-- active begin -->
 
-                    <i class="fa fa-dashboard"></i> Dashboard / View Orders
+                    <i class="fa fa-dashboard"></i> Dashboard / View Payments
 
                 </li><!-- active finish -->
             </ol><!-- breadcrumb finish -->
@@ -26,7 +26,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                 <div class="panel-heading"><!-- panel-heading begin -->
                     <h3 class="panel-title"><!-- panel-title begin -->
 
-                        <i class="fa fa-tags"></i>  View Orders
+                        <i class="fa fa-tags"></i>  View Payments
 
                     </h3><!-- panel-title finish -->
                 </div><!-- panel-heading finish -->
@@ -38,13 +38,13 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                             <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
                                 <th> No: </th>
-                                <th> Customer Email: </th>
                                 <th> Invoice No: </th>
-                                <th> Product Name: </th>
-                                <th> Product Qty: </th>
-                                <th> Order Date: </th>
-                                <th> Total Amount: </th>
-                                <th> Delete: </th>
+                                <th> Amount Paid: </th>
+                                <th> Method: </th>
+                                <th> Reference No: </th>
+                                <th> Payment Code: </th>
+                                <th> Payment Date: </th>
+                                <th> Delete Payment: </th>
                             </tr><!-- tr finish -->
                             </thead><!-- thead finish -->
 
@@ -54,42 +54,25 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             $i=0;
 
-                            $get_orders = "select * from Orden";
+                            $get_payments = "select * from Pago";
 
-                            $run_orders = mysqli_query($con,$get_orders);
+                            $run_payments = mysqli_query($con,$get_payments);
 
-                            while($row_order=mysqli_fetch_array($run_orders)){
+                            while($row_payments=mysqli_fetch_array($run_payments)){
 
-                                $order_id = $row_order['OrdenId'];
+                                $payment_id = $row_payments['PagoId'];
 
-                                $c_id = $row_order['ClienteId'];
+                                $invoice_no = $row_payments['FacturaNumero'];
 
-                                $invoice_no = $row_order['FacturaNumero'];
+                                $amount = $row_payments['PagoCantidad'];
 
-                                $product_id = $row_order['ProductoId'];
+                                $payment_mode = $row_payments['PagoModo'];
 
-                                $qty = $row_order['OrdenCantidad'];
+                                $ref_no = $row_payments['PagoNumeroReferencia'];
 
-                                $order_amount = $row_order['OrdenCantidadDeber'];
+                                $code = $row_payments['PagoCodigo'];
 
-                                $order_date = $row_order['OrdenFecha'];
-
-                                $get_products = "select * from Producto where ProductoId='$product_id'";
-
-                                $run_products = mysqli_query($con,$get_products);
-
-                                $row_products = mysqli_fetch_array($run_products);
-
-                                $product_title = $row_products['ProductoTitulo'];
-
-                                $get_customer = "select * from Cliente where ClienteId='$c_id'";
-
-                                $run_customer = mysqli_query($con,$get_customer);
-
-                                $row_customer = mysqli_fetch_array($run_customer);
-
-                                $customer_email = $row_customer['ClienteCorreo'];
-
+                                $payment_date = $row_payments['PagoFecha'];
 
                                 $i++;
 
@@ -97,15 +80,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                                 <tr><!-- tr begin -->
                                     <td> <?php echo $i; ?> </td>
-                                    <td> <?php echo $customer_email; ?> </td>
-                                    <td> <?php echo $invoice_no; ?></td>
-                                    <td> <?php echo $product_title; ?> </td>
-                                    <td> <?php echo $qty; ?></td>
-                                    <td> <?php echo $order_date; ?> </td>
-                                    <td> <?php echo $order_amount; ?> </td>
+                                    <td> <?php echo $invoice_no; ?> </td>
+                                    <td> <?php echo $amount; ?></td>
+                                    <td> <?php echo $payment_mode; ?> </td>
+                                    <td> <?php echo $ref_no; ?></td>
+                                    <td> <?php echo $code; ?> </td>
+                                    <td> <?php echo $payment_date; ?> </td>
                                     <td>
 
-                                        <a href="Index.php?delete_order=<?php echo $order_id; ?>">
+                                        <a href="Index.php?delete_payment=<?php echo $payment_id; ?>">
 
                                             <i class="fa fa-trash-o"></i> Delete
 

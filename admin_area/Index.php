@@ -188,6 +188,19 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                 include("Estadisticas.php");
 
             }
+            if(isset($_GET['view_payments'])){
+
+                include("Ver_Pagos.php");
+
+            } if(isset($_GET['delete_payment'])){
+
+                include("Borrar_Pagos.php");
+
+            } if(isset($_GET['view_profile'])){
+
+                include("Perfil_Usuario.php");
+
+            }
 
 
 

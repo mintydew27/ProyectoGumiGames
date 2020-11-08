@@ -173,7 +173,99 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
 
 </div>
-<div class="row"><!--Inicio row -->
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Highcharts Example</title>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <style type="text/css">
+            #container {
+                height: 400px;
+                min-width: 310px;
+                max-width: 800px;
+                margin: 0 auto;
+            }
+        </style>
+        <script type="text/javascript">
+            $(function () {
+                $('#container').highcharts({
+                    chart: {
+                        type: 'column',
+                        margin: 75,
+                        options3d: {
+                            enabled: true,
+                            alpha: 10,
+                            beta: 25,
+                            depth: 70
+                        }
+                    },
+                    title: {
+                        text: '3D chart with null values'
+                    },
+                    subtitle: {
+                        text: 'Notice the difference between a 0 value and a null point'
+                    },
+                    plotOptions: {
+                        column: {
+                            depth: 25
+                        }
+                    },
+                    xAxis: {
+                        categories: Highcharts.getOptions().lang.shortMonths
+                    },
+                    yAxis: {
+                        title: {
+                            text: null
+                        }
+                    },
+                    series: [{
+                        name: 'Sales',
+                        data:[
+                            <?php
+                            $sql=mysqli_query("Select * from Pago Order by PagoCantidad desc");
+                            while($res=mysqli_fetch_array($sql)){
+                            ?>
+                            [<?php echo $res['PagoCantidad']?>],
+                            <?php
+                        }
+                        ?>
+                        ]
+
+
+
+                    }]
+                });
+            });
+        </script>
+    </head>
+    <body>
+
+    <script src="admin_area/Highcharts-4.1.5/js/highcharts.js"></script>
+    <script src="admin_area/Highcharts-4.1.5/js/highcharts-3d.js"></script>
+    <script src="admin_area/Highcharts-4.1.5/js/modules/exporting.js"></script>
+
+    <div id="container" style="height: 400px"></div>
+    </body>
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="row"><!--Inicio row -->
          <div class="col-lg-8">
            <div class="panel panel-primary">
                <div class="panel-heading">
@@ -209,13 +301,13 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                            $i=0;
 
-                           $get_order = "select * from OrdenPendiente order by 1 DESC LIMIT 0,5";
+                           $get_order = "select * from Orden order by 1 DESC LIMIT 0,5";
 
                            $run_order = mysqli_query($con,$get_order);
 
                            while($row_order=mysqli_fetch_array($run_order)){
 
-                               $order_id = $row_order['OrdenPendienteId'];
+                               $order_id = $row_order['OrdenId'];
 
                                $c_id = $row_order['ClienteId'];
 
@@ -223,11 +315,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                                $product_id = $row_order['ProductoId'];
 
-                               $qty = $row_order['OrdenPendienteCantidad'];
+                               $qty = $row_order['OrdenCantidad'];
 
-                               $amount = $row_order['OrdenPendienteCantidadDeber'];
+                               $amount = $row_order['OrdenCantidadDeber'];
 
-                               $date = $row_order['OrdenPendienteFecha'];
+                               $date = $row_order['OrdenFecha'];
 
                                $i++;
 
@@ -287,38 +379,6 @@ if(!isset($_SESSION['AdministradorCorreo'])){
            </div>
        </div>
 
-    <div class="col-md-4">
-    <div class="panel"><!--Inicio panel -->
-        <div class="panel-body"><!--Inicio panel-body-->
-            <div class="mb-md thumb-info"><!--Inicio mb-md thumb-info-->
-                <img src="admin_images/<?php echo $admin_image; ?>" alt="admin-thumb-info" class="img-rounded img-responsive">
-                <div class="thumb-info-title"><!--Inicio thumb-info-title-->
-                    <i class="fa fa-user"></i><span > Nombre: </span> <?php echo $admin_name; ?></br>
-                    <i class="fa fa-paw"></i><span > Rol: </span><?php echo $admin_rol; ?></br>
-
-                </div><!--Final thumb-info-title-->
-
-            </div><!--Final mb-md thumb-info-->
-
-            <div class="mb-md"><!--Inicio mb-md-->
-                <div class="widget-content-expanded"><!--Inicio widget-content-expanded-->
-                    <i class="fa fa-user"></i> <span> Email: </span> <?php echo $admin_email; ?></br>
-                    <i class="fa fa-flag"></i> <span> Pais: </span> <?php echo $admin_country; ?></br>
-                    <i class="fa fa-envelope"></i> <span> Telefono:</span><?php echo $admin_contact; ?></br>
-                </div><!--Final widget-content-expanded-->
-                <hr class="dotted short">
-
-                <h5 class="text-muted"> Acerca de mi </h5>
-
-                <p>
-                    <?php echo $admin_desc; ?>
-                </p>
-
-            </div><!--Final mb-md-->
-
-        </div><!--Final panel-body-->
-    </div><!--Final panel -->
-    </div>
 </div><!--Final row -->
 <?php
 }

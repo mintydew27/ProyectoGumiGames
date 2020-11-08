@@ -164,6 +164,16 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                 include("user_profile.php");
 
             }
+            if(isset($_GET['view_orders'])){
+
+                include("Ver_Ordenes.php");
+
+
+            }  if(isset($_GET['delete_order'])){
+
+                include("Borrar_Orden.php");
+
+            }
 
 
 

@@ -87,7 +87,6 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                                     <td> <?php echo $c_ape; ?> </td>
                                     <td> <?php echo $c_apeseg; ?> </td>
                                     <td> <?php echo $c_email; ?> </td>
-
                                     <td> <?php echo $c_country; ?></td>
                                     <td> <?php echo $c_city; ?> </td>
                                     <td> <?php echo $c_contact ?> </td>

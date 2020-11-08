@@ -176,7 +176,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
 </div>
 <div class="row"><!--Inicio row -->
-    <!--      <div class="col-lg-8">
+         <div class="col-lg-8">
            <div class="panel panel-primary">
                <div class="panel-heading">
                    <h3 class="panel-title">
@@ -207,48 +207,74 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
 
                            <tbody>
-                           <tr>
-                               <td> 1</td>
-                               <td> prueba1@gmail.com</td>
-                               <td> 24/10/2020</td>
-                               <td> 1</td>
-                               <td> 1</td>
-                               <td> Pendiente</td>
+                           <?php
 
-                           </tr>
-                           <tr>
-                               <td> 1</td>
-                               <td> prueba1@gmail.com</td>
-                               <td> 24/10/2020</td>
-                               <td> 1</td>
-                               <td> 1</td>
-                               <td> Pendiente</td>
+                           $i=0;
 
-                           </tr>
-                           <tr>
-                               <td> 1</td>
-                               <td> prueba1@gmail.com</td>
-                               <td> 24/10/2020</td>
-                               <td> 1</td>
-                               <td> 1</td>
-                               <td> Pendiente</td>
+                           $get_order = "select * from OrdenPendiente order by 1 DESC LIMIT 0,5";
 
-                           </tr>
-                           <tr>
-                               <td> 1</td>
-                               <td> prueba1@gmail.com</td>
-                               <td> 24/10/2020</td>
-                               <td> 1</td>
-                               <td> 1</td>
-                               <td> Pendiente</td>
+                           $run_order = mysqli_query($con,$get_order);
 
-                           </tr>
+                           while($row_order=mysqli_fetch_array($run_order)){
+
+                               $order_id = $row_order['OrdenPendienteId'];
+
+                               $c_id = $row_order['ClienteId'];
+
+                               $invoice_no = $row_order['FacturaNumero'];
+
+                               $product_id = $row_order['ProductoId'];
+
+                               $qty = $row_order['OrdenPendienteCantidad'];
+
+                               $amount = $row_order['OrdenPendienteCantidadDeber'];
+
+                               $date = $row_order['OrdenPendienteFecha'];
+
+                               $i++;
+
+                               ?>
+
+                               <tr><!-- tr begin -->
+
+                                   <td> <?php echo $order_id; ?> </td>
+                                   <td>
+
+                                       <?php
+
+                                       $get_customer = "select * from Cliente where ClienteId='$c_id'";
+
+                                       $run_customer = mysqli_query($con,$get_customer);
+
+                                       $row_customer = mysqli_fetch_array($run_customer);
+
+                                       $customer_email = $row_customer['ClienteCorreo'];
+
+                                       echo $customer_email;
+
+                                       ?>
+
+                                   </td>
+                                   <td> <?php echo $invoice_no; ?> </td>
+                                   <td> <?php echo $product_id; ?> </td>
+                                   <td> <?php echo $qty; ?> </td>
+                                   <td> <?php echo $amount; ?> </td>
+                                   <td> <?php echo $date; ?> </td>
+                                   <td>
+
+
+
+                                   </td>
+
+                               </tr><!-- tr finish -->
+
+                           <?php } ?>
                            </tbody>
 
                        </table>
                    </div>
                    <div class="text-right">
-                       <a href="Index.php?view_ordenes">
+                       <a href="Index.php?view_orders">
 
                            View All Orders <i class="fa fa-arrow-circle-right"></i>
 
@@ -262,7 +288,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
            </div>
        </div>
-       -->
+
     <div class="col-md-4">
     <div class="panel"><!--Inicio panel -->
         <div class="panel-body"><!--Inicio panel-body-->

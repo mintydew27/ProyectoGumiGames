@@ -29,8 +29,9 @@
             <th> Invoice No: </th>
             <th> Qty: </th>
             <th> Order Date:</th>
-            <th> Paid / Unpaid: </th>
-            <th> Status: </th>
+            <th>  </th>
+
+
 
         </tr><!--  tr Finish  -->
 
@@ -50,37 +51,29 @@
 
         $customer_id = $row_customer['ClienteId'];
 
-        $get_orders = "select * from ClienteOrden where ClienteId='$customer_id'";
+        $get_orders = "select * from OrdenPendiente where ClienteId='$customer_id'";
 
         $run_orders = mysqli_query($con,$get_orders);
+
+
+
+
 
         $i = 0;
 
         while($row_orders = mysqli_fetch_array($run_orders)){
 
-            $order_id = $row_orders['ClienteOrdenId'];
-
-            $due_amount = $row_orders['ClienteOrdenCantidadDeber'];
+            $order_id = $row_orders['OrdenPendienteId'];
 
             $invoice_no = $row_orders['FacturaNumero'];
+            $pro_id = $row_orders['ProductoId'];
+            $qty= $row_orders['OrdenPendienteCantidad'];
+            $due_amount = $row_orders['OrdenPendienteCantidadDeber'];
+            $order_date = substr($row_orders['OrdenPendienteFecha'],0,11);
 
-            $qty = $row_orders['ClienteOrdenCantidad'];
-
-            $order_date = substr($row_orders['ClienteOrdenFecha'],0,11);
-
-            $order_status = $row_orders['ClienteOrdenEstado'];
 
             $i++;
 
-            if($order_status=='pending'){
-
-                $order_status = 'Unpaid';
-
-            }else{
-
-                $order_status = 'Paid';
-
-            }
 
             ?>
 
@@ -91,13 +84,14 @@
                 <td> <?php echo $invoice_no; ?> </td>
                 <td> <?php echo $qty; ?> </td>
                 <td> <?php echo $order_date; ?> </td>
-                <td> <?php echo $order_status; ?> </td>
+
+
 
                 <td>
 
                     <a href="Confirmar.php?order_id='<?php echo $order_id; ?>'" target="_blank" class="btn btn-primary btn-sm"> Confirm Paid </a>
 
-                </td> <td> <?php echo $order_status; ?> </td>
+                </td>
 
             </tr><!--  tr Finish  -->
 

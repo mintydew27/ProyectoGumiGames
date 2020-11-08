@@ -11,12 +11,10 @@ if(!isset($_SESSION['ClienteCorreo'])){
     include("includes/BD.php");
     include("functions/functions.php");
 
-    if(isset($_GET['order_id'])){
+    if(isset($_GET['ClienteOrdenId'])){
 
-        $order_id = $_GET['order_id'];
-
+        $order_id= $_GET['ClienteOrdenId'];
     }
-
     ?>
     <!DOCTYPE html>
     <html lang="en">
@@ -236,7 +234,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                     <h1 align="center"> Please confirm your payment</h1>
 
-                    <form action="Confirmar.php?update_id=<?php echo $order_id;  ?>" method="post" enctype="multipart/form-data"><!-- form Begin -->
+                    <form action="Confirmar.php?update_id=<?php echo $order_id;?>" method="post" enctype="multipart/form-data"><!-- form Begin -->
 
                         <div class="form-group"><!-- form-group Begin -->
 
@@ -324,27 +322,22 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                         $payment_date = $_POST['date'];
 
-                        $complete = 'Complete';
+                        $complete ="Complete";
 
                         $insert_payment = "insert into Pago (FacturaNumero,PagoCantidad,PagoModo,PagoNumeroReferencia,PagoCodigo,PagoFecha) values ('$invoice_no','$amount','$payment_mode','$ref_no','$code','$payment_date')";
 
                         $run_payment = mysqli_query($con,$insert_payment);
 
-                        $update_customer_order = "update ClienteOrden set ClienteOrdenEstado='$complete' where ClienteOrdenId='$update_id'";
-
-                        $run_customer_order = mysqli_query($con,$update_customer_order);
-
-                        $update_pending_order = "update OrdenPendiente set OrdenPendienteEstado='$complete' where OrdenPendienteId='$update_id'";
-
-                        $run_pending_order = mysqli_query($con,$update_pending_order);
-
-                        if($run_pending_order){
+                        if($run_payment){
 
                             echo "<script>alert('Thank You for purchasing, your orders will be completed within 24 hours work')</script>";
 
                             echo "<script>window.open('Mi_cuenta.php?mis_ordenes','_self')</script>";
 
-                        }
+                        }else
+                            echo "<script>alert('kk ck de vk')</script>";
+
+                        echo "<script>window.open('Mi_cuenta.php?mis_ordenes','_self')</script>";
 
                     }
 

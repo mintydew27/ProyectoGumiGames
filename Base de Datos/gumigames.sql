@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-11-2020 a las 05:03:14
+-- Tiempo de generación: 09-11-2020 a las 05:35:55
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -87,7 +87,7 @@ INSERT INTO `carrusel` (`CarruselId`, `CarruselNombre`, `CarruselImagen`) VALUES
 
 CREATE TABLE `categoria` (
   `CategoriaId` int(11) NOT NULL,
-  `CategoriaTitulo` text NOT NULL,
+  `CategoriaTitulo` varchar(50) NOT NULL,
   `CategoriaDescripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -104,8 +104,8 @@ CREATE TABLE `cliente` (
   `ClienteSegundoApellido` varchar(50) NOT NULL,
   `ClienteCorreo` varchar(50) NOT NULL,
   `ClienteContraseña` varchar(20) NOT NULL,
-  `ClientePais` text NOT NULL,
-  `ClienteCiudad` text NOT NULL,
+  `ClientePais` varchar(50) NOT NULL,
+  `ClienteCiudad` varchar(50) NOT NULL,
   `ClienteContraseñaEncriptada` varchar(100) NOT NULL,
   `ClienteTelefono` int(10) NOT NULL,
   `ClienteIp` varchar(100) NOT NULL
@@ -133,7 +133,7 @@ CREATE TABLE `comentario` (
 
 CREATE TABLE `genero` (
   `GeneroId` int(11) NOT NULL,
-  `GeneroTitulo` text NOT NULL,
+  `GeneroTitulo` varchar(50) NOT NULL,
   `GeneroDescripcion` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -198,11 +198,11 @@ CREATE TABLE `pago` (
 
 CREATE TABLE `producto` (
   `ProductoId` int(10) NOT NULL,
-  `ProductoTitulo` text NOT NULL,
+  `ProductoTitulo` varchar(50) NOT NULL,
   `ProductoImagenUno` text NOT NULL,
   `ProductoImagenDos` text NOT NULL,
   `ProductoImagenTres` text NOT NULL,
-  `ProductoPalabraClave` text NOT NULL,
+  `ProductoPalabraClave` varchar(50) NOT NULL,
   `Date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `ProductoDescripcion` text NOT NULL,
   `GeneroId` int(11) NOT NULL,

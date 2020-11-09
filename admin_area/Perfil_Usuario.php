@@ -17,7 +17,7 @@
             <div class="panel-heading"><!-- panel-heading begin -->
                 <h3 class="panel-title"><!-- panel-title begin -->
 
-                    <i class="fa fa-tags"></i>  View Orders
+                    <i class="fa fa-tags"></i>  View Profile
 
                 </h3><!-- panel-title finish -->
             </div><!-- panel-heading finish -->

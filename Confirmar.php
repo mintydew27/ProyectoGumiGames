@@ -284,13 +284,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                         </div><!-- form-group Finish -->
 
-                        <div class="form-group"><!-- form-group Begin -->
 
-                            <label> Payment Date: </label>
-
-                            <input placeholder="dd/mm/yyyy" class="form-control" name="date" required>
-
-                        </div><!-- form-group Finish -->
 
                         <div class="text-center"><!-- text-center Begin -->
 
@@ -320,11 +314,11 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                         $code = $_POST['code'];
 
-                        $payment_date = $_POST['date'];
+
 
                         $complete ="Complete";
 
-                        $insert_payment = "insert into Pago (FacturaNumero,PagoCantidad,PagoModo,PagoNumeroReferencia,PagoCodigo,PagoFecha) values ('$invoice_no','$amount','$payment_mode','$ref_no','$code','$payment_date')";
+                        $insert_payment = "insert into Pago (FacturaNumero,PagoCantidad,PagoModo,PagoNumeroReferencia,PagoCodigo,PagoFecha) values ('$invoice_no','$amount','$payment_mode','$ref_no','$code',NOW())";
 
                         $run_payment = mysqli_query($con,$insert_payment);
 

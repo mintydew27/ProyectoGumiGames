@@ -145,22 +145,19 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     <div class="col-xs-9 text-right">
                         <div class="huge"> $ <?php echo  $TotalPago; ?>
                         </div>
-                        <div>Detalle de Ventas</div>
+                        <div> Ventas</div>
 
                     </div>
                 </div>
             </div>
-            <a href="Index.php?view_estadistics">
+            <a>
                 <div class="panel-footer">
-                    <span class="pull-left">
-                        Ver Detalles
+                    <span class="pull-center">
+                        Total de Ventas
 
                     </span>
 
-                    <span class="pull-right">
-                    <i class="fa fa-arrow-circle-right"></i>
 
-                    </span>
                     <div class="clearfix"></div>
 
                 </div>
@@ -203,10 +200,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     title: {
-                        text: '3D chart with null values'
+                        text: 'Ventas del Dia'
                     },
                     subtitle: {
-                        text: 'Notice the difference between a 0 value and a null point'
+                        text: 'Total de Ventas del Dia'
                     },
                     plotOptions: {
                         column: {
@@ -214,7 +211,18 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     xAxis: {
-                        categories: Highcharts.getOptions().lang.shortMonths
+                        categories: [
+                            <?php
+                            $sql="SELECT PagoFecha FROM Pago Where PagoFecha= DATE(NOW()) ";
+                            $run_cat = mysqli_query($con,$sql);
+                            while($res=mysqli_fetch_array($run_cat)){
+                            ?>
+                            ['<?php echo $res['PagoFecha'];?>'],
+
+                            <?php
+                            }
+                            ?>
+                        ]
                     },
                     yAxis: {
                         title: {
@@ -222,25 +230,42 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     series: [{
-                        name: 'Sales',
+                        name: 'Ventas del Dia',
                         data:[
                             <?php
-                            $sql=mysqli_query("Select * from Pago Order by PagoCantidad desc");
-                            while($res=mysqli_fetch_array($sql)){
+                            $sql="SELECT  SUM(PagoCantidad) as totalventas FROM Pago  ";
+                            $run_cat = mysqli_query($con,$sql);
+                            while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            [<?php echo $res['PagoCantidad']?>],
+                            [<?php echo $res['totalventas']?>],
+
                             <?php
                         }
                         ?>
                         ]
 
 
-
                     }]
+
+
+
+
+
                 });
+
+
+
             });
         </script>
+
+
+
+
+
+
     </head>
+
+
     <body>
 
     <script src="admin_area/Highcharts-4.1.5/js/highcharts.js"></script>
@@ -250,18 +275,6 @@ if(!isset($_SESSION['AdministradorCorreo'])){
     <div id="container" style="height: 400px"></div>
     </body>
     </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -359,6 +372,14 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                                </tr><!-- tr finish -->
 
                            <?php } ?>
+
+
+
+
+
+
+
+
                            </tbody>
 
                        </table>

@@ -60,7 +60,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <td> <img src="product_images/<?php echo $pro_img1; ?>" width="60" height="60"></td>
                                 <td><?php echo $pro_precio; ?></td>
                                 <td><?php
-                                        $get_sold = "select * from OrdenPendiente where ProductoId='$pro_id'";
+                                        $get_sold = "select * from Orden where ProductoId='$pro_id'";
                                         $run_sold = mysqli_query($con,$get_sold);
                                         $count = mysqli_num_rows($run_sold);
                                         echo $count;
@@ -80,6 +80,8 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 </td>
                             </tr>
                             <?php } ?>
+
+
                         </tbody>
 
                     </table>

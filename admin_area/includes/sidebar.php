@@ -116,17 +116,24 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
             ///////////////////////////////////////////////////////////////////
             <li>
-                <a href="Index.php?view_estadistics" data-toggle="collapse" data-target="#slides">
+                <a data-toggle="collapse" data-target="#slides">
                     <i class="fa fa-fw fa-gear"></i> Estadisticas
                 </a>
 
+
+            <li>
+                <a href="Index.php?view_estadistics1">Compras de los clientes</a>
+            </li>
+            <li>
+                <a href="Index.php?view_estadistics2"> Ventas</a>
+            </li>
+
+            <li>
+                <a href="Index.php?view_estadistics3">Visitas</a>
+            </li>
+
             </li>
             ///////////////////////////////////////////////////////////////////
-
-
-
-
-
             <li>
                 <a href="Index.php?view_orders">
                     <i class="fa fa-fw fa-book"></i> View Orders
@@ -140,7 +147,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
-                <a href="#" data-toggle="collapse" data-target="#users">
+                <a href="Index.php?view_users" data-toggle="collapse" data-target="#users">
                     <i class="fa fa-fw fa-users"></i> Users
                     <i class="fa fa-fw fa-caret-down"></i>
                 </a>

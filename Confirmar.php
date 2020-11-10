@@ -21,7 +21,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>M-Dev Store</title>
+        <title>GumiGames</title>
         <link rel="stylesheet" href="styles/bootstrap-337.min.css">
         <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
         <link rel="stylesheet" href="styles/style.css">
@@ -271,8 +271,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
                         <div class="form-group"><!-- form-group Begin -->
 
                             <label> Transaction / Reference ID: </label>
-
-                            <input type="text" class="form-control" name="ref_no" required>
+                            <input type="text"  maxlength="4" class="form-control" name="ref_no" required>
 
                         </div><!-- form-group Finish -->
 
@@ -280,7 +279,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                             <label> Paypall / Payoneer / Western Union Code: </label>
 
-                            <input type="text" class="form-control" name="code" required>
+                            <input type="text" class="form-control" maxlength="16" name="code" required>
 
                         </div><!-- form-group Finish -->
 

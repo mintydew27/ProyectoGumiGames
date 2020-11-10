@@ -108,18 +108,7 @@ include("includes/header.php")
                                 <img src="admin_area/product_images/<?php echo $pro_img3?>" alt="producto" class="img-responsive">
                             </a>
                         </div>
-
-
-
-
-
-
                 </div>
-
-
-
-
-
                 </div><!--Final col- sm- 6-->
 
                 </div><!--Final row-->

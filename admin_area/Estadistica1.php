@@ -53,7 +53,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     yAxis: {
                         min: 0,
                         title: {
-                            text: 'Population (millions)',
+                            text: 'Money(MXN)',
                             align: 'high'
                         },
                         labels: {
@@ -61,7 +61,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     tooltip: {
-                        valueSuffix: ' millions'
+                        valueSuffix: ' $'
                     },
                     plotOptions: {
                         bar: {
@@ -85,7 +85,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         enabled: false
                     },
                     series: [{
-                        name: 'Year 1800',
+                        name: 'Total',
                         data: [
                             <?php
                             $sql="SELECT Cliente.ClienteNombre, SUM(Orden.OrdenCantidadDeber) as totalcliente FROM Cliente JOIN Orden ON Cliente.ClienteId = Orden.ClienteId ";

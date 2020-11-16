@@ -240,7 +240,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                             <label> Invoice No: </label>
 
-                            <input type="text" class="form-control" name="invoice_no" required>
+                            <input type="number" class="form-control" name="invoice_no" required>
 
                         </div><!-- form-group Finish -->
 
@@ -248,7 +248,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                             <label> Amount Sent: </label>
 
-                            <input type="text" class="form-control" name="amount_sent" required>
+                            <input type="number" class="form-control" name="amount_sent" required>
 
                         </div><!-- form-group Finish -->
 
@@ -271,7 +271,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
                         <div class="form-group"><!-- form-group Begin -->
 
                             <label> Transaction / Reference ID: </label>
-                            <input type="text"  maxlength="4" class="form-control" name="ref_no" required>
+                            <input type="number" maxlength="4" class="form-control" name="ref_no" required>
 
                         </div><!-- form-group Finish -->
 
@@ -279,7 +279,7 @@ if(!isset($_SESSION['ClienteCorreo'])){
 
                             <label> Paypall / Payoneer / Western Union Code: </label>
 
-                            <input type="text" class="form-control" maxlength="16" name="code" required>
+                            <input  type = "number" class="form-control" maxlength="16" name="code" required>
 
                         </div><!-- form-group Finish -->
 

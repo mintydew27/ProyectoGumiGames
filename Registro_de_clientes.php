@@ -60,18 +60,18 @@ include("includes/header.php");
                         </div>
                     
                         <div class="form-group">
-                        <label> País</label>                    <input type="texto" class="form-control" name="ClientePais" required>
+                        <label> País</label>                    <input type="text" class="form-control" name="ClientePais" required>
                         </div>
                         
                         <div class="form-group">
-                        <label> Ciudad</label>                    <input type="texto" class="form-control" name="ClienteCiudad" required>
+                        <label> Ciudad</label>                    <input type="text" class="form-control" name="ClienteCiudad" required>
                         </div>
 
                         
                         
                         <div class="form-group">
                         <label> Teléfono</label>
-                            <input type="number" maxlength="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng class="form-control" name="ClienteTelefono" required> <i>(Máximo 10 dígitos)</i>
+                            <input type="number" maxlength="10" size="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng class="form-control" name="ClienteTelefono" required> <i>(Máximo 10 dígitos)</i>
 
                         </div>
 

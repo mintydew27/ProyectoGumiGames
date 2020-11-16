@@ -39,12 +39,25 @@ include("includes/header.php")?>
                         </div>
 
                         <div class="form-group">
-                        <label> Correo Electrónico</label>                    <input type="email" placeholder="usuario@correo.com" class="form-control" name="correo" required>
+                        <label> Correo Electrónico</label>                    <input type="Email" placeholder="usuario@correo.com" class="form-control" name="correo" required>
                         </div>
 
-                        <div class="form-group">
-                        <label> Asunto</label>                    <input type="text" class="form-control" name="asunto" required>
-                        </div>
+                        <div class="form-group"><!-- form-group Begin -->
+
+                            <label> Asunto: </label>
+
+                            <select name="Tipo_Asunto" class="form-control"><!-- form-control Begin -->
+
+
+                                <option> Duda </option>
+                                <option> Sugerencia </option>
+                                <option> Felicitación </option>
+                                <option> Queja </option>
+
+                            </select><!-- form-control Finish -->
+
+                        </div><!-- form-group Finish -->
+
 
                         <div class="form-group">
                         <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control">
@@ -61,11 +74,20 @@ include("includes/header.php")?>
 
                     <?php
                         if (isset($_POST['submit'])){
-
+                            $name= $_POST['Nombre'];
+                            $email= $_POST['correo'];
+                            $asunto= $_POST['Tipo_Asunto'];
+                            $mensaje= $_POST['Mensaje'];
+                            $insert_mensaje ="insert into Contacto (ContactoNombre,ContactoCorreo,ContactoAsunto,ContactoMensaje) 
+                            values ('$name','$email','$asunto','$mensaje')";
+                            $run_customer = mysqli_query($con,$insert_mensaje);
                             echo "
                                 <h2> Tu mensaje fue enviado correctamente </h2>";
                         }
                     ?>
+
+
+
 
 
                 </div>

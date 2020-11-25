@@ -93,8 +93,6 @@ if(!isset($_COOKIE["Visitado"])){
     <div class="container"><!--Inicio contendor-->
         <div class="col-md-6 offer"><!--Inicio col-md-6 offe-->
             <a <?php if(!isset($_SESSION['ClienteCorreo'])){echo 'href="Registro_de_clientes.php"';}else{echo 'href="Mi_cuenta.php"';}?> class="btn btn-primary btn-sm">
-
-
                 <?php
                 if(!isset($_SESSION['ClienteCorreo'])){
                     echo "Registrate";
@@ -192,10 +190,14 @@ if(!isset($_COOKIE["Visitado"])){
                     </li>
 
                     </>
-                    <li class="<?php if ($active=='Carrito.php') echo "active";?>">
-                        <a href="Carrito.php">Carrito de Compras</a>
-                    </li>
-                    <li class="<?php if ($active=='Contactanos.php') echo "active";?>">
+                <?php if(isset($_SESSION['ClienteCorreo'])){
+                    echo '<li class="';
+                    if ($active=='Carrito.php') echo 'active">';
+                    else echo '">';
+                    echo '<a href="Carrito.php">Carrito de Compras</a></li>';
+                } ?>
+
+                <li class="<?php if ($active=='Contactanos.php') echo "active";?>">
                         <a href="Contactanos.php">Contáctanos</a>
                     </li>
                 <?php if(isset($_SESSION['ClienteCorreo'])){

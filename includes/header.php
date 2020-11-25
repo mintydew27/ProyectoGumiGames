@@ -92,12 +92,12 @@ if(!isset($_COOKIE["Visitado"])){
 <div id="top"><!--cabecera-->
     <div class="container"><!--Inicio contendor-->
         <div class="col-md-6 offer"><!--Inicio col-md-6 offe-->
-            <a href="Mi_cuenta.php" class="btn btn-primary btn-sm">
+            <a <?php if(!isset($_SESSION['ClienteCorreo'])){echo 'href="Registro_de_clientes.php"';}else{echo 'href="Mi_cuenta.php"';}?> class="btn btn-primary btn-sm">
 
 
                 <?php
                 if(!isset($_SESSION['ClienteCorreo'])){
-                    echo "Bienvenido: ";
+                    echo "Registrate";
 
                     }else{
                     echo "Bienvenido: " . $_SESSION['ClienteCorreo'] . "";
@@ -105,7 +105,15 @@ if(!isset($_COOKIE["Visitado"])){
                 ?>
 
             </a>
-            <a href="Carrito.php"><?php items();?> objetos en tu carrito | Precio total: <?php precio_total();?></php></a>
+
+            <?php if(isset($_SESSION['ClienteCorreo'])){
+               echo '<a href="Carrito.php">';
+               items();
+               echo ' objetos en tu carrito | Precio total: ';
+               precio_total();
+               echo '</a>';
+            }?>
+
         </div><!--Final col-md-6 offer-->
         <div class="col-md-6"><!--Inicio col-md-6-->
             <ul class="menu"><!--Inicio Menu-->
@@ -113,9 +121,12 @@ if(!isset($_COOKIE["Visitado"])){
                     <a href="Registro_de_clientes.php">Registro</a>
                 </li>
 
-                <li>
-                    <a href="Mi_cuenta.php">Mi cuenta</a>
-                </li>
+               <?php if(isset($_SESSION['ClienteCorreo'])){
+                   echo '
+                    <li>
+                        <a href="Mi_cuenta.php">Mi cuenta</a>
+                    </li>';
+               }?>
 
                 <li>
 
@@ -187,23 +198,35 @@ if(!isset($_COOKIE["Visitado"])){
                     <li class="<?php if ($active=='Contactanos.php') echo "active";?>">
                         <a href="Contactanos.php">Contáctanos</a>
                     </li>
-                <li class="<?php if ($active=='Mi_cuenta.php') echo "active";?>">
-                    <a href="Mi_cuenta.php">Mi cuenta</a>
-                </li>
+                <?php if(isset($_SESSION['ClienteCorreo'])){
+                    echo '<li class="';
+                    if ($active=='Mi_cuenta.php') echo 'active">';
+                    else echo '">';
+                    echo '<a href="Mi_cuenta.php">Mi cuenta</a></li>';
+                } ?>
 
-                <li class="<?php if ($active=='Lista_Deseos.php') echo "active";?>">
-                    <a href="Lista_Deseos.php">Mi Wish List</a>
-                </li>
+                <?php if(isset($_SESSION['ClienteCorreo'])){
+                    echo '<li class="';
+                    if ($active=='Lista_Deseos.php') echo 'active">';
+                    else echo '">';
+                    echo '<a href="Lista_Deseos.php">Wish list</a></li>';
+                } ?>
+
+
+
 
 
                 </ul><!--Final nav navbar-nav left"-->
 
             </div><!--Final padding-nav"-->
 
-            <a href="Carrito.php" class="btn navbar-btn btn-primary right"><!--Inicio btn navbar-btn btn-primary right"-->
-                <i class="fa fa-shopping-cart"></i>
-                <span> <?php items(); ?> Objetos en tu carrito</span>
-            </a><!--Final btn navbar-btn btn-primary right"-->
+            <?php if(isset($_SESSION['ClienteCorreo'])){
+                echo '<a href="Carrito.php" class="btn navbar-btn btn-primary right">'; //Inicio btn navbar-btn btn-primary right"-->
+                echo '<i class="fa fa-shopping-cart"></i>';
+                echo '<span> '; items(); echo ' Objetos en tu carrito</span>';
+                echo '</a>';//Final btn navbar-btn btn-primary right"-->
+            } ?>
+
 
 
             <!--Boton cabecera-->

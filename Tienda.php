@@ -8,7 +8,6 @@ include("includes/header.php");
 ?>
 
 
-
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->
         <div class="col-md-12"><!--Inicio col-md-12-->
@@ -18,8 +17,19 @@ include("includes/header.php");
                 </li>
                 <li>
                     Tienda
+
                 </li>
+
+                <div style=" text-align: right ; display: inline-block; width:85%" >
+                    <form action="Tienda.php" method="get">
+                    <input type="text" name="palabra" value=<?php  if(isset($_GET["palabra"])){echo $_GET["palabra"];}  ?>  >
+                        <input type="submit" name="buscador" value="Buscar"  />
+
+                </form>
+                </div>
+
             </ul><!--Final breadcrumb-->
+
 
         </div><!--Final col-md-12-->
 
@@ -35,6 +45,7 @@ include("includes/header.php");
         <div class="col-md-9"><!--Inicio col-md-9-->
 
             <?php
+            if(!isset($_GET['buscador'])){
             if(!isset($_GET['p_gen'])) {
             if(!isset($_GET['cat'])) {
                 echo "
@@ -47,10 +58,13 @@ include("includes/header.php");
             ";
             }
             }
+}
             ?>
 
             <div class="row"><!--Inicio row-->
+
     <?php
+    if(!isset($_GET['buscador'])){
                 if(!isset($_GET['p_cat'])) {
                     if(!isset($_GET['cat'])) {
                 $per_page=6;
@@ -153,7 +167,7 @@ include("includes/header.php");
 
                     }
 
-                    }
+                    }}
 
                     ?>
                 </ul>
@@ -164,6 +178,8 @@ include("includes/header.php");
                 /*Este es para el tipo de categoria del producto y el segundo es para la categoria del producto como videojuego o consolas*/
                 getpgenpro();
                 getcatpro();
+                getproduct();
+
 
 
                 ?>
@@ -181,6 +197,7 @@ include("includes/header.php");
         </div><!--Final col-md-3-->
 
     </div><!--Final container-->
+
 </div><!--Final content-->
 
 <?php

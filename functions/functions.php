@@ -394,6 +394,102 @@ function precio_total(){
     echo "$". $total;
 
 }
+
+
+function getproduct()
+{
+    global $db;
+    if (isset($_GET['buscador'])) {
+
+        $buscar = $_GET['palabra'];
+
+        $get_products = "SELECT * FROM Producto WHERE ProductoTitulo LIKE '%$buscar%'";
+        $run_products= mysqli_query($db,$get_products);
+        $count = mysqli_num_rows($run_products);
+        if ($count == 0) {
+
+            echo "
+            
+            <div class= 'box'>
+            <hi>No se encontraron productos :(</hi>
+           
+            </div>
+        
+            ";
+        } else
+
+        while ($row_products = mysqli_fetch_array($run_products)) {
+
+
+            $pro_id = $row_products['ProductoId'];
+
+            $pro_titulo = $row_products['ProductoTitulo'];
+
+            $pro_precio = $row_products['ProductoPrecio'];
+
+            $pro_imagen1 = $row_products['ProductoImagenUno'];
+
+
+            echo "
+            <div class='col-md-4 col-sm-6 center-responsive'>
+                <div class='product'>
+                <a href='Detalles.php?pro_id=$pro_id''>
+                    <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
+                </a>
+                
+                        <div class='text'>
+                            
+                            <h3>
+                                 <a href='Detalles.php?pro_id=$pro_id''>
+                                    $pro_titulo                                      
+                                 </a>
+                            </h3>
+                            
+                            <p class='price'>
+                            $ $pro_precio
+                            </p>
+                            
+                            <p class='button'>
+                           
+                            <a class='btn btn-default' href='Detalles.php?pro_id=$pro_id''>
+                                 
+                                    Ver Detalles
+                                                                        
+                                 </a>
+                                 
+                                 <a class='btn btn-primary' href='Detalles.php?pro_id=$pro_id''>
+                                 
+                                    <i class='fa fa-shopping-cart'></i> Agregar al carrito
+                                                                        
+                                 </a>
+                                 
+                            </p>
+                            
+                            
+                        </div>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            ";
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 ?>
 
 

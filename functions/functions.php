@@ -89,50 +89,6 @@ function add_wishlist(){
 }
 
 
-function add_comen(){
-
-    global $db;
-
-    if(isset($_GET['add_comen'])){
-
-        $p_id = $_GET['add_comen'];
-
-
-        $check_comen = "select * from Comentario where ComentarioId='$p_id'";
-        $run_check = mysqli_query($db,$check_comen);
-
-        $get_products = "select * from Producto where ProductoId='$p_id'";
-        $run_products= mysqli_query($db,$get_products);
-        $row_products = mysqli_fetch_array($run_products);
-        $pr_id =$row_products['ProductoId'];
-
-
-
-        echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
-
-
-    }
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

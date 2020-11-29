@@ -4,6 +4,8 @@ include("includes/header.php");
 
 ?>
 
+
+
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->
         <div class="col-md-12"><!--Inicio col-md-12-->
@@ -69,7 +71,7 @@ include("includes/header.php");
 
                         <?php  add_cart();?>
                         <?php add_wishlist(); ?>
-                        <?php add_comen();?>
+
 
                         <form action="Detalles.php?add_cart=<?php echo $producto_id; ?> " class="form-horizontal" method="post">
                             <div class="form-group">
@@ -195,7 +197,7 @@ include("includes/header.php");
 
 
 
-            <form method="post" action="Detalles.php?add_comen=<?php echo $producto_id; ?>"><!--Inicio Form-->
+            <form method="post" action="Detalles.php?pro_id=<?php echo $producto_id?>"<!--Inicio Form-->
 
                     <input id="radio1" type="radio" name="estrellas" value="1">
                          <img src='admin_area/product_images/calif/uno.png' >
@@ -222,28 +224,23 @@ include("includes/header.php");
                     </button>
                 </div>
             </form>
-
-
-
-
-
             <?php
             if (isset($_POST['Guardar'])){
 
-
-
-
                 $comentario= $_POST['Comentario'];
                 $calificacion= $_POST['estrellas'];
-
+                $idproducto=$_GET['pro_id'];
                 $insert_mensaje ="insert into Comentario (Comentario,ComentarioCalificacion,ProductoId) 
-                            values ('$comentario','$calificacion','$producto_id')";
+                            values ('$comentario','$calificacion','$idproducto')";
                 $run_comentario= mysqli_query($con,$insert_mensaje);
-                echo "
-                                <h2> Tu comentario fue enviado correctamente </h2>";
 
             }
             ?>
+
+
+
+
+
 
 
         </div>

@@ -47,7 +47,6 @@ include("includes/header.php")?>
                                 <tr><!-- Inicio tr -->
 
                                     <th colspan="2">Producto</th>
-                                    <th>Cantidad</th>
                                     <th>Precio</th>
 
 
@@ -66,8 +65,6 @@ include("includes/header.php")?>
                                 while ($row_cart = mysqli_fetch_array($run_cart)){
 
                                     $pro_id = $row_cart['ListaDeseoId'];
-                                    $pro_qty = $row_cart['ListaDeseoCantidad'];
-
                                     $get_products = "select * from Producto where ProductoId='$pro_id'";
                                     $run_products= mysqli_query($con,$get_products);
                                     while($row_products= mysqli_fetch_array($run_products)){
@@ -94,11 +91,6 @@ include("includes/header.php")?>
                                             <td>
                                                 <a href="Detalles.php?pro_id=<?php echo $pro_id ?>"><?php echo $product_title; ?></a>
                                             </td>
-
-                                            <td>
-                                                <?php echo $pro_qty;  ?>
-                                            </td>
-
 
 
                                             <td>

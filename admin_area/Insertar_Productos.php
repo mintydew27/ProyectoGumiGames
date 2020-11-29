@@ -64,7 +64,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                             <label class="col-md-3 control-label">Titulo del Producto</label>
                             <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                <input name="Producto_Titulo"type="text" class="form-control" required>
+                                <input name="Producto_Titulo"type="text" class="form-control" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" >
 
                             </div><!--Final col-md-6-->
                             </div>
@@ -169,7 +169,10 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Cantidad de Productos disponibles</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Cantidad"type="number" class="form-control" required>
+                                        <select name="Producto_Cantidad" id="" class="form-control">
+                                            <option >1</option>
+
+                                        </select><!--Final select-->
 
                                 </div><!--Final col-md-6-->
                             </div>
@@ -181,7 +184,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Precio del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Precio"type="text" class="form-control" required>
+                                    <input name="Producto_Precio"type="number" class="form-control" min="1" required >
 
                                 </div><!--Final col-md-6-->
                             </div>

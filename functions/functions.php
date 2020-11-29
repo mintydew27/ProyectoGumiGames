@@ -62,7 +62,6 @@ function add_wishlist(){
 
         $p_id = $_GET['add_wishlist'];
 
-        $product_qty = $_POST['product_qty'];
 
         $check_product = "select * from ListaDeseo where AddIp='$ip_add' AND ListaDeseoId='$p_id'";
 
@@ -78,7 +77,7 @@ function add_wishlist(){
         }else {
 
 
-            $query = "insert into ListaDeseo (ListaDeseoId,AddIp,ListaDeseoCantidad)values('$p_id','$ip_add','$product_qty')";
+            $query = "insert into ListaDeseo (ListaDeseoId,AddIp)values('$p_id','$ip_add')";
             $run_query= mysqli_query($db,$query);
             echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
 

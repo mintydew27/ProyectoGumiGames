@@ -35,7 +35,7 @@ include("includes/header.php")?>
                     <form action="Contactanos.php" method="post"><!--Inicio Form-->
 
                     <div class="form-group">
-                        <label> Nombre</label>                    <input type="text" class="form-control" name="Nombre" required>
+                        <label> Nombre</label>                    <input type="text" class="form-control" name="Nombre"  maxlength="40" pattern="[A-Za-z]+" title="Solo se admiten letras" required>
                         </div>
 
                         <div class="form-group">
@@ -60,7 +60,7 @@ include("includes/header.php")?>
 
 
                         <div class="form-group">
-                        <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control">
+                        <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control" pattern="[A-Za-z]+" title="Solo se admiten letras">
                             </textarea>
                         </div>
 

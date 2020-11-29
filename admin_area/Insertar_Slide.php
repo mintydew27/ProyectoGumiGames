@@ -43,7 +43,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input name="slide_name" type="text" class="form-control">
+                                <input name="slide_name" type="text" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" class="form-control">
 
                             </div><!-- col-md-6 finish -->
 

@@ -5,6 +5,22 @@ include("includes/header.php");
 ?>
 
 
+<?php
+if (isset($_POST['Guardar'])){
+
+
+
+
+    $comentario= $_POST['Comentario'];
+    $calificacion= $_POST['estrellas'];
+    $idproducto=$_GET['pro_id'];
+    $idcliente=$_SESSION['ClienteId'];
+    $insert_mensaje ="insert into Comentario (Comentario,ComentarioCalificacion,ProductoId,ClienteId) 
+                            values ('$comentario','$calificacion','$idproducto','$idcliente')";
+    $run_comentario= mysqli_query($con,$insert_mensaje);
+
+}
+?>
 
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->
@@ -177,7 +193,52 @@ include("includes/header.php");
 </div>
 
 
-    <div class="col-md-12">
+
+
+        <div class="row"><!-- row 2 begin -->
+            <div class="col-lg-12"><!-- col-lg-12 begin -->
+                <div class="panel panel-default"><!-- panel panel-default begin -->
+                    <div class="panel-heading"><!-- panel-heading begin -->
+                        <h3 class="panel-title"><!-- panel-title begin -->
+
+                            <label> Lee comentarios que mencionan </label>
+
+                        </h3><!-- panel-title finish -->
+                    </div><!-- panel-heading finish -->
+
+                    <div class="panel-body"><!-- panel-body begin -->
+                        <div class="table-responsive"><!-- table-responsive begin -->
+                            <?php
+                            $i=0;
+                            $idproducto=$_GET['pro_id'];
+                            $get_pro = "select * from Comentario JOIN Cliente ON Comentario.ClienteId=Cliente.ClienteId  where ProductoId='$idproducto'";
+                            $run_pro = mysqli_query($con,$get_pro);
+                            while($row_com=mysqli_fetch_array($run_pro)){
+                            $comen_id = $row_com['ComentarioId'];
+                            $comentario = $row_com['Comentario'];
+                            $calif = $row_com['ComentarioCalificacion'];
+                            $pr_id = $row_com['ProductoId'];
+                            $cli_nom= $row_com['ClienteNombre'];
+                            $i++;
+                            ?>
+
+                            <img src='https://images-na.ssl-images-amazon.com/images/S/amazon-avatars-global/default._CR0,0,1024,1024_SX48_.png'>
+                            <p class="text-muted"> <?php echo  $cli_nom ?>  <label> <?php echo $calif; ?> estrellas </label> </p>
+                            <p>
+                                <?php echo $comentario; ?>
+
+                            </p>
+                            <?php } ?>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
         <div class="box"><!--Box Inicio--->
 
             <div class="box-header"><!--Box header Inicio--->
@@ -210,7 +271,7 @@ include("includes/header.php");
                         <input id="radio4" type="radio" name="estrellas" value="4">
                         <label for="radio4"><img src='admin_area/product_images/calif/cuatro.png' ></label>
 
-                        <input id="radio5" type="radio" name="estrellas" value="5">
+                        <input id="radio5" type="radio" name="estrellas" value="5" checked>
                         <label for="radio5"> <img src='admin_area/product_images/calif/cinco.png'></label>
 
                 <div class="form-group"><!--Form group incio--->
@@ -224,24 +285,6 @@ include("includes/header.php");
                     </button>
                 </div>
             </form>
-            <?php
-            if (isset($_POST['Guardar'])){
-
-                $comentario= $_POST['Comentario'];
-                $calificacion= $_POST['estrellas'];
-                $idproducto=$_GET['pro_id'];
-                $insert_mensaje ="insert into Comentario (Comentario,ComentarioCalificacion,ProductoId) 
-                            values ('$comentario','$calificacion','$idproducto')";
-                $run_comentario= mysqli_query($con,$insert_mensaje);
-
-            }
-            ?>
-
-
-
-
-
-
 
         </div>
     </div>

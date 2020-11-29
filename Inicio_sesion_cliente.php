@@ -53,6 +53,7 @@ if(isset($_POST['login'])){
     $cliente_pass = $_POST['ClienteContraseña'];
     $select_customer= "select * from Cliente where ClienteCorreo='$cliente_correo' AND ClienteContraseña='$cliente_pass'";
     $run_customer = mysqli_query($con, $select_customer);
+
     $get_ip = getRealIpUser();
     $check_customer = mysqli_num_rows($run_customer);
     $select_carrito = "select * from Carrito where AddIp='$get_ip'";
@@ -67,6 +68,9 @@ if(isset($_POST['login'])){
 
     if($check_customer==1 AND $check_carrito==0){
         $_SESSION['ClienteCorreo']=$cliente_correo;
+        $customer = mysqli_fetch_array($run_customer);
+        $_SESSION['ClienteId']=$customer['ClienteId'];
+
         echo "<script>alert('Inicio de sesión correcta')</script>";
         echo "<script>window.open('Index.php','_self')</script>";
 

@@ -51,6 +51,12 @@ if(isset($_GET['pro_id'])){
 
 }
 
+
+
+
+
+
+
 if(!isset($_COOKIE["Visitado"])){
     $date = date('d/M/Y', time());
     $select = "Select * from Visita Where VisitaFecha = '$date'";

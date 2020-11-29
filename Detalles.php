@@ -1,6 +1,7 @@
 <?php
 $active='Detalles.php';
-include("includes/header.php")
+include("includes/header.php");
+
 ?>
 
 <div id="content"><!--Inicio content-->
@@ -67,8 +68,10 @@ include("includes/header.php")
                         <h1 class="text-center" ><?php echo $pro_title;?> </h1>
 
                         <?php  add_cart();?>
+                        <?php add_wishlist(); ?>
+                        <?php add_comen();?>
 
-                        <form action="Detalles.php?add_cart=<?php echo $producto_id; ?>" class="form-horizontal" method="post">
+                        <form action="Detalles.php?add_cart=<?php echo $producto_id; ?> " class="form-horizontal" method="post">
                             <div class="form-group">
                                 <label for="" class="col-sm-5 control-label"> Cantidad de Producto </label>
                                 <div class="col-md-7"><!--Inicio col-sm-7-->
@@ -85,9 +88,10 @@ include("includes/header.php")
                             <p class="text-center buttons">
                                 <button class="btn btn-primary i fa fa-shopping-cart btn-lg"> Agregar al carrito </button>
 
-                            </p>
-                            <p class="text-center buttons">
-                                <button class="btn btn-primary i fa fa-heart"> Agregar a mi Wish List </button>
+                            </p> </form>
+                        <form action="Detalles.php?add_wishlist=<?php echo $producto_id; ?> " class="form-horizontal" method="post">
+                            <p class="text-center buttons"  >
+                                <button class="btn btn-primary i fa fa-heart"  > Agregar a mi Wish List</button>
                             </p>
                         </form>
 
@@ -112,6 +116,7 @@ include("includes/header.php")
                 </div><!--Final col- sm- 6-->
 
                 </div><!--Final row-->
+
         <div class="box" id="detalles"><!--Inicio box-->
             <h4>Detalles del Producto</h4>
             <p>
@@ -119,9 +124,11 @@ include("includes/header.php")
             </p>
 
             <hr>
-
         </div><!--Final box-->
-        <div id="row same-heigh-row">
+    </div><!--Final md-9-->
+
+<div class="col-md-9">
+                    <div id="row same-heigh-row" >
             <div class="col-md-3 col-sm-6">
                 <div class="box same-height headline">
                     <h3 class="text-center">Productos que podrian gustarte</h3>
@@ -130,7 +137,7 @@ include("includes/header.php")
 
             <?php
 
-            $get_products="select * from Producto order by 1 DESC LIMIT 0,3";
+            $get_products="select * from Producto order by 1 DESC LIMIT 0, 2";
             $run_products = mysqli_query($con, $get_products);
 
             while($row_products=mysqli_fetch_array($run_products)){
@@ -141,28 +148,107 @@ include("includes/header.php")
                 $pro_price= $row_products['ProductoPrecio'];
 
                 echo "
+
                 <div class= 'col-md-4 col-sm-6 center-responsive'>
                 <div class='product same-height'>
                 <a href='Detalles.php?pro_id=$pro_id'>
-                <img class='img-responsive' alt='Producto' src='admin_area/product_images/$pro_img1'>
+                <img class='img-responsive'  alt='Producto' src='admin_area/product_images/$pro_img1'>
                 
                 </a>
                 <div class='text'>
                     <h3>
                         <a href='Detalles.php?pro_id=$pro_id'> $pro_title </a>
                     </h3>
-                <p class='price'> $ $pro_price </p>
+                <p class='price'> $$pro_price </p>
                     </div>
           
                 </div>
                
               </div>
+
                 ";
 
             }
             ?>
             </div>
-        </div><!--Final md-9-->
+
+</div>
+
+
+    <div class="col-md-12">
+        <div class="box"><!--Box Inicio--->
+
+            <div class="box-header"><!--Box header Inicio--->
+
+                <center><!--center Inicio--->
+
+                    <h1>  Comentarios  </h1>
+                    <p class="lead">  </p>
+
+                    <p class="text-muted"> Deja tu comentario </p>
+
+                </center><!--center Final--->
+
+            </div><!--Box header Final--->
+
+                <h4>Calificación</h4>
+
+
+
+            <form method="post" action="Detalles.php?add_comen=<?php echo $producto_id; ?>"><!--Inicio Form-->
+
+                    <input id="radio1" type="radio" name="estrellas" value="1">
+                         <img src='admin_area/product_images/calif/uno.png' >
+
+                        <input id="radio2" type="radio" name="estrellas" value="2">
+                        <label for="radio2"><img src='admin_area/product_images/calif/dos.png' ></label>
+
+                        <input id="radio3" type="radio" name="estrellas" value="3">
+                        <label for="radio3"><img src='admin_area/product_images/calif/tres.png' ></label>
+                        <input id="radio4" type="radio" name="estrellas" value="4">
+                        <label for="radio4"><img src='admin_area/product_images/calif/cuatro.png' ></label>
+
+                        <input id="radio5" type="radio" name="estrellas" value="5">
+                        <label for="radio5"> <img src='admin_area/product_images/calif/cinco.png'></label>
+
+                <div class="form-group"><!--Form group incio--->
+                    <label> Ingresa tu comentario </label>
+                    <textarea name="Comentario" type="texto" class="form-control" required> </textarea>
+                </div><!--Form group Final--->
+
+                <div class="text-center"><!--text-centerInicio--->
+                    <button name="Guardar" value="guardar"class="btn btn-primary">
+                        <i class="fa fa-sign-in"></i> Guardar Comentario
+                    </button>
+                </div>
+            </form>
+
+
+
+
+
+            <?php
+            if (isset($_POST['Guardar'])){
+
+
+
+
+                $comentario= $_POST['Comentario'];
+                $calificacion= $_POST['estrellas'];
+
+                $insert_mensaje ="insert into Comentario (Comentario,ComentarioCalificacion,ProductoId) 
+                            values ('$comentario','$calificacion','$producto_id')";
+                $run_comentario= mysqli_query($con,$insert_mensaje);
+                echo "
+                                <h2> Tu comentario fue enviado correctamente </h2>";
+
+            }
+            ?>
+
+
+        </div>
+    </div>
+
       </div><!--Final container-->
 </div><!--Final content-->
 

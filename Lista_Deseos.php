@@ -20,7 +20,7 @@ include("includes/header.php")?>
 
                 <div class="box"><!--Inicio box-->
 
-                    <form action=  "Carrito.php" method="post" enctype="multipart/form-data" ><!--Inicio Form-->
+                    <form action=  "Lista_Deseos.phP" method="post" enctype="multipart/form-data" ><!--Inicio Form-->
 
                         <h1> Mi Wish List</h1>
 
@@ -87,7 +87,7 @@ include("includes/header.php")?>
 
                                             <td><!-- Inicio td -->
 
-                                                <img class="img-responsive" src="admin_area/product_images/<?php echo $product_img1;?>" alt="Producto 3a">
+                                                <img class="img-responsive" src="admin_area/product_images/<?php echo $product_img1;?>" width="100" height="100" alt="Producto 3a">
 
                                             </td><!-- Final td -->
 
@@ -112,9 +112,7 @@ include("includes/header.php")?>
 
                                             </td>
 
-                                            <td>
-                                                $<?php echo $sub_total;?>
-                                            </td>
+
 
                                         </tr><!-- Final try -->
                                     <?php }} ?>
@@ -142,7 +140,7 @@ include("includes/header.php")?>
                             </div><!--Final pull-left-->
                             <div class="pull-right"><!--Inicio pull-right-->
 
-                                <button type="submit" name="update" value="Actualizar Compra" class="btn btn-default"><!--Inicio btn btn-default-->
+                                <button type="submit" name="update" value="Actualizar Wish List" class="btn btn-default"><!--Inicio btn btn-default-->
 
                                     <i class="fa fa-refresh"></i>Actualizar Wish List
 
@@ -159,7 +157,7 @@ include("includes/header.php")?>
                 </div><!--Final box aqui va lo de detalles VIvi!!-->
 
                 <?php
-                function update_cart(){
+                function update_wishlist(){
                     global $con;
                     if(isset($_POST['update'])){
                         foreach ($_POST['remove'] as $remove_id){
@@ -167,7 +165,7 @@ include("includes/header.php")?>
                             $delete_product = "delete from ListaDeseo where ListaDeseoId = '$remove_id'";
                             $run_delete = mysqli_query($con,$delete_product);
                             if($run_delete){
-                                echo"<script>window.open('Carrito.php','_self')</script>";
+                                echo"<script>window.open('Lista_Deseos.php','_self')</script>";
 
                             }
                         }
@@ -176,7 +174,7 @@ include("includes/header.php")?>
                     }
 
                 }
-                echo @$up_cart =  update_cart();
+                echo @$up_wishlist =  update_wishlist();
 
 
                 ?>

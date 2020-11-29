@@ -81,6 +81,8 @@ body{
 
 /* MODIFICAR EL COLOR DEL PANEL */
 
+
+
 .huge{
     font-size: 40px;
     line-height: normal;
@@ -218,4 +220,5 @@ hr.dotted{
     color: #0088cc;
     margin-right: 5px;
 }
+
 

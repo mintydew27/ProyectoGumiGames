@@ -15,6 +15,7 @@ $pro_img2 = "";
 $pro_img3 = "";
 $p_genero_title = "";
 
+
 if(isset($_GET['pro_id'])){
 
     $producto_id = $_GET['pro_id'];
@@ -46,6 +47,7 @@ if(isset($_GET['pro_id'])){
     $row_p_genero = mysqli_fetch_array($run_p_genero);
 
     $p_genero_title = $row_p_genero['GeneroTitulo'];
+
 
 }
 

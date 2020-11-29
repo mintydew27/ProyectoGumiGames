@@ -52,6 +52,87 @@ function add_cart(){
 
 }
 
+function add_wishlist(){
+
+    global $db;
+
+    if(isset($_GET['add_wishlist'])){
+
+        $ip_add = getRealIpUser();
+
+        $p_id = $_GET['add_wishlist'];
+
+        $product_qty = $_POST['product_qty'];
+
+        $check_product = "select * from ListaDeseo where AddIp='$ip_add' AND ListaDeseoId='$p_id'";
+
+        $run_check = mysqli_query($db,$check_product);
+
+
+        if(mysqli_num_rows($run_check)>0){
+
+            echo "<script>alert('This product has already added in your wish list')</script>";
+            echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
+
+
+        }else {
+
+
+            $query = "insert into ListaDeseo (ListaDeseoId,AddIp,ListaDeseoCantidad)values('$p_id','$ip_add','$product_qty')";
+            $run_query= mysqli_query($db,$query);
+            echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
+
+        }
+
+    }
+
+}
+
+
+function add_comen(){
+
+    global $db;
+
+    if(isset($_GET['add_comen'])){
+
+        $p_id = $_GET['add_comen'];
+
+
+        $check_comen = "select * from Comentario where ComentarioId='$p_id'";
+        $run_check = mysqli_query($db,$check_comen);
+
+        $get_products = "select * from Producto where ProductoId='$p_id'";
+        $run_products= mysqli_query($db,$get_products);
+        $row_products = mysqli_fetch_array($run_products);
+        $pr_id =$row_products['ProductoId'];
+
+
+
+        echo "<script>window.open('Detalles.php?pro_id=$p_id','_self')</script>";
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

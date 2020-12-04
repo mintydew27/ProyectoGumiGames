@@ -39,9 +39,9 @@
 
             <div class="mb-md"><!--Inicio mb-md-->
                 <div class="widget-content-expanded"><!--Inicio widget-content-expanded-->
-                    <i class="fa fa-user"></i> <span> Email: </span> <?php echo $admin_email; ?></br>
+                    <i class="fa fa-envelope"></i> <span> Email: </span> <?php echo $admin_email; ?></br>
                     <i class="fa fa-flag"></i> <span> Pais: </span> <?php echo $admin_country; ?></br>
-                    <i class="fa fa-envelope"></i> <span> Telefono:</span><?php echo $admin_contact; ?></br>
+                    <i class="fa fa-user"></i> <span> Telefono:</span><?php echo $admin_contact; ?></br>
                 </div><!--Final widget-content-expanded-->
                 <hr class="dotted short">
 

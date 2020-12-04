@@ -96,7 +96,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Titulo del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Titulo"type="text" class="form-control" required value="<?php echo $p_titulo; ?>">
+                                    <input name="Producto_Titulo"type="text" class="form-control" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required value="<?php echo $p_titulo; ?>">
 
                                 </div><!--Final col-md-6-->
                             </div>
@@ -208,7 +208,15 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Cantidad de Productos disponibles</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Cantidad"type="number" class="form-control" required value="<?php echo $p_cantidad; ?>">
+                                    <div class="col-md-6"><!--Inicio col-md-6-->
+
+                                        <select name="Producto_Cantidad" id="" class="form-control">
+                                            <option ><?php echo $p_cantidad; ?></option>
+
+                                        </select><!--Final select-->
+
+                                    </div><!--Final col-md-6-->
+
 
                                 </div><!--Final col-md-6-->
                             </div>
@@ -220,7 +228,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Precio del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Precio"type="text" class="form-control" required value="<?php echo $p_price; ?>">
+                                    <input name="Producto_Precio" type="number" min="1" class="form-control" required value="<?php echo $p_price; ?>">
 
                                 </div><!--Final col-md-6-->
                             </div>
@@ -230,7 +238,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Palabras clave del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Palabra_Clave"type="text" class="form-control" required value="<?php echo $p_keywords; ?>">
+                                    <input name="Producto_Palabra_Clave"type="text" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required value="<?php echo $p_keywords; ?>">
 
                                 </div><!--Final col-md-6-->
                             </div>

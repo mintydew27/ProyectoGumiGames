@@ -65,7 +65,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input value=" <?php echo $genero_title; ?> " name="p_genero_title" type="text" class="form-control">
+                                <input value=" <?php echo $genero_title; ?> " name="p_genero_title" type="text" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" class="form-control">
 
                             </div><!-- col-md-6 finish -->
 
@@ -80,7 +80,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <textarea type='text' name="p_genero_desc" class="form-control"><?php echo $genero_desc; ?></textarea>
+                                <input type='text' name="p_genero_desc" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" class="form-control"><?php echo $genero_desc; ?></input>
 
                             </div><!-- col-md-6 finish -->
 

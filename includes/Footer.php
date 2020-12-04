@@ -67,10 +67,8 @@
                 <hr>
                 <h4>Mantente en contacto</h4>
                 <p class="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-envelope"></a>
+                    <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"></a>
+                    <a href="Contactanos.php" class="fa fa-envelope"></a>
 
                 </p>
 

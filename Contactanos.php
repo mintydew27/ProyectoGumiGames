@@ -35,7 +35,7 @@ include("includes/header.php")?>
                     <form action="Contactanos.php" method="post"><!--Inicio Form-->
 
                     <div class="form-group">
-                        <label> Nombre</label>                    <input type="text" class="form-control" name="Nombre"  maxlength="40" pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                        <label> Nombre</label>                    <input type="text" class="form-control" name="Nombre"  maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
                         </div>
 
                         <div class="form-group">
@@ -46,7 +46,7 @@ include("includes/header.php")?>
 
                             <label> Asunto: </label>
 
-                            <select name="Tipo_Asunto" class="form-control"><!-- form-control Begin -->
+                            <select name="TipoAsunto" class="form-control"><!-- form-control Begin -->
 
 
                                 <option> Duda </option>
@@ -60,7 +60,7 @@ include("includes/header.php")?>
 
 
                         <div class="form-group">
-                        <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control" pattern="[A-Za-z]+" title="Solo se admiten letras">
+                        <label> Mensaje</label>                    <textarea name="Mensaje" class="form-control">
                             </textarea>
                         </div>
 
@@ -76,7 +76,7 @@ include("includes/header.php")?>
                         if (isset($_POST['submit'])){
                             $name= $_POST['Nombre'];
                             $email= $_POST['correo'];
-                            $asunto= $_POST['Tipo_Asunto'];
+                            $asunto= $_POST['TipoAsunto'];
                             $mensaje= $_POST['Mensaje'];
                             $insert_mensaje ="insert into Contacto (ContactoNombre,ContactoCorreo,ContactoAsunto,ContactoMensaje) 
                             values ('$name','$email','$asunto','$mensaje')";

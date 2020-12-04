@@ -258,9 +258,8 @@ $session_email = $_SESSION['ClienteCorreo'];
         </div><!--Final Box-header-->
 
             <p class="text-muted"><!--Inicio text-muted-->
+                Resumen de tus pedidos.
 
-
-                El envío y el costo adicional se calculan en función del valor ingresado
 
             </p><!--Final text-muted-->
 
@@ -270,25 +269,18 @@ $session_email = $_SESSION['ClienteCorreo'];
 
             <tbody><!--Inicio tbody-->
 
+            <td>Total de articulos en tu carrito </td>
+            <th><?php echo $count; ?></th>
+
             <tr><!--Inicio tr-->
+
+
 
             <td> Ordenar todo el Sub-Total </td>
             <th>$<?php echo $total; ?></th>
 
             </tr><!--FInal tr-->
 
-            <tr><!--Inicio tr-->
-
-               <td>Envío y Manejo</td>
-                <td>$0</td>
-
-            </tr><!--FInal tr-->
-            <tr><!--Inicio tr-->
-
-                <td>Impuesto</td>
-                <th>$0</th>
-
-            </tr><!--FInal tr-->
 
             <tr class="Total"><!--Inicio tr-->
 

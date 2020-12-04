@@ -43,7 +43,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input name="cat_title" type="text" class="form-control" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras">
+                                <input name="cat_title" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 finish -->
 
@@ -58,7 +58,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <textarea type='text' name="cat_desc" id="" cols="30" rows="10" required pattern="[A-Za-z]+" title="Solo se admiten letras" class="form-control"></textarea>
+                                <input type='text' name="cat_desc" id="" cols="30" rows="10" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 finish -->
 

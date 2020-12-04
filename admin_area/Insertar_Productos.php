@@ -64,7 +64,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                             <label class="col-md-3 control-label">Titulo del Producto</label>
                             <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                <input name="Producto_Titulo"type="text" class="form-control" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" >
+                                <input name="Producto_Titulo"type="text" class="form-control"  maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" >
 
                             </div><!--Final col-md-6-->
                             </div>
@@ -194,7 +194,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Palabras clave del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Palabra_Clave"type="text" class="form-control" required>
+                                    <input name="Producto_Palabra_Clave"type="text" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" class="form-control" required>
 
                                 </div><!--Final col-md-6-->
                             </div>

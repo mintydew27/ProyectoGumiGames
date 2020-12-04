@@ -90,7 +90,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_name; ?>" name="admin_name" type="text" class="form-control" required>
+                                <input value="<?php echo $user_name; ?>" name="admin_name" type="text" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -102,7 +102,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_ape1; ?>" name="admin_ape1" type="text" class="form-control" required>
+                                <input value="<?php echo $user_ape1; ?>" name="admin_ape1" type="text" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -115,7 +115,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_ape2; ?>" name="admin_ape2" type="text" class="form-control" required>
+                                <input value="<?php echo $user_ape2; ?>" name="admin_ape2" type="text" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -143,7 +143,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_pass; ?>"  name="admin_pass" type="text" class="form-control" required>
+                                <input value="<?php echo $user_pass; ?>"  name="admin_pass" type="password" class="form-control" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -167,7 +167,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_contact; ?>"  name="admin_contact" type="text" class="form-control" required>
+                                <input value="<?php echo $user_contact; ?>"  name="admin_contact" type="number" maxlength="10" size="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng min="1" class="form-control" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -179,7 +179,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input value="<?php echo $user_job; ?>"  name="admin_job" type="text" class="form-control" required>
+                                <input value="<?php echo $user_job; ?>"  name="admin_job" type="text" class="form-control" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -205,7 +205,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <textarea  name="admin_about" class="form-control" rows="3"> <?php echo $user_about; ?></textarea>
+                                <input  name="admin_about" class="form-control" rows="3" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required> <?php echo $user_about; ?>
 
                             </div><!-- col-md-6 Finish -->
 

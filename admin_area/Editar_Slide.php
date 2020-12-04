@@ -65,7 +65,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input name="slide_name" type="text" class="form-control" value="<?php echo $slide_name; ?>">
+                                <input name="slide_name" type="text" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" class="form-control" value="<?php echo $slide_name; ?>">
 
                             </div><!-- col-md-6 finish -->
 
@@ -80,11 +80,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input type="file" name="slide_image" class="form-control">
+                                <input type="file" name="slide_image" class="form-control" required>
 
                                 <br/>
 
-                                <img src="slides_images/<?php echo $slide_image; ?>" class="img-responsive">
+                                <img src="slides_images/<?php echo $slide_image; ?>" class="img-responsive" >
 
                             </div><!-- col-md-6 finish -->
 

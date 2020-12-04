@@ -52,7 +52,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_name" type="text" class="form-control" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                                <input name="admin_name" type="text" class="form-control" maxlength="40"  pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -64,7 +64,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_ape1" type="text" class="form-control" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                                <input name="admin_ape1" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -77,7 +77,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_ape2" type="text" class="form-control" minlength="5" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                                <input name="admin_ape2" type="text" class="form-control"  maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -116,7 +116,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_country" type="text" class="form-control" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                                <input name="admin_country" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -128,7 +128,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_contact" type="text" class="form-control" minlength="10" maxlength="10"required>
+                                <input name="admin_contact" type="number" class="form-control" maxlength="10" size="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng min="1" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -140,7 +140,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <input name="admin_job" type="text" class="form-control" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras"required>
+                                <input name="admin_job" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 
@@ -164,7 +164,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 Begin -->
 
-                                <textarea name="admin_about" class="form-control" rows="3" required pattern="[A-Za-z]+" title="Solo se admiten letras"></textarea>
+                                <input name="admin_about" class="form-control" rows="3" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 Finish -->
 

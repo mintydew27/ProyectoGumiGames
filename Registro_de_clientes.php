@@ -38,15 +38,15 @@ include("includes/header.php");
                     
                     <div class="form-group">
 
-                        <label> Nombre</label>                    <input type="text" class="form-control" name="ClienteNombre" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                        <label> Nombre</label>                    <input type="text" class="form-control" name="ClienteNombre" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
                         </div>
                         <div class="form-group">
 
-                            <label> Primer Apellido</label>                    <input type="text" class="form-control" name="ClientePaterno" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                            <label> Primer Apellido</label>                    <input type="text" class="form-control" name="ClientePaterno" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1]+" title="Solo se admiten letras" required>
                         </div>
                         <div class="form-group">
 
-                            <label> Segundo Apellido</label>                    <input type="text" class="form-control" name="ClienteMaterno" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                            <label> Segundo Apellido</label>                    <input type="text" class="form-control" name="ClienteMaterno" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1]+" title="Solo se admiten letras" required>
                         </div>
 
 
@@ -60,18 +60,18 @@ include("includes/header.php");
                         </div>
                     
                         <div class="form-group">
-                        <label> País</label>                    <input type="text" class="form-control" name="ClientePais" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                        <label> País</label>                    <input type="text" class="form-control" name="ClientePais" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
                         </div>
                         
                         <div class="form-group">
-                        <label> Ciudad</label>                    <input type="text" class="form-control" name="ClienteCiudad" maxlength="40" required pattern="[A-Za-z]+" title="Solo se admiten letras" required>
+                        <label> Ciudad</label>                    <input type="text" class="form-control" name="ClienteCiudad" maxlength="40" required pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
                         </div>
 
                         
                         
                         <div class="form-group">
                         <label> Teléfono</label>
-                            <input type="number" maxlength="10" size="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng class="form-control" name="ClienteTelefono" required> <i>(Máximo 10 dígitos)</i>
+                            <input type="number" maxlength="10" size="10" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" leng class="form-control" name="ClienteTelefono" min="1" required> <i>(Máximo 10 dígitos)</i>
 
                         </div>
 

@@ -237,8 +237,6 @@ if (isset($_POST['Guardar'])){
         </div>
 
 
-
-
         <div class="box"><!--Box Inicio--->
 
             <div class="box-header"><!--Box header Inicio--->

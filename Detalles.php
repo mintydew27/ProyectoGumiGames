@@ -150,7 +150,7 @@ if (isset($_POST['Guardar'])){
 
             <?php
 
-            $get_products="select * from Producto order by 1 DESC LIMIT 0, 2";
+            $get_products="select * from Producto order by rand() DESC LIMIT 0, 2";
             $run_products = mysqli_query($con, $get_products);
 
             while($row_products=mysqli_fetch_array($run_products)){

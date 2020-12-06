@@ -14,9 +14,9 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
         $delete_id = $_GET['delete_customer'];
 
-        $delete_c = "delete from Cliente where ClienteId='$delete_id'";
+        $delete_customer = "delete from Cliente where ClienteId='$delete_id'";
 
-        $run_delete = mysqli_query($con,$delete_c);
+        $run_delete = mysqli_query($con,$delete_customer);
 
         if($run_delete){
 

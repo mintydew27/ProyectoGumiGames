@@ -60,7 +60,7 @@ include("includes/header.php")?>
                             <strong>¿Que puedo hacer si tengo una duda diferente a las preguntas de esta sección?</strong>
                         </p><!--Final texto muted-->
                         <p class="text-muted" align="left"><!--Inicio text muted-->
-                            En caso de alguna duda usted podrá ponerse en contacto con alguno de nuestros asesores mediante el correo electrónico Equipo4@gmail.com, o bien a través del número de teléfono 4494615205, en un horario de lunes a domingo de 7:00 a 11:00 horas
+                            En caso de alguna duda usted podrá ponerse en contacto con alguno de nuestros asesores mediante el apartado de contactanos o con nuestro correo electrónico: Equipo4@gmail.com otra opción es mediante nuestra pagina oficial de Facebook, o bien a través del número de teléfono 4494615205.
                         </p><!--Final texto muted-->
                     </center><!--Final center-->
                     </form><!--Final form-->

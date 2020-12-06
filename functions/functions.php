@@ -305,7 +305,8 @@ function getcatpro()
 
         $cat_title = $row_cat['CategoriaTitulo'];
         $cat_desc = $row_cat['CategoriaDescripcion'];
-        $get_cat = "select * from Producto where GeneroId='$cat_id'";
+
+        $get_cat = "select * from Producto where CategoriaId='$cat_id'";
         $run_products = mysqli_query($db, $get_cat);
         $count = mysqli_num_rows($run_products);
         if ($count == 0) {

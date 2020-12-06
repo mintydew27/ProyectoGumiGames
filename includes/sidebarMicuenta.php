@@ -7,8 +7,11 @@
     $get_cliente = "select * from Cliente where ClienteCorreo = '$cliente_sesion'";
     $run_cliente = mysqli_query($con,$get_cliente);
     $row_cliente = mysqli_fetch_array($run_cliente);
-
     $cliente_nombre = $row_cliente['ClienteNombre'];
+    $cliente_correo = $row_cliente['ClienteCorreo'];
+    $cliente_pais = $row_cliente['ClientePais'];
+    $cliente_ciudad = $row_cliente['ClienteCiudad'];
+    $cliente_telefono = $row_cliente['ClienteTelefono'];
 
     if(!isset($_SESSION['ClienteCorreo'])){
 
@@ -21,7 +24,10 @@
 Name:  $cliente_nombre
         
 </h3>
-  
+<i class='fa fa-envelope'></i> <span> Email:  $cliente_correo</span> <br/>
+<i class='fa fa-flag'></i> <span> Pais:  $cliente_pais</span>  <br/>
+<i class='fa fa-map'></i> <span> Ciudad:  $cliente_ciudad</span>  <br/>
+<i class='fa fa-phone'></i> <span> Telefono:  $cliente_telefono</span>  <br/>
         ";
 
 
@@ -30,34 +36,16 @@ Name:  $cliente_nombre
 
     ?>
 
-
     </div><!--  panel-heading Finish  -->
 
     <div class="panel-body"><!--  panel-body Begin  -->
 
         <ul class="nav-pills nav-stacked nav"><!--  nav-pills nav-stacked nav Begin  -->
-
             <li class="<?php if(isset($_GET['mis_ordenes'])){ echo "active"; } ?>">
-
                 <a href="Mi_cuenta.php?mis_ordenes">
-
                     <i class="fa fa-list"></i> My Orders
-
                 </a>
-
             </li>
-
-            <!--
-        <li class=" <--?php if(isset($_GET['pagar_offline'])){ echo "active"; } ?>">
-
-                <a href="Mi_cuenta.php?pagar_offline">
-
-                    <i class="fa fa-bolt"></i> Pay Offline
-
-                </a>
-
-          </li>
--->
 
 
             <li>

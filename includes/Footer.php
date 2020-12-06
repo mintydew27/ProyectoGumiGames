@@ -11,14 +11,7 @@
                     <li><a href="Tienda.php">Tienda</a></li>
                     <li><a href="Mi_cuenta">Mi cuenta</a></li>
                 </ul><!--Final ul-->
-                <hr>
-                <h4>Sección usuario</h4>
 
-                <ul><!--Inicio de ul-->
-                    <li><a href="Revisa.php">Login</a></li>
-                    <li><a href="Registro_de_clientes.php">Registro</a></li>
-                </ul><!--Final de ul-->
-                <hr class="hidden-md hidden-lg hidden-sm">
 
             </div><!--Final de col-sm-6 col-md-3-->
             <div class="com-sm-6 col-md-3"><!--Inicio de col-sm-6 col-md-3-->
@@ -50,20 +43,8 @@
             </div><!--Final de p-->
 
             <div class="col-sm-6 col-md-3">
-                <h4>Recibe las noticias</h4>
-                <p class="text-muted">
-                    Mantente informado de todas las promociones y nuevos productos de la tienda
-                </p>
 
-                <form action="get" method="post"><!--Inicio de Form-->
-                    <div class="input-group"><!--Inicio de input-group-->
 
-                        <input type="text" class="form-control" name="email">
-                        <span class="input-group-btn"><!--Inicio de input-group-btn-->
-                            <input type="Enviar" value="Suscribirse" class="btn btn-default">
-                        </span><!--Final de input-group-btn-->
-                    </div><!--Final de Input-group-->
-                </form><!--Final de Form-->
                 <hr>
                 <h4>Mantente en contacto</h4>
                 <p class="social">
@@ -84,7 +65,7 @@
 <div id="copyright"><!--Inicio de copyright-->
     <div class="container"><!--Inicio de container-->
         <div class="col-md-6"><!--Inicio de col-md-6-->
-            <p class="pull-left">&copy; 2019 Gumi-Games All Rights Reserve</p>
+            <p class="pull-left">&copy; 2020 Gumi-Games All Rights Reserve</p>
         </div><!--Final de col-md-6-->
         <div class="col-md-6"><!--Inicio de col-md-6-->
             <p class="pull-right">Theme by <a href="#"> Equipo 4</a></p>

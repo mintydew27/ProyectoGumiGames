@@ -7,10 +7,6 @@ include("includes/header.php");
 
 <?php
 if (isset($_POST['Guardar'])){
-
-
-
-
     $comentario= $_POST['Comentario'];
     $calificacion= $_POST['estrellas'];
     $idproducto=$_GET['pro_id'];
@@ -18,7 +14,6 @@ if (isset($_POST['Guardar'])){
     $insert_mensaje ="insert into Comentario (Comentario,ComentarioCalificacion,ProductoId,ClienteId) 
                             values ('$comentario','$calificacion','$idproducto','$idcliente')";
     $run_comentario= mysqli_query($con,$insert_mensaje);
-
 }
 ?>
 
@@ -283,6 +278,7 @@ if (isset($_POST['Guardar'])){
                     </button>
                 </div>
             </form>
+
 
         </div>
     </div>

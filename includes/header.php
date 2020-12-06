@@ -208,12 +208,6 @@ if(!isset($_COOKIE["Visitado"])){
                 <li class="<?php if ($active=='Contactanos.php') echo "active";?>">
                         <a href="Contactanos.php">Contáctanos</a>
                     </li>
-                <?php if(isset($_SESSION['ClienteCorreo'])){
-                    echo '<li class="';
-                    if ($active=='Mi_cuenta.php') echo 'active">';
-                    else echo '">';
-                    echo '<a href="Mi_cuenta.php">Mi cuenta</a></li>';
-                } ?>
 
                 <?php if(isset($_SESSION['ClienteCorreo'])){
                     echo '<li class="';
@@ -222,6 +216,9 @@ if(!isset($_COOKIE["Visitado"])){
                     echo '<a href="Lista_Deseos.php">Wish list</a></li>';
                 } ?>
 
+                <li class="<?php if ($active=='PreguntasFrecuentes.php') echo "active";?>">
+                    <a href="PreguntasFrecuentes.php">Preguntas Frecuentes</a>
+                </li>
 
 
 

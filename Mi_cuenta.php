@@ -20,24 +20,27 @@ include("includes/header.php")
 
         <div class="col-md-3"><!--Inicio col-md-3--->
 
+
+
+
             <?php
             include("includes/sidebarMicuenta.php");
             ?>
 
-        </div><!--Final col-md-3-->
 
+
+
+
+
+        </div><!--Final col-md-3-->
         <div class="col-md-9"><!--inicio col-md-9-->
             <div class="box"><!--inicio box-->
                 <?php
 
                 if(isset($_GET['mis_ordenes'])){
                     include("Mis_ordenes.php");
-
                 }
-
                 ?>
-
-
 
             </div><!--Final box-->
 

@@ -194,7 +194,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <label class="col-md-3 control-label">Palabras clave del Producto</label>
                                 <div class="col-md-6"><!--Inicio col-md-6-->
 
-                                    <input name="Producto_Palabra_Clave"type="text" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" class="form-control" required>
+                                    <input name="Producto_Palabra_Clave"type="text" pattern="[A-Za-zÀ-ÿ,\u00f1\u00d1 ]+" class="form-control" required>
 
                                 </div><!--Final col-md-6-->
                             </div>

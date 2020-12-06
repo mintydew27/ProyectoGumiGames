@@ -37,7 +37,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                              Titulo del Genero del Producto
+                              Titulo del Genero
 
                             </label><!-- control-label col-md-3 finish -->
 
@@ -52,13 +52,13 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                                Producto Genero Descripción
+                                Genero Descripción
 
                             </label><!-- control-label col-md-3 finish -->
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input type='text' name="genero_descripcion" cols="30" rows="10"  class="form-control"  pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" required>
+                                <input type='text' name="genero_descripcion" cols="30" rows="10"  class="form-control"  pattern="[A-Za-zÀ-ÿ,\u00f1\u00d1 ]+" required>
 
                             </div><!-- col-md-6 finish -->
 
@@ -73,7 +73,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input value="Submit" name="submit" type="submit" class="form-control btn btn-primary">
+                                <input value="Insertar Genero" name="submit" type="submit" class="form-control btn btn-primary">
 
                             </div><!-- col-md-6 finish -->
 

@@ -32,7 +32,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                 </li>
                 <li>
                     <a href="Logout.php">
-                        <i class="fa fa-fw fa-power-off"></i> Log Out
+                        <i class="fa fa-fw fa-power-off"></i> Salir
                     </a>
                 </li>
             </ul>
@@ -75,11 +75,11 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="Index.php?view_cats" data-toggle="collapse" data-target="#cat">
-                    <i class="fa fa-fw fa-book"></i> Categoria <span class="badge"><?php echo $count_category; ?></span>
+                    <i class="fa fa-fw fa-book"></i> Categoría <span class="badge"><?php echo $count_category; ?></span>
 
                 </a>
                     <li>
-                        <a href="Index.php?insert_cat">Insertar Categoria </a>
+                        <a href="Index.php?insert_cat">Insertar Categoría </a>
                     </li>
                     <li>
                         <a href="Index.php?view_cats">Ver Categorias</a>
@@ -105,10 +105,10 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                 </a>
 
                     <li>
-                        <a href="Index.php?insert_slide">Insert Slide </a>
+                        <a href="Index.php?insert_slide">Insertar Slide </a>
                     </li>
                     <li>
-                        <a href="Index.php?view_slides">View Slides</a>
+                        <a href="Index.php?view_slides">Ver Slides</a>
                     </li>
 
             </li>
@@ -117,7 +117,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a data-toggle="collapse" data-target="#slides">
-                    <i class="fa fa-fw fa-gear"></i> Estadisticas
+                    <i class="fa fa-fw fa-gear"></i> Estadísticas
                 </a>
 
 
@@ -136,37 +136,37 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="Index.php?view_orders">
-                    <i class="fa fa-fw fa-book"></i> View Orders
+                    <i class="fa fa-fw fa-book"></i> Ver Ordenes
                 </a>
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="Index.php?view_payments">
-                    <i class="fa fa-fw fa-money"></i> View Payments <span class="badge"><?php echo $count_pago; ?></span>
+                    <i class="fa fa-fw fa-money"></i> Ver Pagos <span class="badge"><?php echo $count_pago; ?></span>
                 </a>
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="Index.php?view_users" data-toggle="collapse" data-target="#users">
-                    <i class="fa fa-fw fa-users"></i> Users
+                    <i class="fa fa-fw fa-users"></i> Administradores
                     <i class="fa fa-fw fa-caret-down"></i>
                 </a>
 
                     <li>
-                        <a href="Index.php?insert_user">Insert User </a>
+                        <a href="Index.php?insert_user">Insertar Admin. </a>
                     </li>
                     <li>
-                        <a href="Index.php?view_users">View Users</a>
+                        <a href="Index.php?view_users">Ver Admin.</a>
                     </li>
                     <li>
-                        <a href="Index.php?user_profile=<?php echo $admin_id;?>">Edit User Profile</a>
+                        <a href="Index.php?user_profile=<?php echo $admin_id;?>">Editar Perfil Admin</a>
                     </li>
 
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="logout.php">
-                    <i class="fa fa-fw fa-power-off"></i> Log Out
+                    <i class="fa fa-fw fa-power-off"></i> Salir
                 </a>
             </li>
             ///////////////////////////////////////////////////////////////////

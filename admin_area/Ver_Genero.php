@@ -40,8 +40,8 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                                 <th> Genero ID </th>
                                 <th> Genero Titulo </th>
                                 <th> Genero Descripcion </th>
-                                <th> Edit Genero </th>
-                                <th> Delete Genero</th>
+                                <th> Editar Genero </th>
+                                <th> Eliminar Genero</th>
                             </tr><!-- tr finish -->
                             </thead><!-- thead finish -->
 
@@ -73,12 +73,12 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                                     <td width="300"> <?php echo $genero_desc; ?> </td>
                                     <td>
                                         <a href="Index.php?editar_genero= <?php echo $genero_id; ?> ">
-                                            <i class="fa fa-pencil"></i> Edit
+                                            <i class="fa fa-pencil"></i> Editar
                                         </a>
                                     </td>
                                     <td>
                                         <a href="Index.php?borrar_genero= <?php echo $genero_id; ?> ">
-                                            <i class="fa fa-trash"></i> Delete
+                                            <i class="fa fa-trash"></i> Eliminar
                                         </a>
                                     </td>
                                 </tr><!-- tr finish -->

@@ -37,13 +37,13 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                                Category Title
+                               Titulo de la Categoría
 
                             </label><!-- control-label col-md-3 finish -->
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input name="cat_title" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
+                                <input name="cat_title" type="text" class="form-control" maxlength="40" pattern="[A-Za-zÀ-ÿ,\u00f1\u00d1 ]+" title="Solo se admiten letras" required>
 
                             </div><!-- col-md-6 finish -->
 
@@ -52,7 +52,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                                Category Description
+                                Categoría Descripción
 
                             </label><!-- control-label col-md-3 finish -->
 
@@ -73,7 +73,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input value="Submit" name="submit" type="submit" class="form-control btn btn-primary">
+                                <input value="Insertar Categoria" name="submit" type="submit" class="form-control btn btn-primary">
 
                             </div><!-- col-md-6 finish -->
 

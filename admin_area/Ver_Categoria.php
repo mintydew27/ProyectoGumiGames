@@ -37,11 +37,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
-                                <th> Category ID </th>
-                                <th> Category Title </th>
-                                <th> Category Desc </th>
-                                <th> Edit Category </th>
-                                <th> Delete Category </th>
+                                <th> Categoría ID </th>
+                                <th> Categoría Titulo </th>
+                                <th> Categoría Descripción </th>
+                                <th> Editar Categoría </th>
+                                <th> Eliminar Categoría </th>
                             </tr><!-- tr finish -->
                             </thead><!-- thead finish -->
 
@@ -73,12 +73,12 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                                     <td width="300"> <?php echo $cat_desc; ?> </td>
                                     <td>
                                         <a href="Index.php?edit_cat= <?php echo $cat_id; ?> ">
-                                            <i class="fa fa-pencil"></i> Edit
+                                            <i class="fa fa-pencil"></i> Editar
                                         </a>
                                     </td>
                                     <td>
                                         <a href="Index.php?delete_cat= <?php echo $cat_id; ?> ">
-                                            <i class="fa fa-trash"></i> Delete
+                                            <i class="fa fa-trash"></i> Eliminar
                                         </a>
                                     </td>
                                 </tr><!-- tr finish -->

@@ -37,7 +37,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                                Slide Name
+                                Slide Nombre
 
                             </label><!-- control-label col-md-3 finish -->
 
@@ -52,7 +52,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <label for="" class="control-label col-md-3"><!-- control-label col-md-3 begin -->
 
-                                Slide Image
+                                Slide Imagen
 
                             </label><!-- control-label col-md-3 finish -->
 
@@ -69,7 +69,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                             <div class="col-md-6"><!-- col-md-6 begin -->
 
-                                <input type="submit" name="submit" value="Submit Now" class="btn btn-primary form-control">
+                                <input type="submit" name="submit" value="Insertar Slide" class="btn btn-primary form-control">
 
                             </div><!-- col-md-6 finish -->
 

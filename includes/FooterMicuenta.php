@@ -25,12 +25,12 @@
 
                 <h4> Productos</h4>
                 <ul><!--Inicio de ul-->
-                    <li><a href="#">Acción</a></li>
-                    <li><a href="#">Aventura</a></li>
-                    <li><a href="#">Estrategia</a></li>
-                    <li><a href="#">Indie</a></li>
-                    <li><a href="#">RPG</a></li>
-                    <li><a href="#">Deporte</a></li>
+                    <li><a href="Tienda.php">Acción</a></li>
+                    <li><a href="Tienda.php">Aventura</a></li>
+                    <li><a href="Tienda.php">Estrategia</a></li>
+                    <li><a href="Tienda.php">Indie</a></li>
+                    <li><a href="Tienda.php">RPG</a></li>
+                    <li><a href="Tienda.php">Deporte</a></li>
                 </ul><!--Final de ul-->
 
                 <hr class="hidden-md hidden-lg">
@@ -44,38 +44,19 @@
                     <br/>mitzukiniwi@gmail.com
                     <br/>Equipo 4
                 </p><!--Inicio de p-->
-                <a href="../Contactanos.php">Revisa nuestra página de contacto</a>
+                <a href="Contactanos.php">Revisa nuestra página de contacto</a>
                 <hr class="hidden-md hidden-lg">
 
             </div><!--Final de p-->
 
             <div class="col-sm-6 col-md-3">
-                <h4>Recibe las noticias</h4>
-                <p class="text-muted">
-                    Mantente informado de todas las promociones y nuevos productos de la tienda
-                </p>
 
-                <form action="get" method="post"><!--Inicio de Form-->
-                    <div class="input-group"><!--Inicio de input-group-->
-
-                        <input type="text" class="form-control" name="email">
-                        <span class="input-group-btn"><!--Inicio de input-group-btn-->
-                            <input type="Enviar" value="Suscribirse" class="btn btn-default">
-                        </span><!--Final de input-group-btn-->
-                    </div><!--Final de Input-group-->
-                </form><!--Final de Form-->
                 <hr>
                 <h4>Mantente en contacto</h4>
                 <p class="social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-google"></a>
-                    <a href="#" class="fa fa-envelope"></a>
-
+                    <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"></a>
+                    <a href="Contactanos.php" class="fa fa-envelope"></a>
                 </p>
-
-
-
             </div>
 
         </div><!--Final de row-->
@@ -86,7 +67,7 @@
 <div id="copyright"><!--Inicio de copyright-->
     <div class="container"><!--Inicio de container-->
         <div class="col-md-6"><!--Inicio de col-md-6-->
-            <p class="pull-left">&copy; 2019 Gumi-Games All Rights Reserve</p>
+            <p class="pull-left">&copy; 2020 Gumi-Games All Rights Reserve</p>
         </div><!--Final de col-md-6-->
         <div class="col-md-6"><!--Inicio de col-md-6-->
             <p class="pull-right">Theme by <a href="#"> Equipo 4</a></p>

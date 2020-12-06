@@ -28,15 +28,15 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                     <table class="table table-striped table-bordered table-hover">
                         <thead> <!-- THead start-->
                         <tr>
-                            <th>Product ID: </th>
-                            <th>Product Tittle: </th>
-                            <th>Product Image: </th>
-                            <th>Product Price: </th>
-                            <th>Product Sold: </th>
-                            <th>Product Keywords: </th>
-                            <th>Product Date: </th>
-                            <th>Product Delete:</th>
-                            <th>Product Edit: </th>
+                            <th>Producto ID: </th>
+                            <th>Producto Titulo: </th>
+                            <th>Producto Imagen: </th>
+                            <th>Producto Precio: </th>
+                            <th>Producto Vendido: </th>
+                            <th>Producto Palabras Clave: </th>
+                            <th>Producto Fecha: </th>
+                            <th>Producto Eliminar:</th>
+                            <th>Producto Editar: </th>
                         </tr>
                         </thead><!-- THead end-->
 
@@ -70,12 +70,12 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                                 <td><?php echo $pro_date; ?></td>
 
                                 <td><a href="Index.php?delete_product=<?php echo $pro_id ?>">
-                                            <i class="fa fa-trash"></i> Delete
+                                            <i class="fa fa-trash"></i> Eliminar
                                     </a>
                                 </td>
                                 <td>
                                     <a href="index.php?edit_product=<?php echo $pro_id; ?>">
-                                        <i class="fa fa-pencil"></i> Edit
+                                        <i class="fa fa-pencil"></i> Editar
                                     </a>
                                 </td>
                             </tr>

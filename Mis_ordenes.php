@@ -1,12 +1,12 @@
 <center><!--  center Begin  -->
 
-    <h1> My Orders </h1>
+    <h1> Mis ordenes </h1>
 
-    <p class="lead"> Your orders on one place</p>
+    <p class="lead"> Tus ordenes en un solo lugar</p>
 
     <p class="text-muted">
 
-        If you have any questions, feel free to <a href="Contactanos.php">Contact Us</a>. Our Customer Service work <strong>24/7</strong>
+        Si tiene alguna pregunta, no dude en <a href="Contactanos.php">Contactarnos</a>. Nuestro trabajo de servicio al cliente es <strong>24/7</strong>
 
     </p>
 

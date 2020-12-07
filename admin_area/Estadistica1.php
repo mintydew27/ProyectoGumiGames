@@ -35,7 +35,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         categories: [
 
                             <?php
-                            $sql="SELECT Cliente.ClienteNombre, Orden.OrdenCantidad FROM Cliente JOIN Orden ON Cliente.ClienteId = Orden.ClienteId ";
+                            $sql="SELECT distinct Cliente.ClienteNombre FROM Cliente JOIN Orden ON Cliente.ClienteId = Orden.ClienteId order by OrdenCantidadDeber desc";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
@@ -88,7 +88,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         name: 'Total',
                         data: [
                             <?php
-                            $sql="SELECT Cliente.ClienteNombre, SUM(Orden.OrdenCantidadDeber) as totalcliente FROM Cliente JOIN Orden ON Cliente.ClienteId = Orden.ClienteId ";
+                            $sql="SELECT Cliente.ClienteNombre from (select SUM(Orden.OrdenCantidadDeber))from Orden ) JOIN Orden ON Cliente.ClienteId = Orden.ClienteId order by OrdenCantidadDeber desc";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>

@@ -84,29 +84,12 @@ if (isset($_POST['Guardar'])){
                         <?php add_wishlist(); ?>
 
 
-                        <form action="Detalles.php?add_cart=<?php echo $producto_id; ?> " class="form-horizontal" method="post">
-                            <div class="form-group">
-                                <label for="" class="col-sm-5 control-label"> Cantidad de Producto </label>
-                                <div class="col-md-7"><!--Inicio col-sm-7-->
-                                    <select name="product_qty" id="" class="form-control">
-                                        <option >1</option>
-
-                                    </select><!--Final select-->
-                                </div>
-
-                            </div>
-
-                            <p class="price">$<?php echo $pro_price?></p>
-
-                            <p class="text-center buttons">
-                                <button class="btn btn-primary i fa fa-shopping-cart btn-lg"> Agregar al carrito </button>
-
-                            </p> </form>
-                        <form action="Detalles.php?add_wishlist=<?php echo $producto_id; ?> " class="form-horizontal" method="post">
-                            <p class="text-center buttons"  >
-                                <button class="btn btn-primary i fa fa-heart"  > Agregar a mi Wish List</button>
-                            </p>
-                        </form>
+                       <?php
+                            if(isset($_SESSION['ClienteCorreo'])){
+                                include_once('FormularioAgregarAlCarrito.php');
+                                include_once('FormularioAgregarWishList.php');
+                            }
+                       ?>
 
                     </div><!--Final box-->
                     <div class ="row" id="thumbs">
@@ -230,57 +213,13 @@ if (isset($_POST['Guardar'])){
                 </div>
             </div>
         </div>
+        <?php
+            if(isset($_SESSION['ClienteCorreo'])){
+            include_once('FormularioComentarios.php');
+        }
+        ?>
 
 
-        <div class="box"><!--Box Inicio--->
-
-            <div class="box-header"><!--Box header Inicio--->
-
-                <center><!--center Inicio--->
-
-                    <h1>  Comentarios  </h1>
-                    <p class="lead">  </p>
-
-                    <p class="text-muted"> Deja tu comentario </p>
-
-                </center><!--center Final--->
-
-            </div><!--Box header Final--->
-
-                <h4>Calificación</h4>
-
-
-
-            <form method="post" action="Detalles.php?pro_id=<?php echo $producto_id?>"<!--Inicio Form-->
-
-                    <input id="radio1" type="radio" name="estrellas" value="1">
-                         <img src='admin_area/product_images/calif/uno.png' >
-
-                        <input id="radio2" type="radio" name="estrellas" value="2">
-                        <label for="radio2"><img src='admin_area/product_images/calif/dos.png' ></label>
-
-                        <input id="radio3" type="radio" name="estrellas" value="3">
-                        <label for="radio3"><img src='admin_area/product_images/calif/tres.png' ></label>
-                        <input id="radio4" type="radio" name="estrellas" value="4">
-                        <label for="radio4"><img src='admin_area/product_images/calif/cuatro.png' ></label>
-
-                        <input id="radio5" type="radio" name="estrellas" value="5" checked>
-                        <label for="radio5"> <img src='admin_area/product_images/calif/cinco.png'></label>
-
-                <div class="form-group"><!--Form group incio--->
-                    <label> Ingresa tu comentario </label>
-                    <textarea name="Comentario" type="texto" class="form-control" required> </textarea>
-                </div><!--Form group Final--->
-
-                <div class="text-center"><!--text-centerInicio--->
-                    <button name="Guardar" value="guardar"class="btn btn-primary">
-                        <i class="fa fa-sign-in"></i> Guardar Comentario
-                    </button>
-                </div>
-            </form>
-
-
-        </div>
     </div>
 
       </div><!--Final container-->

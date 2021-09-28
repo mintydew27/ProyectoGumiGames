@@ -73,6 +73,8 @@ if(isset($_GET['pro_id'])){
     setcookie("Visitado",true,mktime().time()+60*60*24);
 
 }*/
+
+
 ?>
 
 

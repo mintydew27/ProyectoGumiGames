@@ -52,9 +52,7 @@ if(isset($_GET['pro_id'])){
 }
 
 
-  //cambio pato
- // cambio patito
-//cambio Vivi vivisilla
+// Se comento esta funcion debido a que no funcionaba en los ordenadores de algunos integrantes de equipo
 
 
 /*(if(!isset($_COOKIE["Visitado"])){

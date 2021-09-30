@@ -87,165 +87,312 @@ if(isset($_GET['pro_id'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Themefisher">
+    <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+
+
+
+
     <!-- Nombre de la pagina-->
     <title>Gumi-Games</title>
     <!-- Conexion a los folders para el diseño-->
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Construction Html5 Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="author" content="Themefisher">
+    <meta name="generator" content="Themefisher Constra HTML Template v1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+    <!-- Themefisher Icon font -->
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+
+    <!-- Animate css -->
+    <link rel="stylesheet" href="plugins/animate/animate.css">
+    <!-- Slick Carousel -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-<!--Creacion de la cabecera-->
-<div id="top"><!--cabecera-->
-    <div class="container"><!--Inicio contendor-->
-        <div class="col-md-6 offer"><!--Inicio col-md-6 offe-->
-            <a <?php if(!isset($_SESSION['ClienteCorreo'])){echo 'href="Registro_de_clientes.php"';}else{echo 'href="Mi_cuenta.php"';}?> class="btn btn-primary btn-sm">
+
+
+
+
+
+<body id ="body">
+<!--Creacion de la cabecera en base a la plantilla-->
+
+<section class="top-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-4">
+                <div >
+                    <link rel="icon" type="image/png" href="/images/favicon.png" />
+                    <img src="images/logotipo_pagina.png" alt="LogotipoGumiGames" class="hidden-xs">
+                    <img src="images/logotipo_pagina.png" alt="LogotipoGumiGames" class="visible-xs">
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-4">
+                <!-- Site Logo -->
+                <div class="logo text-center">
+                    <a href="index.html">
+                        <!-- replace logo here -->
+                        <svg width="280px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40"
+                               font-family="AustinBold, Austin" font-weight="bold">
+                                <g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
+                                    <text id="GUMIGAMES">
+                                        <tspan x="108.94" y="325">GumiGames</tspan>
+                                    </text>
+                                </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-4 col-xs-12 col-sm-4 ">
+                <!-- Cart -->
+                <ul class="top-menu text-right list-inline">
+                    <li class="dropdown cart-nav dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
+                                    class="tf-ion-android-cart"></i>Carrito</a>
+                        <div class="dropdown-menu cart-dropdown">
+
+                            <!-- Cart Item -->
+                            <div class="media">
+
+
+
+                                <?php if(isset($_SESSION['ClienteCorreo'])){
+
+                                    items();
+                                    echo '<div class="media">
+                                        <h4 class="media-heading">Objetos en tu carrito</h4>
+                                        <div class="cart-price">
+                                     
+                                        ';
+
+                                } ?>
+
+                                <?php if(isset($_SESSION['ClienteCorreo'])){
+                                    echo ' <div class="cart-summary">
+                                              <span>Total</span>
+                                              <span class="total-price"> </span>
+                                               </div>';
+
+                                    precio_total();
+
+                                }?>
+
+                            </div>
+                        </div><!-- / Cart Item -->
+
+
+                        <ul class="text-center cart-buttons">
+                            <li><a href="Carrito.php" class="btn btn-small">Ver Carrito</a></li>
+                            <li><a href="Lista_Deseo.php" class="btn btn-small btn-solid-border">Wish list</a></li>
+                        </ul>
+            </div>
+            </li><!-- / Cart -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <?php if(isset($_SESSION['ClienteCorreo'])){
+                echo '
+                    <li class="dropdown"> 
+                        <a href="Mi_cuenta.php" >Mi Cuenta</a>
+                    </li>';
+            }?>
+
+
+            <li class="dropdown ">
+                <a href="Registro_de_clientes.php" >Registro</a>
+            </li><!-- / Home -->
+
+            <li class="dropdown ">
+
+
                 <?php
                 if(!isset($_SESSION['ClienteCorreo'])){
-                    echo "Registrate";
-
-                    }else{
-                    echo "Bienvenido: " . $_SESSION['ClienteCorreo'] . "";
+                    echo "<a href='Revisa.php'> Iniciar sesión</a>";
+                }else{
+                    echo "<h1></h1> 
+                                
+                                <a href='Cerrar_sesion.php' class='tf-ion-log-out' > </a> ";
                 }
                 ?>
 
-            </a>
 
-            <?php if(isset($_SESSION['ClienteCorreo'])){
-               echo '<a href="Carrito.php">';
-               items();
-               echo ' objetos en tu carrito | Precio total: ';
-               precio_total();
-               echo '</a>';
-            }?>
+            </li><!-- / Home -->
 
-        </div><!--Final col-md-6 offer-->
-        <div class="col-md-6"><!--Inicio col-md-6-->
-            <ul class="menu"><!--Inicio Menu-->
-                <li>
-                    <a href="Registro_de_clientes.php">Registro</a>
-                </li>
 
-               <?php if(isset($_SESSION['ClienteCorreo'])){
-                   echo '
-                    <li>
-                        <a href="Mi_cuenta.php">Mi cuenta</a>
+
+
+            </ul><!-- / .nav .navbar-nav .navbar-right -->
+        </div>
+    </div>
+    </div>
+</section><!-- End Top Header Bar -->
+
+<!-- Main Menu Section -->
+<section class="menu">
+    <nav class="navbar navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <h2 class="menu-title">Main Menu</h2>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+            </div><!-- / .navbar-header -->
+
+            <!-- Navbar Links -->
+            <div id="navbar" class="navbar-collapse collapse text-center">
+                <ul class="nav navbar-nav">
+
+                    <!-- Tienda -->
+                    <li class="dropdown ">
+                        <a href="Index.php">Home</a>
+                    </li><!-- / Home -->
+
+                    <!-- / Tienda -->
+                    <li class="dropdown dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+                           role="button" aria-haspopup="true" aria-expanded="false">Tienda <span
+                                    class="tf-ion-ios-arrow-down"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="Tienda.php">Tienda</a></li>
+                            <li><a href="Carrito.php">Carrito</a></li>
+                            <li><a href="Lista_Deseos.php">Wish list</a></li>
+
+                        </ul>
+                    </li><!-- / Tienda -->
+
+
+
+                    <!-- / Nosotros -->
+                    <li class="dropdown dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+                           role="button" aria-haspopup="true" aria-expanded="false">Nosotros <span
+                                    class="tf-ion-ios-arrow-down"></span></a>
+                        <ul class="dropdown-menu">
+
+                            <li><a href="Contactanos.php">Contactanos</a></li>
+                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="PreguntasFrecuentes.php">Preguntas Frecuentes</a></li>
+
+                        </ul>
+                    </li><!-- / Nosotros -->
+
+
+                    <?php if(isset($_SESSION['ClienteCorreo'])){
+                        echo '
+                    <li><li class="dropdown dropdown-slide">
+                        <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+                           role="button" aria-haspopup="true" aria-expanded="false">Mi Cuenta<span
+                                  ></span></a>
+                        <ul class="dropdown-menu">
+                        
+                        <li><a href="Mi_cuenta.php">Detalles del Perfil</a></li>
+                     <li class="<?php if(isset($_GET["mis_ordenes"])){ echo "active"; } ?>"
+                                <a href="Mi_cuenta.php?mis_ordenes">
+                                   Mis Ordenes
+                                </a>
+                            </li>
                     </li>';
-               }?>
-
-                <li>
+                    }?>
 
 
-                    <a href="Revisa.php">
-
-                        <?php
-                        if(!isset($_SESSION['ClienteCorreo'])){
-                            echo "<a href='Revisa.php'> Iniciar sesión</a>";
-                        }else{
-                            echo "<a href='Cerrar_sesion.php'> Cerrar sesión</a>";
-                        }
-
-                        ?>
+    </nav>
+</section>
 
 
 
-                    </a>
-                </li>
-            </ul><!--final menu-->
-        </div><!--Final col-md-6-->
-    </div><!--Final contenedor-->
-</div><!--Final cabecera-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--Creacion de la cabecera-->
 
 <!--Creacioin de la barra de navegacion-->
-<div id="navbar" class="navbar navbar-dafault"><!--Inicio navbar navbar-dafault-->
-
-    <div class="container"><!--Inicio contenedor-->
-
-         <div class="navbar-header"><!-- Inicio navbar--header"-->
-            <a href="Index.php" class="navbar-brand home"><!--Inicio navbar-brand home-->
-                <link rel="icon" type="image/png" href="/images/favicon.png" />
-                <img src="images/logotipo_gumi_games.png" alt="LogotipoGumiGames" class="hidden-xs">
-                <img src="images/logotipo_gumi_games.png" alt="LogotipoGumiGames" class="visible-xs">
-
-            </a><!--Final navbar-brand home-->
-
-            <button class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-                <span class="sr-only">Toggle Navigation</span>
-                <i class="fa fa-align-justify"></i>
-            </button>
-
-            <button class="navbar-toggle" data-toggle="collapse"  data-target="#search">
-
-                <span class="sr-only">Toggle Search</span>
-                <i class="fa fa-search"></i>
-            </button>
-
-        </div><!--Final navbar--header"-->
 
 
-        <div class="navbar-collapse collapse" id="navigation"><!--Inicio navbar-collapse-collapse"-->
 
-            <div class="padding-nav"><!--Inicio padding-nav"-->
+<!--
+Essential Scripts
+=====================================-->
 
-                <ul class="nav navbar-nav left"><!--Inicio nav navbar-nav left"-->
+<!-- Main jQuery -->
+<script src="plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.1 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Touchpin -->
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Instagram Feed Js -->
+<script src="plugins/instafeed/instafeed.min.js"></script>
+<!-- Video Lightbox Plugin -->
+<script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<!-- Count Down Js -->
+<script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
 
-                    <li class="<?php if ($active=='Index.php') echo "active";?>">
-                        <a href="Index.php">Home</a>
-                    </li>
-                    <li class="<?php if ($active=='Tienda.php') echo "active";?>">
-                        <a href="Tienda.php">Tienda</a>
-                    </li>
+<!-- slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
 
-                    </>
-                <?php if(isset($_SESSION['ClienteCorreo'])){
-                    echo '<li class="';
-                    if ($active=='Carrito.php') echo 'active">';
-                    else echo '">';
-                    echo '<a href="Carrito.php">Carrito de Compras</a></li>';
-                } ?>
+<!-- Google Mapl -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script type="text/javascript" src="plugins/google-map/gmap.js"></script>
 
-                <li class="<?php if ($active=='Contactanos.php') echo "active";?>">
-                        <a href="Contactanos.php">Contáctanos</a>
-                    </li>
-
-                <?php if(isset($_SESSION['ClienteCorreo'])){
-                    echo '<li class="';
-                    if ($active=='Lista_Deseos.php') echo 'active">';
-                    else echo '">';
-                    echo '<a href="Lista_Deseos.php">Wish list</a></li>';
-                } ?>
-
-                <li class="<?php if ($active=='PreguntasFrecuentes.php') echo "active";?>">
-                    <a href="PreguntasFrecuentes.php">Preguntas Frecuentes</a>
-                </li>
+<!-- Main Js File -->
+<script src="js/script.js"></script>
 
 
 
 
-                </ul><!--Final nav navbar-nav left"-->
+</body>
 
-            </div><!--Final padding-nav"-->
-
-            <?php if(isset($_SESSION['ClienteCorreo'])){
-                echo '<a href="Carrito.php" class="btn navbar-btn btn-primary right">'; //Inicio btn navbar-btn btn-primary right"-->
-                echo '<i class="fa fa-shopping-cart"></i>';
-                echo '<span> '; items(); echo ' Objetos en tu carrito</span>';
-                echo '</a>';//Final btn navbar-btn btn-primary right"-->
-            } ?>
-
-
-
-            <!--Boton cabecera-->
-
-
-
-
-        </div><!--Final navbar-collapse-collapse"-->
-
-    </div><!--Final contenedor-->
-
-</div><!--Final navbar navbar-dafault-->
-
-
-
+</html>

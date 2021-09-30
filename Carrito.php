@@ -308,6 +308,8 @@ $session_email = $_SESSION['ClienteCorreo'];
 <?php
 include("includes/Footer.php");
 ?>
+
+
 <!-- Librerias de los folders jquery para que funcione-->
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>

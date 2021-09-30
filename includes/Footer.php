@@ -1,5 +1,6 @@
+
 <!--Creación del pie de pagina--->
-<div id="footer"> <!--Inicio pie de pagina-->
+<div id="footer" class ="footer"> <!--Inicio pie de pagina-->
     <div class="container"><!--Inicio de contenedor-->
         <div class="row"><!--Inicio de row-->
             <div class="col-sm-6 col-md-3"><!--Inicio de col-sm-6 col-md-3-->
@@ -44,13 +45,11 @@
 
             <div class="col-sm-6 col-md-3">
 
-
                 <hr>
                 <h4>Mantente en contacto</h4>
                 <p class="social">
                     <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"></a>
                     <a href="Contactanos.php" class="fa fa-envelope"></a>
-
                 </p>
 
 

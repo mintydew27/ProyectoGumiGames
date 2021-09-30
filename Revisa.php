@@ -30,7 +30,7 @@ include("includes/header.php");
             <?php
             if(!isset($_SESSION['ClienteCorreo'])){
 
-                include("Inicio_sesion_cliente.php");
+                include("Login_Users.php");
             }else{
 
                 include("Opcion_pago.php");

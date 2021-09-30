@@ -126,7 +126,7 @@ if(isset($_GET['pro_id'])){
         <div class="col-md-6"><!--Inicio col-md-6-->
             <ul class="menu"><!--Inicio Menu-->
                 <li>
-                    <a href="Registro_de_clientes.php">Registro</a>
+                    <a href="Registro_Users.php">Registro</a>
                 </li>
 
                <?php if(isset($_SESSION['ClienteCorreo'])){

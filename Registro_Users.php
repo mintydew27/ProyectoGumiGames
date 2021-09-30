@@ -143,5 +143,6 @@ if (isset($_POST['registrar'])){
                 echo "<script>alert('Te has registrado correctamente')</script>> ";
                 echo "<script>window.open('Index.php','_self')</script>> ";
             }
+            
 }
 ?>

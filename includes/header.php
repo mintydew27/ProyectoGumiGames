@@ -126,7 +126,6 @@ if(isset($_GET['pro_id'])){
                 <li>
                     <a href="Registro_de_clientes.php">Registro</a>
                 </li>
-
                <?php if(isset($_SESSION['ClienteCorreo'])){
                    echo '
                     <li>

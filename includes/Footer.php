@@ -1,74 +1,32 @@
-<!--Creación del pie de pagina--->
-<div id="footer"> <!--Inicio pie de pagina-->
+<footer class="footer section text-center"> <!--Inicio pie de pagina-->
     <div class="container"><!--Inicio de contenedor-->
         <div class="row"><!--Inicio de row-->
-            <div class="col-sm-6 col-md-3"><!--Inicio de col-sm-6 col-md-3-->
-                <h4>Páginas</h4>
+            <div class="col-md-12"><!--Inicio de col-sm-6 col-md-3-->
+                <ul class="social-media">
+                    <li>
+                        <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"><i class="tf-ion-social-facebook"></i> </a>
+                    </li>
+                    <li>
+                        <a href="Contactanos.php" class="fa fa-envelope"></a>
+                    </li>
 
-                <ul><!--Inicio ul-->
-                    <li><a href="Carrito.php">Carrito de Compras</a></li>
-                    <li><a href="Contactanos.php">Contactanos</a></li>
-                    <li><a href="Tienda.php">Tienda</a></li>
-                    <li><a href="Mi_cuenta">Mi cuenta</a></li>
-                </ul><!--Final ul-->
-
-
-            </div><!--Final de col-sm-6 col-md-3-->
-            <div class="com-sm-6 col-md-3"><!--Inicio de col-sm-6 col-md-3-->
-
-                <h4> Genero</h4>
-                <ul><!--Inicio de ul-->
-                    <li><a href="#">Acción</a></li>
-                    <li><a href="#">Aventura</a></li>
-                    <li><a href="#">Estrategia</a></li>
-                    <li><a href="#">Indie</a></li>
-                    <li><a href="#">RPG</a></li>
-                    <li><a href="#">Deporte</a></li>
-                </ul><!--Final de ul-->
-
-                <hr class="hidden-md hidden-lg">
-
-            </div><!--Final de col-sm-6 col-md-3-->
-            <div class="col-sm-6 col-md-3"><!--Inicio de col-sm-6 col-md-3-->
-                <h4> Encuentranos: </h4>
-                <p><!--Inicio de p -->
-                    <strong>Gumi-Games Inc</strong>
-                    <br/>(449)-153-4312
-                    <br/>Equipo4@gmail.comi
-                    <br/>Equipo 4
-                </p><!--Inicio de p-->
-                <a href="Contactanos.php">Revisa nuestra página de contacto</a>
-                <hr class="hidden-md hidden-lg">
-
-            </div><!--Final de p-->
-
-            <div class="col-sm-6 col-md-3">
-
-
-                <hr>
-                <h4>Mantente en contacto</h4>
-                <p class="social">
-                    <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"></a>
-                    <a href="Contactanos.php" class="fa fa-envelope"></a>
-
-                </p>
-
-
-
+                </ul>
+                <ul class="footer-menu text-uppercase">
+                    <li>
+                        <a href="Contactanos.php">CONTACTANOS</a>
+                    </li>
+                    <li>
+                        <a href="Tienda.php">TIENDA</a>
+                    </li>
+                    <li>
+                        <a href="PreguntasFrecuentes.php">PREGUNTAS FRECUENTES</a>
+                    </li>
+                    <li>
+                        <a href="Lista_Deseos">Lista de deseos</a>
+                    </li>
+                </ul>
+                <p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="PreguntasFrecuentes">Equipo 1</a></p>
             </div>
-
-        </div><!--Final de row-->
-    </div><!--Final de contenedor-->
-</div><!--Final de pie de pagina-->
-
-
-<div id="copyright"><!--Inicio de copyright-->
-    <div class="container"><!--Inicio de container-->
-        <div class="col-md-6"><!--Inicio de col-md-6-->
-            <p class="pull-left">&copy; 2020 Gumi-Games All Rights Reserve</p>
-        </div><!--Final de col-md-6-->
-        <div class="col-md-6"><!--Inicio de col-md-6-->
-            <p class="pull-right">Theme by <a href="#"> Equipo 4</a></p>
-        </div><!--Final de col-md-6-->
-    </div><!--Final de container-->
-</div><!--Final de copyright-->
+        </div>
+    </div>
+</footer>

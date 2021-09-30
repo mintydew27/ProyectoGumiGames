@@ -4,7 +4,7 @@
             <div class="col-md-12"><!--Inicio de col-sm-6 col-md-3-->
                 <ul class="social-media">
                     <li>
-                        <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"><i class="tf-ion-social-facebook"></i> </a>
+                        <a href="https://www.facebook.com/Gumi-Games-102079891766064" class="fa fa-facebook"> </a>
                     </li>
                     <li>
                         <a href="Contactanos.php" class="fa fa-envelope"></a>

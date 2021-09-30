@@ -82,9 +82,9 @@ include("includes/header.php");
 
                         </div><!--Final Icon"-->
 
-                        <h3><a href="#">Las mejores ofertas</a></h3>
+                        <h3><a href="Contactanos.php">¿Tienes una duda?</a></h3>
 
-                        <p>Tenemos el mejor servicio para ti</p>
+                        <p>Preguntanos</p>
 
                     </div><!--Final box same-height"-->
 
@@ -99,9 +99,9 @@ include("includes/header.php");
 
                         </div><!--Final Icon"-->
 
-                        <h3><a href="#">Los mejores precios</a></h3>
+                        <h3><a href="Tienda.php">Los mejores precios</a></h3>
 
-                        <p>Tenemos los mejores precios aquí</p>
+                        <p>Solo para ti</p>
 
                     </div><!--Final box same-height"-->
                 </div><!--Final col-sm-4"-->
@@ -115,9 +115,9 @@ include("includes/header.php");
 
                         </div><!--Final Icon"-->
 
-                        <h3><a href="#">100% originales</a></h3>
+                        <h3><a href="Tienda.php">Juegos originales</a></h3>
 
-                        <p>La mejor calidad </p>
+                        <p>De la mejor calidad </p>
 
                     </div><!--Final box same-height"-->
 
@@ -139,7 +139,7 @@ include("includes/header.php");
                 <div class="col-md-12"><!--Inicio col-md-12"-->
 
                     <h2>
-                        Nuestros Últimos Productos
+                        Nuestros Productos Más recientes
                     </h2>
 
 

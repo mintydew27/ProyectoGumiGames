@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,7 @@
   <link rel="stylesheet" href="plugins/slick/slick-theme.css">
   
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -42,7 +41,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="block text-center">
-          <a class="logo" href="index.php">
+          <a class="logo" href="index.html">
             <img src="images/logotipo_gumi.png" alt="">
           </a>
           <h2 class="text-center">Inicio de sesión</h2>
@@ -54,10 +53,10 @@
             <input name="ClienteContraseña" placeholder="Contraseña" type="password" class="form-control" required>
             </div>
             <div class="text-center">
-              <button type="submit" name="login" value="Login" class="btn btn-main text-center" >Iniciar sesión</button>
+              <button type="submit" class="btn btn-main text-center" >Iniciar Sesión</button>
             </div>
           </form>
-          <p class="mt-20">¿No tienes una cuenta?<a href="Registro.php">Registrate aqui</a></p>
+          <p class="mt-20">¿No tienes una cuenta?<a href="signin.html"> Registrate Aqui</a></p>
         </div>
       </div>
     </div>
@@ -96,41 +95,3 @@
 
   </body>
   </html>
-  <?php
-if(isset($_POST['login'])){
-    $cliente_correo = $_POST['ClienteCorreo'];
-    $cliente_pass = $_POST['ClienteContraseña'];
-    $select_customer= "select * from Cliente where ClienteCorreo='$cliente_correo' AND ClienteContraseña='$cliente_pass'";
-    $run_customer = mysqli_query($con, $select_customer);
-
-    $get_ip = getRealIpUser();
-    $check_customer = mysqli_num_rows($run_customer);
-    $select_carrito = "select * from Carrito where AddIp='$get_ip'";
-    $run_carrito = mysqli_query($con,$select_carrito);
-    $check_carrito= mysqli_num_rows($run_carrito);
-    if($check_customer==0){
-        echo "<script>alert('Tu correo o contraseña son incorrectos')</script>";
-
-        exit();
-
-    }
-
-    if($check_customer==1 AND $check_carrito==0){
-        $_SESSION['ClienteCorreo']=$cliente_correo;
-        $customer = mysqli_fetch_array($run_customer);
-        $_SESSION['ClienteId']=$customer['ClienteId'];
-
-        echo "<script>alert('Inicio de sesión correcta')</script>";
-        echo "<script>window.open('Index.php','_self')</script>";
-
-    }
-    else{
-        $_SESSION['ClienteCorreo']=$cliente_correo;
-        echo "<script>alert('Inicio de sesión correcta')</script>";
-        echo "<script>window.open('Index.php','_self')</script>";
-
-
-    }
-}
-
-?>

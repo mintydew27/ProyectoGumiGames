@@ -13,85 +13,60 @@ include("includes/header.php");
 
 
 ?>
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 
+<!-- Themefisher Icon font -->
+<link rel="stylesheet" href="plugins/themefisher-font/style.css">
+<!-- bootstrap.min css -->
+<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
 
-<!--Creacion del carril de imagenes-->
-    <div class="container" id="slider" style="max-width: 1800px"><!--Incio del contenedor-->
+<!-- Animate css -->
+<link rel="stylesheet" href="plugins/animate/animate.css">
+<!-- Slick Carousel -->
+<link rel="stylesheet" href="plugins/slick/slick.css">
+<link rel="stylesheet" href="plugins/slick/slick-theme.css">
 
-        <div class="col-md-12"><!--Inicio del col-md-12-->
-            <div class="carousel slide" id="myCarousel" data-ride="carousel"><!--Inicio del carousel slide-->
-                <ol class="carousel-indicators"><!--Inicio del carousel-indicators-->
-
-                    <li class="active" data-target="#myCarousel" data-slide-to="0" ></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
-
-                </ol><!--Final del carousel-indicators-->
-
-                <div class="carousel-inner"><!--Inicio del carousel-inner, Seleccion de las imagenes que se utilizaran-->
-
-                 <?php
-                 $get_slides = "select * from Carrusel LIMIT 0,1";
-
-                 $run_slides = mysqli_query($con,$get_slides);
-                  while($row_slides=mysqli_fetch_array($run_slides)){
-
-                      $slide_name = $row_slides['CarruselNombre'];
-                      $slide_image= $row_slides['CarruselImagen'];
-
-                      echo "
-                       
-                       <div class='item active'>
-                       
-                      <a href='Tienda.php'><img alt='Producto' src='admin_area/slides_images/$slide_image' ></a> 
-                       
-                       </div>
-                       
-                       ";
-
-
-
-                  }
-                 $get_slides = "select * from Carrusel LIMIT 1,3";
-                 $run_slides = mysqli_query($con,$get_slides);
-                 while($row_slides=mysqli_fetch_array($run_slides)){
-
-                     $slide_name = $row_slides['CarruselNombre'];
-                     $slide_image= $row_slides['CarruselImagen'];
-
-                     echo "
-                       
-                       <div class='item'>
-                       
-                      <a href='Tienda.php'><img alt='Producto' src='admin_area/slides_images/$slide_image' ></a>
-                       
-                       </div>
-                       
-                       ";
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+<div class="hero-slider">
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(admin_area/slides_images/slide_1.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-center">
+                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">PRODUCTOS</p>
+                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Una variedad de juegos nuevos <br> por descubrir.</h1>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="Tienda.php">Ir Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(admin_area/slides_images/slide2.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-left">
+                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Fall Guys</p>
+                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Nuevos desafíos te esperan <br> en esta nueva temporada.</h1>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="Tienda.php">Ir Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slider-item th-fullpage hero-area" style="background-image: url(admin_area/slides_images/slide4.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 text-right">
+                    <p data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Kurtzpel</p>
+                    <h1 data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".5">Una experiencia única <br> en este nuevo juego PvP.</h1>
+                    <a data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".8" class="btn" href="Tienda.php">Ir Ahora</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
-                 }
-                  
-                 ?>
-
-                </div><!--Final del carousel-inner-->
-
-                <a href="#myCarousel" class="left carousel-control" data-slide="prev"><!--Inicio del left carousel-control-->
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                    <span class="sr-only">Anterior</span>
-                </a><!--Final del left carousel-control-->
-
-                <a href="#myCarousel" class="right carousel-control" data-slide="next"><!--Inicio del left carousel-control-->
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a><!--Final del left carousel-control-->
-
-
-            </div><!--Final del carousel slide-->
-        </div><!--Final del col-md-12-->
-    </div><!--Final del contenedor-->
 
 <!--Creacion de los bloques de las ventajas de la pagina-->
     <div id="advantages"><!--Inicio advantages-->
@@ -204,6 +179,25 @@ include("includes/header.php");
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
 
+
+<!-- Main jQuery -->
+<script src="plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.1 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Touchpin -->
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+
+<!-- Video Lightbox Plugin -->
+<script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<!-- Count Down Js -->
+<script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+<!-- slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
+
+<!-- Main Js File -->
+<script src="js/script.js"></script>
 
 </body>
 

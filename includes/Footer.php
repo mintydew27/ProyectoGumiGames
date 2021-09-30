@@ -27,6 +27,7 @@
                 </ul>
                 <p class="copyright-text">Copyright &copy;2021, Designed &amp; Developed by <a href="PreguntasFrecuentes">Equipo 1</a></p>
             </div>
+            
         </div>
     </div>
 </footer>

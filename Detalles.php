@@ -156,7 +156,6 @@ if (isset($_POST['Guardar'])){
                         </div>
                     </div>
                 </div>
-
                 <?php
 
                 $get_products="select * from Producto order by rand() DESC LIMIT 0, 2";

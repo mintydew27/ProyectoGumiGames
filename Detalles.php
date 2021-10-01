@@ -115,63 +115,89 @@ if (isset($_POST['Guardar'])){
 
         </div><!--Final row-->
 
-        <div class="box" id="detalles"><!--Inicio box-->
+
+        <div class="row">
+            <div class="title text-center">
+                <h2></h2>
+            </div>
+        </div>
+
+
+        <div id="details" class="tab-pane fade active in">
             <h4>Detalles del Producto</h4>
             <p>
                 <?php echo $pro_desc;?>
             </p>
+       </div>
+        <div class="row">
+            <div class="title text-center">
+                <h2></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="title text-center">
+                <h2></h2>
+            </div>
+        </div>
 
-            <hr>
-        </div><!--Final box-->
+
     </div><!--Final md-9-->
 
-
-<div class="col-md-9">
-                    <div id="row same-heigh-row" >
-            <div class="col-md-3 col-sm-6">
-                <div class="box same-height headline">
-                    <h3 class="text-center">Productos que podrian gustarte</h3>
-                </div>
-            </div>
-
-            <?php
-
-            $get_products="select * from Producto order by rand() DESC LIMIT 0, 2";
-            $run_products = mysqli_query($con, $get_products);
-
-            while($row_products=mysqli_fetch_array($run_products)){
-
-                $pro_id = $row_products['ProductoId'];
-                $pro_title = $row_products['ProductoTitulo'];
-                $pro_img1 = $row_products['ProductoImagenUno'];
-                $pro_price= $row_products['ProductoPrecio'];
-
-                echo "
-
-                <div class= 'col-md-4 col-sm-6 center-responsive'>
-                <div class='product same-height'>
-                <a href='Detalles.php?pro_id=$pro_id'>
-                <img class='img-responsive'  alt='Producto' src='admin_area/product_images/$pro_img1'>
-                
-                </a>
-                <div class='text'>
-                    <h3>
-                        <a href='Detalles.php?pro_id=$pro_id'> $pro_title </a>
-                    </h3>
-                <p class='price'> $$pro_price </p>
+    <section class="products related-products section">
+        <div class="container">
+            <div class="col-md-9">
+                <div id="row same-heigh-row" >
+                <div class="col-md-3 col-sm-6">
+                    <div class="box same-height headline">
+                        <div class="row">
+                        <div class="title text-center">
+                            <h2>Productos que podrian gustarte</h2>
+                        </div>
+                        </div>
                     </div>
-          
                 </div>
-               
-              </div>
 
-                ";
+                <?php
 
-            }
-            ?>
+                $get_products="select * from Producto order by rand() DESC LIMIT 0, 2";
+                $run_products = mysqli_query($con, $get_products);
+
+                while($row_products=mysqli_fetch_array($run_products)){
+
+                    $pro_id = $row_products['ProductoId'];
+                    $pro_title = $row_products['ProductoTitulo'];
+                    $pro_img1 = $row_products['ProductoImagenUno'];
+                    $pro_price= $row_products['ProductoPrecio'];
+
+                    echo "
+    
+                    <div class= 'col-md-4 col-sm-6 center-responsive'>
+                    <div class='product same-height'>
+                    <a href='Detalles.php?pro_id=$pro_id'>
+                    <img class='img-responsive'  alt='Producto' src='admin_area/product_images/$pro_img1'>
+                    
+                    </a>
+                    <div class='text'>
+                        <h3>
+                            <a href='Detalles.php?pro_id=$pro_id'> $pro_title </a>
+                        </h3>
+                    <p class='price'> $$pro_price </p>
+                        </div>
+              
+                    </div>
+                   
+                  </div>
+    
+                    ";
+
+                }
+                ?>
+
+                </div>
+
             </div>
-
-</div>
+        </div>
+    </section>
 
 
 
@@ -234,6 +260,29 @@ include("includes/Footer.php");
 <!-- Librerias de los folders jquery para que funcione-->
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
+<script src="plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.1 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Touchpin -->
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Instagram Feed Js -->
+<script src="plugins/instafeed/instafeed.min.js"></script>
+<!-- Video Lightbox Plugin -->
+<script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<!-- Count Down Js -->
+<script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+<!-- slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
+
+<!-- Google Mapl -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+
+<!-- Main Js File -->
+<script src="js/script.js"></script>
+
 </body>
 
 </html>

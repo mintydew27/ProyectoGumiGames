@@ -1,4 +1,6 @@
-
+<?php
+$active='Ordenes.php';
+include("includes/header.php")?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,7 +87,7 @@
 							</thead>
 							<tbody>
                             <?php
-                            session_start();
+
                             include("includes/BD.php");
 
 $customer_session = $_SESSION['ClienteCorreo'];
@@ -156,6 +158,9 @@ while($row_orders = mysqli_fetch_array($run_orders)){
 	</div>
 </section>
 
+<?php
+include("includes/Footer.php");
+?>
     <!-- 
     Essential Scripts
     =====================================-->

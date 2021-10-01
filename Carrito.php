@@ -160,7 +160,7 @@ $session_email = $_SESSION['ClienteCorreo'];
 
                         </button><!--Final btn btn-default-->
 
-                        <a href="Orden.php?c_id=<?php echo $customer_id ?>" class="btn btn-primary">
+                        <a href="Ordenes.php?c_id=<?php echo $customer_id ?>" class="btn btn-primary">
 
                         Pagar <i class="fa fa chevron-right"></i>
 

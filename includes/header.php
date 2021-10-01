@@ -212,7 +212,7 @@ if(isset($_GET['pro_id'])){
                        <?php if(isset($_SESSION['ClienteCorreo'])){
                            echo '
                     <li class="dropdown"> 
-                        <a href="Mi_cuenta.php" >Mi Cuenta</a>
+                        <a href="Profile-User.php" >Mi Cuenta</a>
                     </li>';
                        }?>
 
@@ -223,7 +223,7 @@ if(isset($_GET['pro_id'])){
                     <li class="dropdown ">
                     <?php
                     if(!isset($_SESSION['ClienteCorreo'])){
-                        echo "<a href='Revisa.php'> Iniciar sesión</a>";
+                        echo "<a href='Login_Users.php'> Iniciar sesión</a>";
                     }else{
                         echo "<h1></h1> 
                                 

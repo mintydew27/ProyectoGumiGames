@@ -158,7 +158,7 @@ if (isset($_POST['Guardar'])){
                     </div>
                     <?php
 
-                    $get_products="select * from Producto order by rand() DESC LIMIT 0, 2";
+                    $get_products="select * from Producto order by rand() DESC LIMIT 0, 3";
                     $run_products = mysqli_query($con, $get_products);
 
                     while($row_products=mysqli_fetch_array($run_products)){
@@ -170,7 +170,7 @@ if (isset($_POST['Guardar'])){
 
                         echo "
     
-                    <div class= 'col-md-4 col-sm-6 center-responsive'>
+                    <div class= 'col-md-3 col-sm-6 center-responsive' align='center'>
                     <div class='product same-height'>
                     <a href='Detalles.php?pro_id=$pro_id'>
                     <img class='img-responsive'  alt='Producto' src='admin_area/product_images/$pro_img1'>

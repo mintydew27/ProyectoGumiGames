@@ -50,9 +50,9 @@ include("includes/header.php");
             if(!isset($_GET['cat'])) {
                 echo "
             <div class='box'><!--Inicio box-->
-                <h1>Tienda</h1>
+                <h1>Productos</h1>
                     <p>
-                       Aqui podras encontrar una gran variedad de juegos.
+                       Lista de videojuegos.
                     </p>
             </div><!--Final box-->
             ";

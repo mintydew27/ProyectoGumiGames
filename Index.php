@@ -26,9 +26,10 @@ include("includes/header.php");
 <!-- Slick Carousel -->
 <link rel="stylesheet" href="plugins/slick/slick.css">
 <link rel="stylesheet" href="plugins/slick/slick-theme.css">
-
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="styles/css.css">
+
+
 <div class="hero-slider">
     <div class="slider-item th-fullpage hero-area" style="background-image: url(admin_area/slides_images/slide_1.jpg);">
         <div class="container">

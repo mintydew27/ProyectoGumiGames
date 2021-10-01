@@ -35,7 +35,7 @@
         </div><!--Form group Final--->
 
         <div class="text-center"><!--text-centerInicio--->
-            <button name="Guardar" value="guardar"class="btn btn-primary">
+            <button name="Guardar" value="guardar"class="btn btn-main btn-large">
                 <i class="fa fa-sign-in"></i> Guardar Comentario
             </button>
         </div>

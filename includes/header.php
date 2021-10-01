@@ -165,7 +165,8 @@ if(isset($_GET['pro_id'])){
             <div class="col-md-4 col-xs-12 col-sm-4 ">
                 <!-- Cart -->
                 <ul class="top-menu text-right list-inline">
-                    <li class="dropdown cart-nav dropdown-slide">
+
+                   <li class="dropdown cart-nav dropdown-slide">
                         <a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
                                     class="tf-ion-android-cart"></i>Carrito</a>
                         <div class="dropdown-menu cart-dropdown">
@@ -199,11 +200,13 @@ if(isset($_GET['pro_id'])){
                             </div>
                         </div><!-- / Cart Item -->
 
-
-                        <ul class="text-center cart-buttons">
+                        <?php if(isset($_SESSION['ClienteCorreo'])){
+                            echo  '<ul class="text-center cart-buttons">
                             <li><a href="Carrito.php" class="btn btn-small">Ver Carrito</a></li>
                             <li><a href="Lista_Deseo.php" class="btn btn-small btn-solid-border">Wish list</a></li>
-                        </ul>
+                        </ul> ';
+
+                        }?>
             </div>
             </li><!-- / Cart -->
 
@@ -328,7 +331,6 @@ if(isset($_GET['pro_id'])){
                             </li>
                     </li>';
                     }?>
-
 
     </nav>
 </section>

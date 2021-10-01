@@ -40,7 +40,7 @@
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
         <div class="block text-center">
-          <a class="logo" href="index.php">
+          <a class="logo" href="Index.php">
             <img src="images/logotipo_gumi.png" alt="">
           </a>
           <h2 class="text-center">Inicio de sesión</h2>
@@ -55,13 +55,16 @@
               <button type="submit" name="login" value="Login" class="btn btn-main text-center" >Iniciar Sesión</button>
             </div>
           </form>
-          <p class="mt-20">¿No tienes una cuenta?<a href="signin.html"> Registrate Aqui</a></p>
+          <p class="mt-20">¿No tienes una cuenta?<a href="Registro_Users.php"> Registrate Aqui</a></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<?php
+include("includes/Footer.php");
+?>
     <!-- 
     Essential Scripts
     =====================================-->

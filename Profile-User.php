@@ -1,3 +1,7 @@
+<?php
+$active='Profile-User.php';
+include("includes/header.php")?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +50,6 @@
 	
 </section>
 <?php
-session_start();
 include("includes/BD.php");
     $cliente_sesion = $_SESSION['ClienteCorreo'];
     $get_cliente = "select * from Cliente where ClienteCorreo = '$cliente_sesion'";
@@ -103,6 +106,12 @@ include("includes/BD.php");
     </div>
   </div>
 </section>
+
+<?php
+include("includes/Footer.php");
+?>
+
+
     <!-- 
     Essential Scripts
     =====================================-->

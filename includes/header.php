@@ -207,46 +207,36 @@ if(isset($_GET['pro_id'])){
                         </ul> ';
 
                         }?>
-            </div>
-            </li><!-- / Cart -->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <?php if(isset($_SESSION['ClienteCorreo'])){
-                echo '
+                       <?php if(isset($_SESSION['ClienteCorreo'])){
+                           echo '
                     <li class="dropdown"> 
                         <a href="Mi_cuenta.php" >Mi Cuenta</a>
                     </li>';
-            }?>
+                       }?>
 
 
-            <li class="dropdown ">
-                <a href="Registro_de_clientes.php" >Registro</a>
-            </li><!-- / Home -->
-
-            <li class="dropdown ">
-
-
-                <?php
-                if(!isset($_SESSION['ClienteCorreo'])){
-                    echo "<a href='Revisa.php'> Iniciar sesión</a>";
-                }else{
-                    echo "<h1></h1> 
+                    <li class="dropdown ">
+                        <a href="Registro_de_clientes.php" >Registro</a>
+                    </li><!-- / Home -->
+                    <li class="dropdown ">
+                    <?php
+                    if(!isset($_SESSION['ClienteCorreo'])){
+                        echo "<a href='Revisa.php'> Iniciar sesión</a>";
+                    }else{
+                        echo "<h1></h1> 
                                 
                                 <a href='Cerrar_sesion.php' class='tf-ion-log-out' > </a> ";
-                }
-                ?>
+                    }
+                    ?>
+                    </li><!-- / Home -->
+
+
+
+            </div>
+            </li><!-- / Cart -->
+
 
 
             </li><!-- / Home -->
@@ -292,7 +282,15 @@ if(isset($_GET['pro_id'])){
                                     class="tf-ion-ios-arrow-down"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="Tienda.php">Tienda</a></li>
-                            <li><a href="Carrito.php">Carrito</a></li>
+
+
+
+                            <?php if(isset($_SESSION['ClienteCorreo'])){
+                                echo '<li><a href="Carrito.php">Carrito</a></li>
+                    ';
+                            }?>
+
+
                             <li><a href="Lista_Deseos.php">Wish list</a></li>
 
                         </ul>

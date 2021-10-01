@@ -41,5 +41,11 @@
         </div>
     </form>
 
+    <div class="row">
+        <div class="title text-center">
+            <h2></h2>
+        </div>
+    </div>
+
 </div>
 

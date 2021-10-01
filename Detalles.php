@@ -43,75 +43,77 @@ if (isset($_POST['Guardar'])){
 
         </div><!--Final col-md-3-->
 
-            <div class="col-md-9"><!--Inicio col-md-9--->
-                <div id="productMain" class="row">
-                    <div class=" col-sm-6">
-                        <div id="mainImage">
+        <div class="col-md-9"><!--Inicio col-md-9--->
+            <div id="productMain" class="row">
+                <div class=" col-sm-6">
+                    <div id="mainImage">
                         <div id="myCarousel" class="carousel slide" data-ride-"carousel">
-                            <ol class="carousel-indicators">
-                               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1" ></li>
-                                <li data-target="#myCarousel" data-slide-to="2" ></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <center><img class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img1; ?>" alt="productoimg1carrusel"></center>
-                                </div>
-                                <div class="item">
-                                    <center><img class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img2; ?>" alt="productoimg2carrusel"></center>
-                                </div>
-                                <div class="item">
-                                    <center><img class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img3; ?>" alt="productoimg3carrusel"></center>
-                                </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1" ></li>
+                            <li data-target="#myCarousel" data-slide-to="2" ></li>
+                        </ol>
+                        <div class='carousel-inner '>
+                            <div class='item active'>
+                                <img class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img1; ?>" />
                             </div>
-                            <a href="#myCarousel" class="left carousel-control" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-                            </a><!--Final carrusel izquierdo-->
-                            <a href="#myCarousel" class="right carousel-control" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Previous</span>
-                            </a><!--Final carrusel derecho-->
+                            <div class='item'>
+                                <img class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img2; ?>" alt="productoimg2carrusel" />
+                            </div>
+
+                            <div class='item'>
+                                <img  class="img-responsive" alt="Producto" src="admin_area/product_images/<?php echo $pro_img3; ?>" alt="productoimg3carrusel" />
+                            </div>
 
                         </div>
-                        </div>
+                        <a href="#myCarousel" class="left carousel-control" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a><!--Final carrusel izquierdo-->
+                        <a href="#myCarousel" class="right carousel-control" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Previous</span>
+                        </a><!--Final carrusel derecho-->
+
                     </div>
-                <div class="col-sm-6"><!--Inicio col-sm-6-->
-                    <div class="box">
-                        <h1 class="text-center" ><?php echo $pro_title;?> </h1>
-
-                        <?php  add_cart();?>
-                        <?php add_wishlist(); ?>
-
-
-                       <?php
-                            if(isset($_SESSION['ClienteCorreo'])){
-                                include_once('FormularioAgregarAlCarrito.php');
-                                include_once('FormularioAgregarWishList.php');
-                            }
-                       ?>
-
-                    </div><!--Final box-->
-                    <div class ="row" id="thumbs">
-                         <div class="col-xs-4">
-                             <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
-                                 <img src="admin_area/product_images/<?php echo $pro_img1?>" alt="producto" class="img-responsive">
-                             </a>
-                    </div>
-                        <div class="col-xs-4">
-                            <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
-                                <img src="admin_area/product_images/<?php echo $pro_img2?>" alt="producto" class="img-responsive">
-                            </a>
-                        </div>
-                        <div class="col-xs-4">
-                            <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
-                                <img src="admin_area/product_images/<?php echo $pro_img3?>" alt="producto" class="img-responsive">
-                            </a>
-                        </div>
                 </div>
-                </div><!--Final col- sm- 6-->
+            </div>
+            <div class="col-sm-6"><!--Inicio col-sm-6-->
+                <div class="box">
+                    <h1 class="text-center" ><?php echo $pro_title;?> </h1>
 
-                </div><!--Final row-->
+                    <?php  add_cart();?>
+                    <?php add_wishlist(); ?>
+
+
+                    <?php
+                    if(isset($_SESSION['ClienteCorreo'])){
+                        include_once('FormularioAgregarAlCarrito.php');
+                        include_once('FormularioAgregarWishList.php');
+                    }
+                    ?>
+
+                </div><!--Final box-->
+                <div class ="row" id="thumbs">
+                    <div class="col-xs-4">
+                        <a data-target="#myCarousel" data-slide-to="0" href="#" class="thumb">
+                            <img src="admin_area/product_images/<?php echo $pro_img1?>" alt="producto" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a data-target="#myCarousel" data-slide-to="1" href="#" class="thumb">
+                            <img src="admin_area/product_images/<?php echo $pro_img2?>" alt="producto" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a data-target="#myCarousel" data-slide-to="2" href="#" class="thumb">
+                            <img src="admin_area/product_images/<?php echo $pro_img3?>" alt="producto" class="img-responsive">
+                        </a>
+                    </div>
+                </div>
+            </div><!--Final col- sm- 6-->
+
+        </div><!--Final row-->
 
         <div class="box" id="detalles"><!--Inicio box-->
             <h4>Detalles del Producto</h4>
@@ -122,6 +124,7 @@ if (isset($_POST['Guardar'])){
             <hr>
         </div><!--Final box-->
     </div><!--Final md-9-->
+
 
 <div class="col-md-9">
                     <div id="row same-heigh-row" >

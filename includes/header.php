@@ -99,7 +99,7 @@ if(isset($_GET['pro_id'])){
     <!-- Conexion a los folders para el diseño-->
     <link rel="stylesheet" href="styles/bootstrap-337.min.css">
     <link rel="stylesheet" href="font-awsome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -123,7 +123,7 @@ if(isset($_GET['pro_id'])){
     <link rel="stylesheet" href="plugins/slick/slick-theme.css">
 
     <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 
@@ -203,7 +203,7 @@ if(isset($_GET['pro_id'])){
                         <?php if(isset($_SESSION['ClienteCorreo'])){
                             echo  '<ul class="text-center cart-buttons">
                             <li><a href="Carrito.php" class="btn btn-small">Ver Carrito</a></li>
-                            <li><a href="Lista_Deseo.php" class="btn btn-small btn-solid-border">Wish list</a></li>
+                            <li><a href="Lista_Deseos.php" class="btn btn-small btn-solid-border">Wish list</a></li>
                         </ul> ';
 
                         }?>

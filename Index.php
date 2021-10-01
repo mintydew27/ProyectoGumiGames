@@ -171,6 +171,12 @@ include("includes/header.php");
         </div><!--Final row-->
     </div><!--Final container-->
 <!--Para incluir el pie de pagina-->
+
+
+
+
+
+
     <?php
 
     include("includes/Footer.php");

@@ -159,8 +159,8 @@ include("includes/header.php");
 
 
     </div><!--Final hot-->
-
-    <div id="content" class="container"><!--Inicio container-->
+<section class="products section bg-gray">
+    <div class="container">
         <div class="row"><!--Inicio row-->
 
             <?php
@@ -170,8 +170,7 @@ include("includes/header.php");
 
         </div><!--Final row-->
     </div><!--Final container-->
-<!--Para incluir el pie de pagina-->
-
+</section>
 
 
 

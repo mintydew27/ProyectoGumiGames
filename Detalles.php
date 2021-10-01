@@ -80,8 +80,7 @@ if (isset($_POST['Guardar'])){
             </div>
             <div class="col-sm-6"><!--Inicio col-sm-6-->
                 <div class="box">
-                    <h1 class="text-center" ><?php echo $pro_title;?> </h1>
-
+                    <a href="#!" class="btn btn-main">Add To Cart<?php  add_cart();?> </a>
                     <?php  add_cart();?>
                     <?php add_wishlist(); ?>
 
@@ -159,6 +158,7 @@ if (isset($_POST['Guardar'])){
                         <a href='Detalles.php?pro_id=$pro_id'> $pro_title </a>
                     </h3>
                 <p class='price'> $$pro_price </p>
+                
                     </div>
           
                 </div>

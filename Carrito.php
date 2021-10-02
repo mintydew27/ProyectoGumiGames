@@ -14,6 +14,23 @@ $session_email = $_SESSION['ClienteCorreo'];
 ?>
 
 
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+
+<!-- Themefisher Icon font -->
+<link rel="stylesheet" href="plugins/themefisher-font/style.css">
+<!-- bootstrap.min css -->
+<link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+
+<!-- Animate css -->
+<link rel="stylesheet" href="plugins/animate/animate.css">
+<!-- Slick Carousel -->
+<link rel="stylesheet" href="plugins/slick/slick.css">
+<link rel="stylesheet" href="plugins/slick/slick-theme.css">
+
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
+
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->
         <div class="col-md-12"><!--Inicio col-md-12-->
@@ -147,7 +164,7 @@ $session_email = $_SESSION['ClienteCorreo'];
 
                     <a href="Index.php" class="btn btn-default"><!--Inicio btn btn-default-->
 
-                    <i class="fa fa-chevron-left"></i>Continuar Comprando
+                    <i class="fa fa-chevron-left"></i>Regresar a la tienda
 
                     </a><!--Final btn btn-default-->
 
@@ -156,7 +173,7 @@ $session_email = $_SESSION['ClienteCorreo'];
 
                         <button type="submit" name="update" value="Actualizar Compra" class="btn btn-default"><!--Inicio btn btn-default-->
 
-                            <i class="fa fa-refresh"></i>Actualizar Compra
+                            <i class="fa fa-refresh"></i>Actualizar Carrito
 
                         </button><!--Final btn btn-default-->
 
@@ -249,13 +266,9 @@ $session_email = $_SESSION['ClienteCorreo'];
 
         <div class="col-md-3"><!--Inicio col-md-3-->
 
-        <div id="order-summary" class="box"><!--Inicio Box-->
+        <div id="order-summary" class="widget widget-category"><!--Inicio Box-->
 
-        <div class="box-header"><!--Inicio Box-header-->
-
-            <h3>Resumen del pedido</h3>
-
-        </div><!--Final Box-header-->
+            <h3 class="widget-title">Resumen del pedido</h3>
 
             <p class="text-muted"><!--Inicio text-muted-->
                 Resumen de tus pedidos.
@@ -311,6 +324,33 @@ include("includes/Footer.php");
 <!-- Librerias de los folders jquery para que funcione-->
 <script src="js/jquery-331.min.js"></script>
 <script src="js/bootstrap-337.min.js"></script>
+<!--
+   Essential Scripts
+   =====================================-->
+
+<!-- Main jQuery -->
+<script src="plugins/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.1 -->
+<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+<!-- Bootstrap Touchpin -->
+<script src="plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<!-- Instagram Feed Js -->
+<script src="plugins/instafeed/instafeed.min.js"></script>
+<!-- Video Lightbox Plugin -->
+<script src="plugins/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<!-- Count Down Js -->
+<script src="plugins/syo-timer/build/jquery.syotimer.min.js"></script>
+
+<!-- slick Carousel -->
+<script src="plugins/slick/slick.min.js"></script>
+<script src="plugins/slick/slick-animation.min.js"></script>
+
+<!-- Google Mapl -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCC72vZw-6tGqFyRhhg5CkF2fqfILn2Tsw"></script>
+<script type="text/javascript" src="plugins/google-map/gmap.js"></script>
+
+<!-- Main Js File -->
+<script src="js/script.js"></script>
 
 
 </body>

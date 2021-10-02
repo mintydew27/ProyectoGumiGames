@@ -29,7 +29,7 @@ $session_email = $_SESSION['ClienteCorreo'];
 <link rel="stylesheet" href="plugins/slick/slick-theme.css">
 
 <!-- Main Stylesheet -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="styles/style.css">
 
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->

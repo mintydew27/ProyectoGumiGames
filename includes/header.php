@@ -321,9 +321,9 @@ if(isset($_GET['pro_id'])){
                                   ></span></a>
                         <ul class="dropdown-menu">
                         
-                        <li><a href="Mi_cuenta.php">Detalles del Perfil</a></li>
+                        <li><a href="Profile-User.php">Detalles del Perfil</a></li>
                      <li class="<?php if(isset($_GET["mis_ordenes"])){ echo "active"; } ?>"
-                                <a href="Mi_cuenta.php?mis_ordenes">
+                                <a href="Ordenes.php?mis_ordenes">
                                    Mis Ordenes
                                 </a>
                             </li>

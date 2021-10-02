@@ -233,46 +233,42 @@ function getpgenpro(){
             echo
 
             "
-              <div class='col-md-4 col-sm-6 center-responsive'>
-                <div class='product'>
-                <a href='Detalles.php?pro_id=$pro_id''>
-                    <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
-                </a>
-                
-                        <div class='text'>
-                            
-                            <h3>
-                                 <a href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    $pro_titulo
-                                                                        
-                                 </a>
-                            </h3>
-                            
-                            <p class='price'>
-                            $ $pro_precio
-                            </p>
-                            
-                            <p class='button'>
-                           
-                            <a class='btn btn-default' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    Ver Detalles
-                                                                        
-                                 </a>
-                                 
-                                 <a class='btn btn-primary' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    <i class='fa fa-shopping-cart'></i> Agregar al carrito
-                                                                        
-                                 </a>
-                                 
-                            </p>
-                            
-                            
-                        </div>
+              <div class='col-md-4'>
+                <div class='product-item'>
+                      <div class='product-thumb'>
+                            <span class='bage'>Sale</span>
+                            <a href='Detalles.php?pro_id=$pro_id''>
+                                <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
+                            </a>
+                    
+  
+                                        <div class='preview-meta'>
+                                            <ul>
+                                    
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id' ><i class='tf-ion-ios-search'></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id'><i class='tf-ion-android-cart'></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+     
+                                  
+                                <div class='product-content'>
+                                    <h4><a href='Detalles.php?pro_id=$pro_id''>
+                                             
+                                                $pro_titulo
+                                                                                    
+                                             </a>
+                                             </h4>
+                                   <p class='price'>
+                                        $ $pro_precio
+                                        </p>
+					            </div>
+                      </div>
                 </div>
-            </div>
+           </div>
               
             ";
 
@@ -340,46 +336,42 @@ function getcatpro()
 
 
             echo "
-            <div class='col-md-4 col-sm-6 center-responsive'>
-                <div class='product'>
-                <a href='Detalles.php?pro_id=$pro_id''>
-                    <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
-                </a>
-                
-                        <div class='text'>
-                            
-                            <h3>
-                                 <a href='Detalles.php?pro_id=$pro_id''>
-                                    $pro_titulo                                      
-                                 </a>
-                            </h3>
-                            
-                            <p class='price'>
-                            $ $pro_precio
-                            </p>
-                            
-                            <p class='button'>
-                           
-                            <a class='btn btn-default' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    Ver Detalles
-                                                                        
-                                 </a>
-                                 
-                                 <a class='btn btn-primary' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    <i class='fa fa-shopping-cart'></i> Agregar al carrito
-                                                                        
-                                 </a>
-                                 
-                            </p>
-                            
-                            
-                        </div>
+            <div class='col-md-4'>
+                <div class='product-item'>
+                      <div class='product-thumb'>
+                            <span class='bage'>Sale</span>
+                            <a href='Detalles.php?pro_id=$pro_id''>
+                                <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
+                            </a>
+                    
+  
+                                        <div class='preview-meta'>
+                                            <ul>
+                                    
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id' ><i class='tf-ion-ios-search'></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id'><i class='tf-ion-android-cart'></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+     
+                                  
+                                <div class='product-content'>
+                                    <h4><a href='Detalles.php?pro_id=$pro_id''>
+                                             
+                                                $pro_titulo
+                                                                                    
+                                             </a>
+                                             </h4>
+                                   <p class='price'>
+                                        $ $pro_precio
+                                        </p>
+					            </div>
+                      </div>
                 </div>
-            </div>
-            
-            
+           </div>
             
             
             
@@ -463,47 +455,42 @@ function getproduct()
 
 
             echo "
-            <div class='col-md-4 col-sm-6 center-responsive'>
-                <div class='product'>
-                <a href='Detalles.php?pro_id=$pro_id''>
-                    <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
-                </a>
-                
-                        <div class='text'>
-                            
-                            <h3>
-                                 <a href='Detalles.php?pro_id=$pro_id''>
-                                    $pro_titulo                                      
-                                 </a>
-                            </h3>
-                            
-                            <p class='price'>
-                            $ $pro_precio
-                            </p>
-                            
-                            <p class='button'>
-                           
-                            <a class='btn btn-default' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    Ver Detalles
-                                                                        
-                                 </a>
-                                 
-                                 <a class='btn btn-primary' href='Detalles.php?pro_id=$pro_id''>
-                                 
-                                    <i class='fa fa-shopping-cart'></i> Agregar al carrito
-                                                                        
-                                 </a>
-                                 
-                            </p>
-                            
-                            
-                        </div>
+            <div class='col-md-4'>
+                <div class='product-item'>
+                      <div class='product-thumb'>
+                            <span class='bage'>Sale</span>
+                            <a href='Detalles.php?pro_id=$pro_id''>
+                                <img class='img-responsive' src='admin_area/product_images/$pro_imagen1'>
+                            </a>
+                    
+  
+                                        <div class='preview-meta'>
+                                            <ul>
+                                    
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id' ><i class='tf-ion-ios-search'></i></a>
+                                                </li>
+                                                <li>
+                                                    <a href='Detalles.php?pro_id=$pro_id'><i class='tf-ion-android-cart'></i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+     
+                                  
+                                <div class='product-content'>
+                                    <h4><a href='Detalles.php?pro_id=$pro_id''>
+                                             
+                                                $pro_titulo
+                                                                                    
+                                             </a>
+                                             </h4>
+                                   <p class='price'>
+                                        $ $pro_precio
+                                        </p>
+					            </div>
+                      </div>
                 </div>
-            </div>
-            
-            
-            
+           </div>
             
             
             

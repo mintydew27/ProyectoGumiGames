@@ -55,7 +55,7 @@
               <button type="submit" name="login" value="Login" class="btn btn-main text-center" >Iniciar Sesión</button>
             </div>
           </form>
-          <p class="mt-20">¿No tienes una cuenta?<a href="Registro_Users.php"> Registrate Aqui</a></p>
+          <p class="mt-20">¿No tienes una cuenta?<a href="Registro_de_clientes.php"> Registrate Aqui</a></p>
         </div>
       </div>
     </div>

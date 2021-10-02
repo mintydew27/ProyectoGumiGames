@@ -99,7 +99,7 @@ iframe {
 a, a:focus, a:hover {
     text-decoration: none;
     outline: 0;
-    color: #000;
+    color: #000000;
 }
 
 blockquote {
@@ -157,7 +157,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .btn-main:hover, .btn-solid-border:hover, .btn-transparent:hover, .btn-small:hover {
-    background: black;
+    background: #263654;
     color: #fff;
 }
 
@@ -501,7 +501,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     transform: translate(0px, 0px);
     opacity: 1;
     visibility: visible;
-    color: #777;
+    color: #777777;
     -webkit-transform: translateY(0px);
     transform: translateY(0px);
 }
@@ -513,7 +513,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     position: absolute;
     padding: 15px;
     border: 1px solid #ebebeb;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgb(48, 177, 34);
     transition: .3s all;
     position: absolute;
     display: block;
@@ -902,8 +902,9 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
     transition: .3s all;
 }
 
+/* Cambiar el color del drop down menu hover */
 .navigation .dropdown-slide .dropdown-menu li a:hover {
-    background-color: #000;
+    background-color: #263654;
     color: #fff;
 }
 

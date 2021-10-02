@@ -7,6 +7,8 @@ include("includes/header.php");
 
 ?>
 
+<!-- Main Stylesheet -->
+<link rel="stylesheet" href="css/style.css">
 
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->

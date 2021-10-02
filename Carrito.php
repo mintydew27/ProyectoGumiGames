@@ -31,6 +31,7 @@ $session_email = $_SESSION['ClienteCorreo'];
 <!-- Main Stylesheet -->
 <link rel="stylesheet" href="styles/style.css">
 
+
 <div id="content"><!--Inicio content-->
     <div class="container"><!--Inicio container-->
         <div class="col-md-12"><!--Inicio col-md-12-->

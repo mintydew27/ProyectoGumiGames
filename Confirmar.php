@@ -126,12 +126,12 @@ include("includes/header.php");
 
                             echo "<script>alert('Thank You for purchasing, your orders will be completed within 24 hours work')</script>";
 
-                            echo "<script>window.open('Mi_cuenta.php?mis_ordenes','_self')</script>";
+                            echo "<script>window.open('Ordenes.php?mis_ordenes','_self')</script>";
 
                         }else
                             echo "<script>alert('kk ck de vk')</script>";
 
-                        echo "<script>window.open('Mi_cuenta.php?mis_ordenes','_self')</script>";
+                        echo "<script>window.open('Ordenes.php?mis_ordenes','_self')</script>";
 
                     }
 

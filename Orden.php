@@ -43,7 +43,7 @@ while($row_cart = mysqli_fetch_array($run_cart)){
 
         echo "<script>alert('Your orders has been submitted, Thanks')</script>";
 
-        echo "<script>window.open('Mi_cuenta.php?mis_ordenes','_self')</script>";
+        echo "<script>window.open('Ordenes.php?mis_ordenes','_self')</script>";
 
     }
 

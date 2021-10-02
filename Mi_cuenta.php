@@ -38,7 +38,7 @@ include("includes/header.php")
                 <?php
 
                 if(isset($_GET['mis_ordenes'])){
-                    include("Mis_ordenes.php");
+                    include("Ordenes.php");
                 }
                 ?>
 

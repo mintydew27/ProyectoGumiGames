@@ -1,3 +1,7 @@
+
+
+
+
 <?php
 session_start();
 include("includes/BD.php");
@@ -138,15 +142,18 @@ if(isset($_GET['pro_id'])){
         <div class="row">
             <div class="col-md-4 col-xs-12 col-sm-4">
                 <div >
+
                     <link rel="icon" type="image/png" href="/images/favicon.png" />
+                    <a href="Index.php">
                     <img src="images/logotipo_pagina.png" alt="LogotipoGumiGames" class="hidden-xs">
                     <img src="images/logotipo_pagina.png" alt="LogotipoGumiGames" class="visible-xs">
+                    </a>
                 </div>
             </div>
             <div class="col-md-4 col-xs-12 col-sm-4">
                 <!-- Site Logo -->
                 <div class="logo text-center">
-                    <a href="index.html">
+                    <a href="Index.php">
                         <!-- replace logo here -->
                         <svg width="280px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
                              xmlns:xlink="http://www.w3.org/1999/xlink">

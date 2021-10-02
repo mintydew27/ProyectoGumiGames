@@ -1,5 +1,5 @@
 <?php
-$active='Carrito.php';
+$active='Cart.php';
 include("includes/header.php");
 $session_email = $_SESSION['ClienteCorreo'];
 
@@ -61,7 +61,7 @@ $customer_id = $row_customer['ClienteId'];
 
             <div class="box"><!--Inicio box-->
 
-                <form action=  "Carrito.php" method="post" enctype="multipart/form-data" ><!--Inicio Form-->
+                <form action=  "Cart.php" method="post" enctype="multipart/form-data" ><!--Inicio Form-->
 
                     <h1>Carrito de compras</h1>
 
@@ -80,6 +80,17 @@ $customer_id = $row_customer['ClienteId'];
                     <p class="text-muted">Actualmente tienes <?php echo $count; ?> artículos en el carrito</p>
 
                     <div class="table-responsive"><!--Inicio Tabla-responsive-->
+
+
+
+
+
+                        <!-- !!!!!    Apartir de Table modificar en base a la plantilla sin dañar lo dinamico o el codigo php!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+
+
+
+
+
 
                         <table class="table"><!--Inicio Tabla-->
 

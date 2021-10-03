@@ -313,7 +313,7 @@ if(isset($_GET['pro_id'])){
                         <ul class="dropdown-menu">
 
                             <li><a href="Contactanos.php">Contactanos</a></li>
-                            <li><a href="#">Sobre Nosotros</a></li>
+                            <li><a href="About_Us.php">Sobre Nosotros</a></li>
                             <li><a href="PreguntasFrecuentes.php">Preguntas Frecuentes</a></li>
 
                         </ul>

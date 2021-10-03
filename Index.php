@@ -27,6 +27,7 @@ include("includes/header.php");
 <link rel="stylesheet" href="plugins/slick/slick.css">
 <link rel="stylesheet" href="plugins/slick/slick-theme.css">
 <!-- Main Stylesheet -->
+
 <link rel="stylesheet" href="styles/css.css">
 
 
@@ -71,65 +72,45 @@ include("includes/header.php");
 
 <!--Creacion de los bloques de las ventajas de la pagina-->
     <div id="advantages"><!--Inicio advantages-->
-
-        <div class="container"><!--Inicio contenedor-->
-            <div class="same-height-row"><!--Inicio same-height-row-->
-                <div class="col-sm-4"><!--Inicio col-sm-4"-->
-                    <div class="box same-height"><!--Inicio box same-height"-->
-
-                        <div class="icon"><!--Inicio Icon"-->
-
-                            <i class="fa fa-heart"></i>
-
-                        </div><!--Final Icon"-->
-
-                        <h3><a href="Contactanos.php">¿Tienes una duda?</a></h3>
-
-                        <p>Preguntanos</p>
-
-                    </div><!--Final box same-height"-->
-
-                </div><!--Final col-sm-4"-->
-
-                <div class="col-sm-4"><!--Inicio col-sm-4"-->
-                    <div class="box same-height"><!--Inicio box same-height"-->
-
-                        <div class="icon"><!--Inicio Icon"-->
-
-                            <i class="fa fa-tag"></i>
-
-                        </div><!--Final Icon"-->
-
-                        <h3><a href="Tienda.php">Los mejores precios</a></h3>
-
-                        <p>Solo para ti</p>
-
-                    </div><!--Final box same-height"-->
-                </div><!--Final col-sm-4"-->
-
-                <div class="col-sm-4"><!--Inicio col-sm-4"-->
-                    <div class="box same-height"><!--Inicio box same-height"-->
-
-                        <div class="icon"><!--Inicio Icon"-->
-
-                            <i class="fa fa-thumbs-up"></i>
-
-                        </div><!--Final Icon"-->
-
-                        <h3><a href="Tienda.php">Juegos originales</a></h3>
-
-                        <p>De la mejor calidad </p>
-
-                    </div><!--Final box same-height"-->
-
-                </div><!--Final col-sm-4"-->
-
-
-            </div><!--Final same-height-row-->
-
-
-        </div><!--Final contenedor-->
-
+        <section class="product-category section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="category-box">
+                            <a href="Tienda.php">
+                                <img src="admin_area\slides_images\gumi3.png" alt="ventajas2" />
+                                <div class="content">
+                                    <h3>Los mejores precios</h3>
+                                    <p>Solo para ti</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="category-box">
+                            <a href="Tienda.php">
+                                <img src="admin_area\slides_images\gumi1.png" alt="ventajas 3" />
+                                <div class="content">
+                                    <h3>¿Buscas un juego nuevo?</h3>
+                                    <p>Da un paseo por nuestro catalogo</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="category-box category-box-2">
+                            <a href="Contactanos.php">
+                                <img src="admin_area\slides_images\gumi2.png" alt="ventajas 2" />
+                                <div class="content">
+                                    <h3>¿Tienes una duda o comentario?</h3>
+                                    <p>Contactate con nosotros</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div><!--Final advantages-->
 

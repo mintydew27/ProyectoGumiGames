@@ -1,5 +1,5 @@
 <?php
-$active='Preguntas Frecuentes';
+$active='PreguntasFrecuentes.php';
 include("includes/header.php")?>
 
 <div id="content"><!--Inicio content-->

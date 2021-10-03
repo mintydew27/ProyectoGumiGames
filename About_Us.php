@@ -40,7 +40,7 @@ include("includes/header.php")?>
                                     de manera digital. Sabemos que existen diversas plataformas que están enfocadas a este tipo de mercado pero
                                     normalmente son para una marca en específico, dando así una clara preferencia, dandole mayor prioridad a
                                     una franquicia que a otra, consideramos que esto provoca que algunas marcas
-                                    o videojuegos no puedan crecer o sean reconocidas,en Gumi Games queremos hacer que esto
+                                    o videojuegos no puedan crecer o sean reconocidas en Gumi Games queremos hacer que esto
                                     cambie para así poder darle un panorama diferente a esta comunidad, también
                                     poderles dar más facilidad a los usuarios de conseguir estos productos.
                                 </p>

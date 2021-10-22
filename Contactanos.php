@@ -30,8 +30,9 @@ include("includes/header.php")?>
                         Cualquier duda o sugerencia contáctanos. Nuestro servicio al cliente trabaja 24/7
                     </p><!--Final texto muted-->
                 </center><!--Final center-->
-        
-        <section class="page-wrapper">
+                    </div>
+            </div>
+        </div>
         <section class="page-wrapper">
 	<div class="contact-section">
 		<div class="container">

@@ -202,9 +202,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
         $user_ape2 = $_POST['admin_ape2'];
         $user_email = $_POST['admin_email'];
         $user_pass = $_POST['admin_pass'];
+        $user_pass_crypt = password_hash($user_pass,PASSWORD_BCRYPT);
         $user_country = $_POST['admin_country'];
         $user_contact = $_POST['admin_contact'];
         $user_job = $_POST['admin_job'];
+
         $user_about = $_POST['admin_about'];
 
         $user_image = $_FILES['admin_image']['name'];
@@ -212,7 +214,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
         move_uploaded_file($temp_admin_image,"admin_images/$user_image");
 
-        $insert_user = "insert into administrador (AdministradorNombre,AdministradorPrimerApellido,AdministradorSegundoApellido,AdministradorCorreo,AdministradorContraseña,AdministradorPais,AdministradorTelefono,AdministradorRol,AdministradorImagen,AdministradorDescripcion) values ('$user_name','$user_ape1','$user_ape2','$user_email','$user_pass','$user_country','$user_contact','$user_job','$user_image','$user_about')";
+        $insert_user = "insert into administrador (AdministradorNombre,AdministradorPrimerApellido,AdministradorSegundoApellido,AdministradorCorreo,AdministradorContraseña,AdministradorContraseñaEncriptada,AdministradorPais,AdministradorTelefono,AdministradorRol,AdministradorImagen,AdministradorDescripcion) values ('$user_name','$user_ape1','$user_ape2','$user_email','$user_pass','$user_pass_crypt','$user_country','$user_contact','$user_job','$user_image','$user_about')";
 
         $run_user = mysqli_query($con,$insert_user);
 

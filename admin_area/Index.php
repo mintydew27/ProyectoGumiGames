@@ -180,6 +180,14 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
             }
 
+            if(isset($_GET['view_bitacora'])){
+
+                include("Bitacora.php");
+
+            }
+
+
+
             if(isset($_GET['delete_order'])){
 
                 include("Borrar_Orden.php");

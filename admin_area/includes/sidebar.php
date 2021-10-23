@@ -162,6 +162,19 @@ if (!isset($_SESSION['AdministradorCorreo'])){
 
             </li>
             ///////////////////////////////////////////////////////////////////
+
+            <li>
+                <a href="Index.php?view_bitacora" data-toggle="collapse" data-target="#p_cat">
+                    <i class="fa fa-fw fa-edit"></i> Bitacora <span class="badge"></span>
+
+                </a>
+            <li>
+                <a href="Index.php?view_bitacora">Ver Bitacora </a>
+            </li>
+
+            </li>
+
+            ///////////////////////////////////////////////////////////////////
             <li>
                 <a href="logout.php">
                     <i class="fa fa-fw fa-power-off"></i> Salir

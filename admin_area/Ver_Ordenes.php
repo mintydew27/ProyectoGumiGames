@@ -1,5 +1,6 @@
 <?php
-
+$active='Ver_Ordenes.php';
+include_once("../functions/functions.php");
 if(!isset($_SESSION['AdministradorCorreo'])){
 
     echo "<script>window.open('Login.php','_self')</script>";
@@ -20,6 +21,34 @@ if(!isset($_SESSION['AdministradorCorreo'])){
         </div><!-- col-lg-12 finish -->
     </div><!-- row 1 finish -->
 
+    <script language="javascript">
+        function doSearch() {
+            var tableReg = document.getElementById('regTable');
+            var searchText = document.getElementById('searchTerm').value.toLowerCase();
+            for (var i = 1; i < tableReg.rows.length; i++) {
+                var cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                var found = false;
+                for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                    var compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1)) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tableReg.rows[i].style.display = '';
+                } else {
+                    tableReg.rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+    Buscar: <input id="searchTerm" type="text" onkeyup="doSearch()" />
+
+
+
+
+
     <div class="row"><!-- row 2 begin -->
         <div class="col-lg-12"><!-- col-lg-12 begin -->
             <div class="panel panel-default"><!-- panel panel-default begin -->
@@ -33,7 +62,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 <div class="panel-body"><!-- panel-body begin -->
                     <div class="table-responsive"><!-- table-responsive begin -->
-                        <table class="table table-striped table-bordered table-hover"><!-- table table-striped table-bordered table-hover begin -->
+                        <table id="regTable" class="table table-striped table-bordered table-hover"><!-- table table-striped table-bordered table-hover begin -->
 
                             <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
@@ -126,4 +155,21 @@ if(!isset($_SESSION['AdministradorCorreo'])){
         </div><!-- col-lg-12 finish -->
     </div><!-- row 2 finish -->
 
+
+
+
+
+
+
+
+
+
+
+
+
 <?php } ?>
+
+
+
+
+

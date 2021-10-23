@@ -178,12 +178,16 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("Ver_Ordenes.php");
 
+            }
 
-            }  if(isset($_GET['delete_order'])){
+            if(isset($_GET['delete_order'])){
 
                 include("Borrar_Orden.php");
 
-            }if(isset($_GET['view_estadistics'])){
+            }
+
+
+            if(isset($_GET['view_estadistics'])){
 
                 include("Estadisticas.php");
 

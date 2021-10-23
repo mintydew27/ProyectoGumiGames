@@ -110,7 +110,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                         </div>
 
-                        <div>Categoria de Productos</div>
+                        <div>Categorias</div>
 
                     </div>
                 </div>
@@ -203,7 +203,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         text: 'Ventas del Dia'
                     },
                     subtitle: {
-                        text: 'Total de Ventas del Dia'
+                        text: 'Total de Ventas'
                     },
                     plotOptions: {
                         column: {

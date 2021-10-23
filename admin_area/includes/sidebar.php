@@ -121,6 +121,9 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                 </a>
 
 
+             <li>
+                <a href="Index.php?view_estadistics4"> Cantidad de Producto</a>
+            </li>
 
             <li>
                 <a href="Index.php?view_estadistics2"> Ventas</a>

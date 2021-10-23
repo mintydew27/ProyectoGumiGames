@@ -200,6 +200,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("Perfil_Usuario.php");
 
+            }if(isset($_GET['view_estadistics4'])){
+
+                include("Estadistica4.php");
+
             }if(isset($_GET['view_estadistics3'])){
 
                 include("Estadistica3.php");

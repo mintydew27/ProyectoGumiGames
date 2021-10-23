@@ -20,7 +20,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             <ol class="panel panel-default">
                 <div class="pannel-heading"> <!-- Heading start-->
                     <h3 class="panel-title">
-                        <i class="fa fa-tags"></i> View Log
+                        <i class="fa fa-tags"></i> Ver Bitacora
                     </h3>
                 </div> <!-- Heading end-->
                 <div class="panel-body">
@@ -40,15 +40,15 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                             <tbody>
                             <?php
                             $i=0;
-                            $get_bit = "select * from bitacoraproducto";
+                            $get_bit = "select * from Bitacora";
                             $run_bit = mysqli_query($con,$get_bit);
                             while($row_bit=mysqli_fetch_array($run_bit)){
-                                $bit_id = $row_bit['EntradaId'];
-                                $bit_pro_id = $row_bit['IdProducto'];
-                                $bit_pro_titulo = $row_bit['NombreProducto'];
-                                $bit_fecha = $row_bit['FechaEntrada'];
-                                $bit_accion = $row_bit['AccionProducto'];
-                                $bit_empleado = $row_bit['EmpleadoNombre'];
+                                $bit_id = $row_bit['BitacoraId'];
+                                $bit_pro_id = $row_bit['BitacoraProductoId'];
+                                $bit_pro_titulo = $row_bit['BitacoraNombreProducto'];
+                                $bit_fecha = $row_bit['BitacoraFechaEntrada'];
+                                $bit_accion = $row_bit['BitacoraAccionProducto'];
+                                $bit_empleado = $row_bit['BitacoraNombreEmpleado'];
                                 $i++;
                                 ?>
                                 <tr>

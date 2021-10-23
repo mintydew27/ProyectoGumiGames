@@ -15,6 +15,31 @@ if (!isset($_SESSION['AdministradorCorreo'])){
         </div>
     </div> <!-- Row end-->
 
+    <script language="javascript">
+        function doSearch() {
+            var tableReg = document.getElementById('regTable');
+            var searchText = document.getElementById('searchTerm').value.toLowerCase();
+            for (var i = 1; i < tableReg.rows.length; i++) {
+                var cellsOfRow = tableReg.rows[i].getElementsByTagName('td');
+                var found = false;
+                for (var j = 0; j < cellsOfRow.length && !found; j++) {
+                    var compareWith = cellsOfRow[j].innerHTML.toLowerCase();
+                    if (searchText.length == 0 || (compareWith.indexOf(searchText) > -1)) {
+                        found = true;
+                    }
+                }
+                if (found) {
+                    tableReg.rows[i].style.display = '';
+                } else {
+                    tableReg.rows[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+    Buscar: <input id="searchTerm" type="text" onkeyup="doSearch()" />
+
+
     <div class="row"> <!-- Row 2 start-->
         <div class="col-lg-12">
             <ol class="panel panel-default">
@@ -25,7 +50,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                 </div> <!-- Heading end-->
                 <div class="panel-body">
                     <div class="table-responsive">
-                        <table class="table table-striped table-bordered table-hover">
+                        <table id="regTable" class="table table-striped table-bordered table-hover">
                             <thead> <!-- THead start-->
                             <tr>
                                 <th>Log ID: </th>

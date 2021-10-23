@@ -285,7 +285,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                    <h3 class="panel-title">
 
 
-                       <i class="fa fa-money fa-fw"></i>Nuevas Compras
+                       <i class="fa fa-money fa-fw"></i>Lista de Ordenes
 
 
                      </h3>
@@ -373,21 +373,16 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                            <?php } ?>
 
-
-
-
-
-
-
-
                            </tbody>
+
+
 
                        </table>
                    </div>
                    <div class="text-right">
                        <a href="Index.php?view_orders">
 
-                           View All Orders <i class="fa fa-arrow-circle-right"></i>
+                           Ver Ordenes <i class="fa fa-arrow-circle-right"></i>
 
 
                        </a>
@@ -401,6 +396,130 @@ if(!isset($_SESSION['AdministradorCorreo'])){
        </div>
 
 </div><!--Final row -->
+
+
+
+
+
+
+
+
+
+
+
+    <!---Busqueda y paginacion tabla de ventas-->
+
+
+
+    <div class="row">
+
+    <div class="col-lg-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+
+
+                    <i class="fa fa-money fa-fw"></i>Lista de Ventas
+
+
+                </h3>
+            </div>
+
+
+            <div class="panel-body">
+
+                <div class="table-responsive">
+                    <table class="table table-hover table-striped table-bordered">
+
+                        <thead>
+                        <tr>
+
+                            <th>Numero de Compra Id: </th>
+                            <th>Numero de Referencia Pago: </th>
+                            <th>Cantidad de dinero $: </th>
+                            <th>Modo de pago: </th>
+                            <th>Numero de Referencia: </th>
+                            <th>Codigo de Pago: </th>
+                            <th>Fecha: </th>
+
+                        </tr>
+
+                        </thead>
+
+
+                        <tbody>
+                        <?php
+
+                        $i=0;
+
+                        $get_payment = "select * from Pago order by 1 DESC LIMIT 0,5";
+
+
+                        $run_payment = mysqli_query($con,$get_payment);
+
+                        while($row_payment=mysqli_fetch_array($run_payment)){
+
+                            $payment_id = $row_payment['PagoId'];
+
+                            $payment_invoice_no = $row_payment['FacturaNumero'];
+
+                            $payment_money = $row_payment['PagoCantidad'];
+
+                            $payment_mode = $row_payment['PagoModo'];
+
+                            $payment_num_ref = $row_payment['PagoNumeroReferencia'];
+
+                            $payment_code = $row_payment['PagoCodigo'];
+
+                            $payment_date = $row_payment['PagoFecha'];
+
+                            $i++;
+
+                            ?>
+
+                            <tr><!-- tr begin -->
+                                <td> <?php echo $payment_id; ?> </td>
+                                <td> <?php echo $payment_invoice_no; ?> </td>
+                                <td> <?php echo $payment_money; ?> </td>
+                                <td> <?php echo $payment_mode; ?> </td>
+                                <td> <?php echo $payment_num_ref; ?> </td>
+                                <td> <?php echo $payment_code; ?> </td>
+                                <td> <?php echo $payment_date; ?> </td>
+                            </tr><!-- tr finish -->
+
+                        <?php } ?>
+
+                        </tbody>
+
+
+
+                    </table>
+                </div>
+                <div class="text-right">
+                    <a href="Index.php?view_orders">
+
+                        Ver Ventas <i class="fa fa-arrow-circle-right"></i>
+
+
+                    </a>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    </div><!--Final row -->
+
+
+
+
+
+
+
+
 <?php
 }
     ?>

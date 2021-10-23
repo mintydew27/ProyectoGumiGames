@@ -500,15 +500,6 @@ function getproduct()
 
 }
 
-
-
-
-
-
-
-
-
-
 ?>
 
 

@@ -126,6 +126,10 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             </li>
 
             <li>
+                <a href="Index.php?view_estadistics5"> Usuarios por Estado</a>
+            </li>
+
+            <li>
                 <a href="Index.php?view_estadistics2"> Ventas</a>
             </li>
 

@@ -37,10 +37,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     title: {
-                        text: 'Disponible'
+                        text: 'Usuarios'
                     },
                     subtitle: {
-                        text: 'Cantidad de productos'
+                        text: 'por estado'
                     },
                     plotOptions: {
                         column: {
@@ -50,11 +50,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     xAxis: {
                         categories: [
                             <?php
-                            $sql="SELECT * FROM producto ";
+                            $sql="SELECT ClienteCiudad  FROM cliente GROUP BY ClienteCiudad";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            ['<?php echo $res['ProductoTitulo'];?>'],
+                            ['<?php echo $res['ClienteCiudad'];?>'],
 
                             <?php
                             }
@@ -67,14 +67,18 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     series: [{
-                        name: 'Cantidad',
+                        name: 'Usuarios',
                         data:[
                             <?php
-                            $sql="SELECT * FROM producto ";
+                            $sql="SELECT COUNT(*) AS RecuentoFilas
+                            FROM cliente
+                            GROUP BY ClienteCiudad
+                            HAVING COUNT(*) >= 1
+                            ORDER BY ClienteCiudad";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            [<?php echo $res['ProductoCantidad']?>],
+                            [<?php echo $res['RecuentoFilas']?>],
 
                             <?php
                             }

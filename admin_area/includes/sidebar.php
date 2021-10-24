@@ -132,7 +132,11 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             <li>
                 <a href="Index.php?EstadisticaOrden">Ordenes</a>
             </li>
-
+            <li>
+                <a href="Index.php?EstadisticaProducto">Productos</a>
+            </li>
+            <li><a href="Index.php?EstadisticaUsuario">Usuarios</a>
+            </li>
             </li>
             ///////////////////////////////////////////////////////////////////
             <li>

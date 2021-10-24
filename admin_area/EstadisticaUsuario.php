@@ -37,10 +37,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     title: {
-                        text: 'Ordenes'
+                        text: 'Usuarios Compras'
                     },
                     subtitle: {
-                        text: 'Total de ordenes al mes'
+                        text: 'Total de compras'
                     },
                     plotOptions: {
                         column: {
@@ -50,11 +50,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     xAxis: {
                         categories: [
                             <?php
-                            $sql="SELECT * FROM orden";
+                            $sql="SELECT DISTINCT ClienteId FROM orden";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
+                                $idpr=$res['ClienteId'];
+                                $sql1="SELECT ClienteNombre FROM cliente WHERE ClienteId=$idpr";
+                                $run_cat1 = mysqli_query($con,$sql1);
+                                $nose=mysqli_fetch_array($run_cat1);
                             ?>
-                            ['<?php echo date("F",strtotime($res['OrdenFecha']));?>'],
+                            ['<?php echo $nose['ClienteNombre'];?>'],
 
                             <?php
                             }
@@ -67,14 +71,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     series: [{
-                        name: 'MES',
+                        name: 'Usuario Name',
                         data:[
                             <?php
-                            $sql="SELECT  SUM(OrdenCantidad) as totalventas FROM orden  ";
+                            $sql="SELECT COUNT(ClienteId) as total from orden GROUP BY(ClienteId)
+                            ";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            [<?php echo $res['totalventas']?>],
+                            [<?php echo $res['total']?>],
 
                             <?php
                             }

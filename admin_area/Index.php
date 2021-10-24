@@ -191,6 +191,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
 
                 include("EstadisticaOrden.php");
 
+            }if(isset($_GET['EstadisticaProducto'])){
+
+                include("EstadisticaProducto.php");
+
+            }
+            if(isset($_GET['EstadisticaUsuario'])){
+
+                include("EstadisticaUsuario.php");
+
             }
             if(isset($_GET['view_payments'])){
 

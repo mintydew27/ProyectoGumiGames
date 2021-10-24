@@ -129,6 +129,9 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             <li>
                 <a href="Index.php?view_estadistics3">Visitas</a>
             </li>
+            <li>
+                <a href="Index.php?EstadisticaOrden">Ordenes</a>
+            </li>
 
             </li>
             ///////////////////////////////////////////////////////////////////

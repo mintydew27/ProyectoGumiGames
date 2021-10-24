@@ -120,13 +120,12 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                     <i class="fa fa-fw fa-gear"></i> Estadísticas
                 </a>
 
-
-             <li>
-                <a href="Index.php?view_estadistics4"> Cantidad de Producto</a>
+            <li>
+                <a href="Index.php?view_estadistics5"> Usuarios por ciudad</a>
             </li>
 
             <li>
-                <a href="Index.php?view_estadistics5"> Usuarios por Estado</a>
+                <a href="Index.php?view_estadistics4"> Usuarios por país</a>
             </li>
 
             <li>

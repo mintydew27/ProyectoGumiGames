@@ -37,10 +37,10 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         }
                     },
                     title: {
-                        text: 'Disponible'
+                        text: 'Usuarios'
                     },
                     subtitle: {
-                        text: 'Cantidad de productos'
+                        text: 'Por país'
                     },
                     plotOptions: {
                         column: {
@@ -50,11 +50,11 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                     xAxis: {
                         categories: [
                             <?php
-                            $sql="SELECT * FROM producto ";
+                            $sql="SELECT ClientePais  FROM cliente GROUP BY ClientePais";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            ['<?php echo $res['ProductoTitulo'];?>'],
+                            ['<?php echo $res['ClientePais'];?>'],
 
                             <?php
                             }
@@ -70,11 +70,15 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         name: 'Cantidad',
                         data:[
                             <?php
-                            $sql="SELECT * FROM producto ";
+                            $sql="SELECT COUNT(*) AS RecuentoFilas
+                            FROM cliente
+                            GROUP BY ClientePais
+                            HAVING COUNT(*) >= 1
+                            ORDER BY ClientePais";
                             $run_cat = mysqli_query($con,$sql);
                             while($res=mysqli_fetch_array($run_cat)){
                             ?>
-                            [<?php echo $res['ProductoCantidad']?>],
+                            [<?php echo $res['RecuentoFilas']?>],
 
                             <?php
                             }

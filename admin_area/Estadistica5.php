@@ -40,7 +40,7 @@ if(!isset($_SESSION['AdministradorCorreo'])){
                         text: 'Usuarios'
                     },
                     subtitle: {
-                        text: 'por estado'
+                        text: 'por ciudad'
                     },
                     plotOptions: {
                         column: {

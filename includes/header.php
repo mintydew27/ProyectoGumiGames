@@ -56,10 +56,8 @@ if(isset($_GET['pro_id'])){
 }
 
 
-// Se comento esta funcion debido a que no funcionaba en los ordenadores de algunos integrantes de equipo
 
-
-/*(if(!isset($_COOKIE["Visitado"])){
+if(!isset($_COOKIE["Visitado"])){
     $date = date('d/M/Y', time());
     $select = "Select * from Visita Where VisitaFecha = '$date'";
     $result = mysqli_query($con,$select);
@@ -74,7 +72,7 @@ if(isset($_GET['pro_id'])){
     }
     setcookie("Visitado",true,mktime().time()+60*60*24);
 
-}*/
+}
 
 
 ?>
@@ -294,7 +292,7 @@ if(isset($_GET['pro_id'])){
 
                             <?php if(isset($_SESSION['ClienteCorreo'])){
                                 echo '<li><a href="Carrito.php">Carrito</a></li>
-                    ';
+                                             ';
                             }?>
 
 

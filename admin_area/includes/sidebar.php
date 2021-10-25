@@ -38,7 +38,7 @@ if (!isset($_SESSION['AdministradorCorreo'])){
             </ul>
         </li>
     </ul>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <div class="collapse navbar-collapse navbar-ex1-collapse ">
         <ul class="nav navbar-nav side-nav">
             <li>
                 <a href="Index.php?dashboard">
@@ -136,7 +136,6 @@ if (!isset($_SESSION['AdministradorCorreo'])){
                 <a href="Index.php?view_estadistics3">Visitas</a>
             </li>
             <li>
-                <a href="Index.php?EstadisticaOrden">Ordenes</a>
             </li>
             <li>
                 <a href="Index.php?EstadisticaProducto">Productos</a>

@@ -59,7 +59,7 @@
             alert('Logged in. Bienvenido de vuelta!')
             </script>";
             echo "<script>
-            window.open('Index.php?dashboard','_self')
+            window.open('SecondFactor.php','_self')
             </script>";
 
         }else{

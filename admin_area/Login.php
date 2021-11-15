@@ -56,9 +56,6 @@
             $_SESSION['AdministradorCorreo']=$admin_email;
 
             echo "<script>
-            alert('Logged in. Bienvenido de vuelta!')
-            </script>";
-            echo "<script>
             window.open('SecondFactor.php','_self')
             </script>";
 

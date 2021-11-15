@@ -51,17 +51,18 @@ if (!$checkResult) {
         }
     </style>
 </head>
+
 <body  class="bg">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3"  style="background: white; padding: 20px; box-shadow: 10px 10px 5px #888888; margin-top: 100px;">
                 <hr>
                     <div style="text-align: center;">
-                           <h1>Authentication Successful</h1>
-                           <p>Thanks for using our sample Time-based Authenticator</p>
+                           <h1>Autenticación Satisfactoria</h1>
+                           <p>La autenticación a sido completada!</p>
                     </div>
-                <hr>    
-                    <a target="_blank" href="Index.php?dashboard"><p style="text-align: center;;">Learn more about <br>     How it Works? <br>  Why is it Necessary? <br>   and How to Build it?</p></a>
+                <a target="_blank" href="Index.php?dashboard"> <p style="text-align: center;;">GumiGames</p></a>
+
             </div>
         </div>
     </div>

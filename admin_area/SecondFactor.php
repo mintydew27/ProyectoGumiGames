@@ -7,6 +7,7 @@ $Authenticator = new Authenticator();
 if (!isset($_SESSION['auth_secret'])) {
     $secret = $Authenticator->generateRandomSecret();
     $_SESSION['auth_secret'] = $secret;
+
 }
 
 
@@ -51,14 +52,16 @@ if (!isset($_SESSION['failed'])) {
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3"  style="background: white; padding: 20px; box-shadow: 10px 10px 5px #888888; margin-top: 100px;">
-                <h1>Time-Based Authentication</h1>
-                <p style="font-style: italic;">A Google Authenticator kinda Authentication</p>
+                <center><h2>Segundo Factor de Autenticación</h2> </center> 
+                <p style="font-style: italic;">1.- Para poder seguir instale en el teléfono Google Authenticator y escanee el siguiente código QR</p>
+                <p style="font-style: italic;">2.- Escriba el código generado por Google Authenticator y verifíquelo</p>
+
                 <hr>
                 <form action="check.php" method="post">
                     <div style="text-align: center;">
                         <?php if ($_SESSION['failed']): ?>
                             <div class="alert alert-danger" role="alert">
-                                        <strong>Oh snap!</strong> Invalid Code.
+                                        <strong>Oh no!</strong> Código Invalido.
                             </div>
                             <?php   
                                 $_SESSION['failed'] = false;
@@ -67,7 +70,7 @@ if (!isset($_SESSION['failed'])) {
                             
                             <img style="text-align: center;;" class="img-fluid" src="<?php   echo $qrCodeUrl ?>" alt="Verify this Google Authenticator"><br><br>        
                             <input type="text" class="form-control" name="code" placeholder="******" style="font-size: xx-large;width: 200px;border-radius: 0px;text-align: center;display: inline;color: #0275d8;"><br> <br>    
-                            <button type="submit" class="btn btn-md btn-primary" style="width: 200px;border-radius: 0px;">Verify</button>
+                            <button type="submit" class="btn btn-md btn-primary" style="width: 200px;border-radius: 0px;">Verificar</button>
 
                     </div>
 

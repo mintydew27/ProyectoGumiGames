@@ -70,7 +70,7 @@ if(!isset($_COOKIE["Visitado"])){
         $insertdate = "INSERT INTO Visita (VisitaFecha,VisitaCantidad) VALUES('$date',1)";
         $insertresult = mysqli_query($con,$insertdate);
     }
-    setcookie("Visitado",true,mktime().time()+60*60*24);
+    //setcookie("Visitado",true,mktime());
 
 }
 

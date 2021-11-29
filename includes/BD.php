@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect("localhost","root","", "gumigames");
+$con = mysqli_connect("localhost","azure","", "gumigames");
 ?>

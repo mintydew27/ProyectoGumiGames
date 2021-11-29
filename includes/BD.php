@@ -1,3 +1,3 @@
 <?php
-$con = mysqli_connect("localhost","azure-enter","hsI84hjB4Qt320UE", "gumigames");
+$con = mysqli_connect("localhost","azure","6#vWHD_$", "gumigames");
 ?>

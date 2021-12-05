@@ -93,7 +93,15 @@ if(!isset($_COOKIE["Visitado"])){
     <meta name="author" content="Themefisher">
     <meta name="generator" content="Themefisher Constra HTML Template v1.0">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6981TB2DB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'G-Z6981TB2DB');
+    </script>
 
 
     <!-- Nombre de la pagina-->
